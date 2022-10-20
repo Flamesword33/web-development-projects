@@ -1,0 +1,118 @@
+<!--lab-1-part-3.html
+    by Nathan Pelletier
+    September 29, 2022-->
+
+<!-- Recreate figure 3.30 (picture in Instructions.docx) from scratch
+    
+TODO: 
+    *head:           
+    *    utf8
+    *    Title: My Sample Art Store
+
+    *header:
+    *    h1: My Sample Art Store
+    *    navigation:
+    *        page links
+
+    main article:
+    *    h2: Mademoiselle Caroline Rivi&egrave;re 
+    *        e has accent ague
+    *    picture
+    *    description
+    *    Add to Cart/Favorites
+    
+    *aside:
+    *    h3: Related Paintings
+    *    pictures
+    
+    Section:
+    *    h3: Reviews
+    *    bold description
+    *    name 
+        star rating 
+            star rating will require button trickery
+    *    sloppy second description?
+    
+    *Footer:
+    *    page links
+    *    copyright info
+
+Sources:
+https://www.w3schools.com/html/html_symbols.asp
+https://www.thoughtco.com/html-codes-french-characters-4062211
+https://stackoverflow.com/questions/6764961/change-an-image-with-onclick
+-->
+
+<!DOCTYPE html>
+<html lang="en-Can">
+<head>
+    <meta charset="utf-8">
+    <title>My Sample Art Store</title>
+</head>
+    
+<body>
+    <header>
+        <h1>My Sample Art Store</h1>
+        <nav>
+            <p><a href="#">Home</a> | <a href="#">Artists</a> | <a href="#">Artworks</a> | <a href="#">About Us</a> | <a href="#">Search</a></p>
+        </nav>
+    </header>
+    
+    <main>
+        <!--REMEMBER TO CHANGE e to /-->
+        <h2>Mademoiselle Caroline Rivi&egrave;re</h2>
+        <!--figure auto indents so not usable in this project :(-->
+        <seciton>
+            <p>by <a href="#">Jean-Auguste-Dominique Ingres</a></p>
+            <a href="images/06010-large.jpg">
+                <img src="images/06010-medium.jpg" alt="Neutral image of Mademoiselle Caroline Rivi&egrave;re" title="Mademoiselle Caroline Rivi&egrave;re">
+            </a>
+        </section>
+
+        <figcaption>
+            <p>The portrait of Mademoiselle Caroline Rivi&egrave;re was painted in 1806 by the French Neoclassical artist Jean Auguste Dominique Ingres, and today hangs in the Louvre. It is the third of three portraits of the Rivi&egrave;re family the artist painted that year.</p>
+            <p>Date: 1806 
+                <br>Medium: Oil on Canvas 
+                <br>Dimensions: 100 x 70 cm 
+                <br>Home: <i>Mus&egrave;e du Louvre, Paris</i>
+            </p>
+        </figcaption>
+
+        <section id="Checkout">
+            <p><img src="images/cart.png"> 
+                <a href="#">Add to Cart</a> 
+                <img src="images/favorites.png">
+                <a href="#">Add to Favorites</a>
+            </p>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Related Paintings</h3>
+        <img src="images/06020.jpg" alt="Fancy lady" title="Fancy lady">
+        <img src="images/07020.jpg" alt="Revolution" title="Revolution">
+        <img src="images/13030.jpg" alt="Lady stares at wall" title="Lady stares at wall">
+        <img src="images/05030.jpg" alt="man in bath" title="man in bath">
+    </aside>
+
+    <section>
+        <h3>Reviews</h3>
+        <p><b>Love this painting</b> <br>John Smith 
+            <!--like 5 image buttons here-->
+            <img src="images/star-white.png" onclick="this.src='images/star-orange.png'">
+            <img src="images/star-white.png" onclick="this.src='images/star-orange.png'">
+            <img src="images/star-white.png" onclick="this.src='images/star-orange.png'">
+            <img src="images/star-white.png" onclick="this.src='images/star-orange.png'">
+            <img src="images/star-white.png" onclick="this.src='images/star-orange.png'">
+        </p>
+
+        <p><small>This is one of my favorites!</small></p>
+        <hr>
+    </section>
+
+    <footer>
+        <p><a href="#">Home</a> | <a href="#">Art Works</a> | <a href="#">Artists</a> | <a href="#">About Us</a>
+        <p><small><i>Copyright &copy; 2017 My Sample Art Store</i></small></p>
+    </footer>
+</body>
+</html>
