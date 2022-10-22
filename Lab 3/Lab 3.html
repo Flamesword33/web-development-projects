@@ -9,6 +9,11 @@
         opgroup
         input types
         datalist
+
+    learned:
+        radio buttons that have the same name will only allow the selection of one
+        https://stackoverflow.com/questions/5419459/how-to-allow-only-one-radio-button-to-be-checked
+    
     -->
 
 <!DOCTYPE html>
@@ -68,6 +73,14 @@
                 <option value="Camrose">Camrose</option>
                 <option value="Edmonton">Edmonton</option>
             </select><br>
+
+                <!--COPYRIGHT-->
+                <p id="Copyright">Copyright?<br>
+                    <input type="radio" value="1" name="copyright" id="copyright1">
+                    <label for="copyright1"> All rights reserved</label><br>
+                    <input type="radio" value="2" name="copyright" id="copyright2">
+                    <label for="copyright2"> Creative Commons</label>
+                </p>
 
 
         </form>
