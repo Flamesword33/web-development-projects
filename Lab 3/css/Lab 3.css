@@ -75,4 +75,17 @@ textarea.resize_box{
 select#continent, select#country, input#city{
   margin-bottom: 0.5em;
   width: 25%;
+/*===submit and clear buttons===*/
+div#form_submit{
+  padding:0.5em 0em 0.5em 0.5em;
+  background-color: #9FA8DA;
+}
+
+div#form_submit input{
+  background-color: #E91E63;
+  border: 0.5em solid #E91E63;
+  border-radius: 5px;
+  color: white;
+  margin-right: 1em;
+  
 }
