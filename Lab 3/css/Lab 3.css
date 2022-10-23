@@ -7,3 +7,10 @@ body{
   padding:0em 4em 1em 4em;
 }
 
+/*header and header text*/
+header{
+  background-color: navy;
+  color: white;
+  padding: 0.5em 0em 0em 1em;
+  margin-bottom: 0.5em;
+}
