@@ -14,3 +14,13 @@ header{
   padding: 0.5em 0em 0em 1em;
   margin-bottom: 0.5em;
 }
+
+h1{
+  font-size:1.5em;
+}
+
+h2{
+  font-style: italic;
+  font-weight:lighter;
+}
+
