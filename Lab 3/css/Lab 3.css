@@ -24,3 +24,10 @@ h2{
   font-weight:lighter;
 }
 
+/*===main, h3 and form boxes===*/
+
+main{
+  background-color: white;
+  padding: 0.5em 0.5em 1.5em 0.5em;
+}
+
