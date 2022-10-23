@@ -48,6 +48,7 @@ form{
 input#title{
   width: 99%;
   margin-bottom: 0.5em;
+
 }
 
 /*===resizable box===*/
@@ -63,7 +64,7 @@ textarea.resize_box{
 }
 /*====================*/
 
-select#continent, select#country, select#city{
+select#continent, select#country, input#city{
   margin-bottom: 0.5em;
   width: 25%;
 }
