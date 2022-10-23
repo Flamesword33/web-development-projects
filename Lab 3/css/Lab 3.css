@@ -45,3 +45,8 @@ form{
 }
 /*===============================*/
 
+input#title{
+  width: 99%;
+  margin-bottom: 0.5em;
+}
+
