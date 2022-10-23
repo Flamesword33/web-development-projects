@@ -50,6 +50,26 @@
             </div>
 			
 			<section>
+			<aside>
+                <!--COPYRIGHT-->
+                <p id="Copyright">Copyright?<br>
+                    <input type="radio" value="1" name="copyright" id="copyright1">
+                    <label for="copyright1"> All rights reserved</label><br>
+                    <input type="radio" value="2" name="copyright" id="copyright2">
+                    <label for="copyright2"> Creative Commons</label>
+                </p>
+
+                <!--CREATIVE COMMONS TYPES-->
+                <p id="Creative_Commons_Types">Creative Commons Types<br>
+                    <input type="checkbox" name="cc" value="1" id="cc1">
+                    <label for="cc1"> Attribution</label><br>
+                    <input type="checkbox" name="cc" value="2" id="cc2">
+                    <label for="cc2"> Noncommercial</label><br>
+                    <input type="checkbox" name="cc" value="3" id="cc3">
+                    <label for="cc3"> No Derivative Works</label>
+                </p>
+            </aside>
+			
             <!--CONTINENT-->
             <label for="continent">Continent</label><br>
             <select name="continent" id="continent">
@@ -76,26 +96,19 @@
             <label for="city">City</label><br>
             <input type="text" name="city" id="city"><br>
 
-            <aside>
-                <!--COPYRIGHT-->
-                <p id="Copyright">Copyright?<br>
-                    <input type="radio" value="1" name="copyright" id="copyright1">
-                    <label for="copyright1"> All rights reserved</label><br>
-                    <input type="radio" value="2" name="copyright" id="copyright2">
-                    <label for="copyright2"> Creative Commons</label>
-                </p>
 
-                <!--CREATIVE COMMONS TYPES-->
-                <p id="Creative_Commons_Types">Creative Commons Types<br>
-                    <input type="checkbox" name="cc" value="1" id="cc1">
-                    <label for="cc1"> Attribution</label><br>
-                    <input type="checkbox" name="cc" value="2" id="cc2">
-                    <label for="cc2"> Noncommercial</label><br>
-                    <input type="checkbox" name="cc" value="3" id="cc3">
-                    <label for="cc3"> No Derivative Works</label>
-                </p>
-            </aside>
 			</section>
+			<aside>
+			    <p  id="date_box">
+				    <!--DATE TAKEN-->
+					<label for="date_taken">Date Taken:</label><br>
+					<input type="date" id="date_taken" name="date"><br>
+
+					<!--TIME TAKEN-->
+					<label for="time_taken">Time Taken:</label><br>
+					<input type="time" id="time_taken" name="time"><br>
+				</p>
+            </aside>
 
             <!--ACCEPT SOFTWARE LICENSE-->
             <div id="accept">
@@ -111,18 +124,7 @@
             <!--COLOR COLLECTION-->
             <label for="color_collection">Color Collection:</label><br>
             <input type="color" id="color_collection" name="color"><br>
-
-            <aside>
-			    <p  id="date_box">
-				    <!--DATE TAKEN-->
-					<label for="date_taken">Date Taken:</label><br>
-					<input type="date" id="date_taken" name="date"><br>
-
-					<!--TIME TAKEN-->
-					<label for="time_taken">Time Taken:</label><br>
-					<input type="time" id="time_taken" name="time"><br>
-				</p>
-            </aside>
+			
 			</section>
 
             <!--Submit and clear buttons-->
