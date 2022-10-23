@@ -63,3 +63,7 @@ textarea.resize_box{
 }
 /*====================*/
 
+select#continent, select#country, select#city{
+  margin-bottom: 0.5em;
+  width: 25%;
+}
