@@ -81,6 +81,10 @@ input#rate_photo{
   margin-bottom: 0.5em;
 }
 
+input#color_collection{
+  margin-bottom: 2em;
+}
+
 /*===submit and clear buttons===*/
 div#form_submit{
   padding:0.5em 0em 0.5em 0.5em;
