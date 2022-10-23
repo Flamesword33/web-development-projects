@@ -50,3 +50,16 @@ input#title{
   margin-bottom: 0.5em;
 }
 
+/*===resizable box===*/
+div#resize_description{
+  width:100%;
+  height:4em;
+  margin-bottom: 2em;
+}
+
+textarea.resize_box{
+  width: 100%;
+  height: 100%;
+}
+/*====================*/
+
