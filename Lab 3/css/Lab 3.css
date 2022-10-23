@@ -74,7 +74,13 @@ textarea.resize_box{
 
 select#continent, select#country, input#city{
   margin-bottom: 0.5em;
-  width: 25%;
+  width: 20em;
+}
+input#rate_photo{
+  width:3em;
+  margin-bottom: 0.5em;
+}
+
 /*===submit and clear buttons===*/
 div#form_submit{
   padding:0.5em 0em 0.5em 0.5em;
