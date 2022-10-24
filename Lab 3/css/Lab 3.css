@@ -73,8 +73,13 @@ textarea.resize_box{
 }
 /*====================*/
 
-select#continent, select#country, input#city{
+select#continent, select#country{
   margin-bottom: 0.5em;
+  width: 20em;
+}
+
+input#city{
+  margin-bottom: 3em;
   width: 20em;
 }
 
@@ -110,16 +115,18 @@ div#form_submit input{
 /* asides (the options on the right side of the screen)*/
 aside p{
   border: 1px solid #9FA8DA;
+  float: right;
+  width: 50%;
 }
 
 aside #Copyright{
   padding: 0.5em 0.5em 0.5em 0.5em;
   margin-bottom:0.2em;
-  float:right;
 }
 
 aside #Creative_Commons_Types{
   padding: 0.5em 0.5em 0.5em 0.5em;
+  margin-bottom:1em;
 }
 
 aside #date_box{
