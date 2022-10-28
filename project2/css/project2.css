@@ -15,9 +15,17 @@ h1{}
 
 header nav{}
 
-.card{}
+.card{
+  width: 24%;
+  margin-bottom: 1em;
+  margin-right: 0.5em;
+}
 
 .thumbnail{}
+
+.thumbnail img{
+  width: 100%;
+}
 
 .card-content{
   padding-bottom: 2em;
