@@ -11,9 +11,13 @@
       
   */
 
-h1{}
+h1{
+  float: left;
+}
 
-header nav{}
+header nav{
+  float: right;
+}
 
 .card{
   width: 24%;
