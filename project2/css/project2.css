@@ -27,10 +27,12 @@ header nav{}
   display: none;
 }
 
-.button{
-  /*display: none;*/
-}
+.button{}
 
+/* Anything involving :hover */
+.card:hover{
+  box-shadow: 5px 5px 3px grey;
+}
 .card:hover .card-actions{
   display: block;
 }
