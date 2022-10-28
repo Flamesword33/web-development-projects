@@ -20,11 +20,21 @@ header nav{}
 .thumbnail{}
 
 .card-content{
+  padding-bottom: 2em;
 }
 
 .card-actions{
+  display: none;
 }
 
 .button{
+  /*display: none;*/
 }
 
+.card:hover .card-actions{
+  display: block;
+}
+
+.card:hover .card-content{
+  padding-bottom:0em;
+}
