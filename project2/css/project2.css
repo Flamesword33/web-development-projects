@@ -9,8 +9,9 @@
       At certain height design switches how many columns we have
 
   TODO: 
-    make program work for smaller sized screens 
     add transitions to the on hover elements
+    shrink header on smallest screens
+
   */
 
 h1{
@@ -75,7 +76,7 @@ header nav{
 
 /* styles for tablet screens */
 @media only screen and (min-width: 481px)
-and (max-width: 768px)
+and (max-width: 815px)
 {
     .card {
       width: 48%;
