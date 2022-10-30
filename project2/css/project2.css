@@ -10,7 +10,6 @@
 
   TODO: 
     add transitions to the on hover elements
-    shrink header on smallest screens
 
   */
 
@@ -63,11 +62,11 @@ header nav{
 @media only screen and (max-width:480px)
 {
     header {
-        
-		
+      padding: 1em 0 5px 25px;
+      height: 60px;
     }
     header h1 {
-        
+      margin-top: 0.3px;
     }
     .card {
       width: 98%;
