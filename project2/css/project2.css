@@ -8,9 +8,6 @@
     It needs a responsive layout to devices
       At certain height design switches how many columns we have
 
-  TODO: 
-    add transitions to the on hover elements
-
   */
 
 h1{
@@ -26,6 +23,8 @@ header nav{
   margin-bottom: 1em;
   margin-right: 0.5em;
   float:left;
+  transition: box-shadow 1s;
+  transition-timing-function: ease-out;
 }
 
 .thumbnail{}
@@ -40,6 +39,8 @@ header nav{
 
 .card-actions{
   opacity: 0.0;
+  transition: opacity 1s;
+  transition-timing-function: ease-in-out;
 }
 
 .button{}
