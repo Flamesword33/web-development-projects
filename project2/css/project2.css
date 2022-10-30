@@ -69,6 +69,7 @@ header nav{
         
     }
     .card {
+      width: 98%;
     }
 }
 
@@ -77,5 +78,6 @@ header nav{
 and (max-width: 768px)
 {
     .card {
+      width: 48%;
     }
 }
