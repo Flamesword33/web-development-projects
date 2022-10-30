@@ -27,8 +27,6 @@ header nav{
   transition-timing-function: ease-out;
 }
 
-.thumbnail{}
-
 .thumbnail img{
   width: 100%;
 }
@@ -43,8 +41,6 @@ header nav{
   transition-timing-function: ease-in-out;
 }
 
-.button{}
-
 /* Anything involving :hover */
 .card:hover{
   box-shadow: 5px 5px 3px grey;
@@ -55,7 +51,6 @@ header nav{
 
 
 /* styles for small screens */
-
 @media only screen and (max-width:480px)
 {
     header {
@@ -69,6 +64,7 @@ header nav{
       width: 98%;
     }
 }
+
 
 /* styles for tablet screens */
 @media only screen and (min-width: 481px)
