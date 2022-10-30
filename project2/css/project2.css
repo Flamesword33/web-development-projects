@@ -55,3 +55,27 @@ header nav{
 .card:hover .card-content{
   padding-bottom:0em;
 }
+
+
+/* styles for small screens */
+
+@media only screen and (max-width:480px)
+{
+    header {
+        
+		
+    }
+    header h1 {
+        
+    }
+    .card {
+    }
+}
+
+/* styles for tablet screens */
+@media only screen and (min-width: 481px)
+and (max-width: 768px)
+{
+    .card {
+    }
+}
