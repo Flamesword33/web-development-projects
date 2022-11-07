@@ -14,3 +14,7 @@ function output_artist(picture, artist_name, num_of_sales){
     var title = ["Picasso","Raphael","Van Gogh", "Botticelli", "Klimt", "Matisse", 
     "Michelangelo", "Vermeer", "da Vinci", "Cezanne", "Monet", "Caravaggio"];
     var num_of_sales = [66, 56, 40, 37, 36, 34, 32, 31, 26, 25, 25, 18];
+
+    for(var i=0; i<title.length; i++){
+        output_artist(file_names[i], title[i], num_of_sales[i]);
+    }//for title.length
