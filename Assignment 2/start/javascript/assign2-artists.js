@@ -10,6 +10,7 @@ function output_artist(picture, artist_name, num_of_sales){
     document.write('');
 }//output_artist
 
+function write_artists(){
     var file_names = ["1","2","17","19", "21", "29", "95", "97", "98", "99", "101", "106"];
     var title = ["Picasso","Raphael","Van Gogh", "Botticelli", "Klimt", "Matisse", 
     "Michelangelo", "Vermeer", "da Vinci", "Cezanne", "Monet", "Caravaggio"];
@@ -18,3 +19,4 @@ function output_artist(picture, artist_name, num_of_sales){
     for(var i=0; i<title.length; i++){
         output_artist(file_names[i], title[i], num_of_sales[i]);
     }//for title.length
+}//write_artists
