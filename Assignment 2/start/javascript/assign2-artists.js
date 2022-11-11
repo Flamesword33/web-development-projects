@@ -1,5 +1,6 @@
 function output_artist(picture, artist_name, num_of_sales){
-    document.write('<div class="artist">');
+    document.write('<div class = "col-md-2"');
+    document.write('<div class="thumbnail">');
     document.write('<img src="../images/artists/'+ picture +'.jpg">');
     document.write('<p>'+ artist_name +'</p>');
     document.write('<p><a href="#"><span class="glyphicon glyphicon-fire"></span>');
@@ -7,7 +8,7 @@ function output_artist(picture, artist_name, num_of_sales){
     document.write('</a></p>');
     document.write('</div> <!--artist-->');
     document.write('</div> <!--art_by_artist-->');
-    document.write('');
+    document.write('</div>');
 }//output_artist
 
 function write_artists(){
