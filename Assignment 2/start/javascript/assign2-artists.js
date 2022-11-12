@@ -11,16 +11,16 @@
 </div>//end col-md-2 artist
 */
 function output_artist(picture, artist_name, num_of_sales){
-    document.write('<div class = "col-md-2"');
+    document.write('<div class="col-md-2 artist">');
     document.write('<div class="thumbnail">');
     document.write('<img src="../images/artists/'+ picture +'.jpg">');
     document.write('<p>'+ artist_name +'</p>');
-    document.write('<p><a href="#"><span class="glyphicon glyphicon-fire"></span>');
+    document.write('<div class="btn-group-xs"><button type="button" class="btn btn-info"><p><a href="#">');
+    document.write('<span class="glyphicon glyphicon-fire icon-white"></span>');
     document.write('Sales <span class="how_many_sales">' + num_of_sales + '</span>');
-    document.write('</a></p>');
-    document.write('</div> <!--artist-->');
-    document.write('</div> <!--art_by_artist-->');
-    document.write('</div>');
+    document.write('</a></p></button></div>');
+    document.write('</div><!--end thumbnail-->');
+    document.write('</div><!--end col-md-2 artist-->');
 }//output_artist
 
 function write_artists(){
