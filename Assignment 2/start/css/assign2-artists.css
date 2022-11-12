@@ -10,3 +10,11 @@
 .artist .btn p{
     margin: 0.3em 0.3em 0.3em 0.3em;
 }
+
+.btn a{
+    color: white;
+}
+
+.icon-white{
+    color:white;
+}
