@@ -6,43 +6,48 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Chapter5</title>
 	<link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="../bootstrap-3.2.0-dist/css/bootstrap-theme.min.css"/>
-	<script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../css/general.css"/>
 	<link rel="stylesheet" href="../css/assign2-about.css"/>
 </head>
 <body>
-	<header>
+    <header>
 		<nav id="top_header_row" class="navbar navbar-inverse">
 			<div class="container-fluid">
-			  <div class="navbar-header">
-				<p>Welcome to <b>Art Store</b>, <a href="#"><b>Login</b></a>
-					or <a href="#"><b>Create new account</b></a>
-				</p>
-			  </div>
-			  <ul class="nav navbar-nav pull-right">
-				<li><a href="#">
-					<span class="glyphicon glyphicon-user"></span> My Account</a></li>
-				<li><a href="#">
-					<span class="glyphicon glyphicon-gift"></span> Wish List</a></li>
-				<li><a href="#">
-					<span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
-				<li><a href="#">
-					<span class="glyphicon glyphicon-arrow-right"></span> Checkout</a></li>
-			  </ul>
+			  	<div class="navbar-header">
+					<p>Welcome to <b>Art Store</b>, <a href="#"><b>Login</b></a>
+						or <a href="#"><b>Create new account</b></a>
+					</p>
+				</div>
+			  	<ul class="nav navbar-nav pull-right">
+					<li><a href="#">
+						<span class="glyphicon glyphicon-user"></span> My Account</a></li>
+					<li><a href="#">
+						<span class="glyphicon glyphicon-gift"></span> Wish List</a></li>
+					<li><a href="#">
+						<span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
+					<li><a href="#">
+						<span class="glyphicon glyphicon-arrow-right"></span> Checkout</a></li>
+			  	</ul>
 			</div>
-		  </nav>
+		</nav> <!--end top_header_row-->
 
-		<div id="logo_row">
-			<h1>Art Store</h1> 
-			<form>
+
+		<div id="logo_row" class="container-fluid">
+			<h1 class="pull-left">Art Store</h1> 
+	
+			<form class="pull-right">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search" name="search">
 					<div class="input-group-btn">
-					  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+					  	<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
 					</div>
 				</div>
 			</form> 
@@ -53,18 +58,16 @@
 			<div class="container-fluid">
 			  	<ul class="nav navbar-nav">
 					<li><a href="assign2-index.html">Home</a></li>
-					<li class="active"><a href="assign2-about.html">About Us</a></li>
-					<li><a href="index-work.html">Art Works</a></li>
+					<li><a href="assign2-about.html">About Us</a></li>
+					<li class="active"><a href="index-work.html">Art Works</a></li>
 					<li><a href="assign2-artists.html">Artists</a></li>
-					<li>
-						<div class="dropdown">
-							<button  class="dropdown-toggle" type="button" data-toggle="dropdown">Specials
-							<span class="caret"></span></button>
-							<ul class="dropdown-menu">
-								<li><a href="#">Special-1</a></li>
-								<li><a href="#">Special-2</a></li>
-							</ul>
-						</div>
+					<!--https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_collapse&stacked=h-->
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Specials<span class="caret"></span></a>
+          				<ul class="dropdown-menu">
+            				<li><a href="#">Special-1</a></li>
+            				<li><a href="#">Special-2</a></li>
+						</ul>
 					</li>
 			  	</ul>
 			</div>
