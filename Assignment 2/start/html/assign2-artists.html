@@ -77,22 +77,8 @@
 
     <main>
 		<h2>This Week's Best-Selling Artists</h2>
-		<!--Bootstrap: Alert-->
 		<p class="alert alert-warning">Each week we show you who are our best-selling artists...</p>
-		
-		<!--Bootstrap: Thumbnail 
-		This is a template for javascript-->
-		<!--
 		<div id="art_by_artist">
-			<div class="artist">
-				<img src="../images/artists/1.jpg">
-				<p>Picasso</p>
-				<p><a href="#"><span class="glyphicon glyphicon-fire"></span>
-					Sales <span class="how_many_sales">66</span>
-				</a></p>
-			</div> //artist
-		</div> //art_by_artist-->
-		<script>write_artists();</script>
 
 		<p>Artist by Genre</p>
 		<ul id="art_by_period">
@@ -102,6 +88,21 @@
 			<li><a href="#">Pre-Modern</a></li>
 			<li><a href="#">Modern</a></li>
 		</ul> <!--art_by_period-->
+		<!--This is a template for javascript-->
+		<!--
+			<div class="col-md-2 artist">
+				<div class="thumbnail">
+					<img src="../images/artists/1.jpg">
+					<p>Picasso</p>
+					<div class="btn-group-xs"><button type="button" class="btn btn-info"><p><a href="#">
+						<span class="glyphicon glyphicon-fire icon-white"></span>
+						Sales <span class="how_many_sales">66</span>
+					</a></p></button></div>
+				</div>//end thumbnail
+			</div>//end col-md-2 artist
+		-->
+			<script>write_artists();</script>
+		</div> <!--art_by_artist-->
 	</main>
 </body>
 </html>
