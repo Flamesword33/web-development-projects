@@ -23,6 +23,7 @@
 span.how_many_sales{
     color: #54bddc;
     background-color: white;
+    border-style: transparent;
     border-radius: 45%;
     padding: 0.2em 0.5em 0.2em 0.5em;
 }
