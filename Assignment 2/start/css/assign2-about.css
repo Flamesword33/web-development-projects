@@ -11,3 +11,15 @@
     font-size: 1.5em;
 }
 
+.btn-white a{
+    color:white;
+}
+
+.btn{
+    font-size: 0.8em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+
+
