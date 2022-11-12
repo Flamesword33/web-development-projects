@@ -1,5 +1,7 @@
 .jumbotron{
     background-image: url('../images/whistler_cropped.jpg');
+    background-size:contain;
+    background-repeat: repeat-x repeat-y;
     color: white;
 }
 
