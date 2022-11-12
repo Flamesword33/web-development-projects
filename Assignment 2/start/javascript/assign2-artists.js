@@ -1,3 +1,15 @@
+/* Template code for reference within output_artist
+<div class="col-md-2 artist">
+<div class="thumbnail">
+    <img src="../images/artists/1.jpg">
+    <p>Picasso</p>
+    <div class="btn-group-xs"><button type="button" class="btn btn-info"><p><a href="#">
+        <span class="glyphicon glyphicon-fire icon-white"></span>
+        Sales <span class="how_many_sales">66</span>
+    </a></p></button></div>
+</div>//end thumbnail
+</div>//end col-md-2 artist
+*/
 function output_artist(picture, artist_name, num_of_sales){
     document.write('<div class = "col-md-2"');
     document.write('<div class="thumbnail">');
