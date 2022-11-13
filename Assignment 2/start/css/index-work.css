@@ -31,6 +31,14 @@ section#bottom_of_page{
     font-size: large;
 }
 
+#beside_pic>.btn-group{
+    margin-bottom: 2em;
+}
+
+#beside_pic>.container{
+    padding: 0 0 0 0;
+}
+
 /* similar_products */
 #similar_products{
     padding-left: 4em;
