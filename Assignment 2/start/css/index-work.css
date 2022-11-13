@@ -122,6 +122,7 @@ aside#popular_artists li:nth-child(7), aside#popular_genres li:nth-child(4){
     }
 
     section#sidebar{
+        height: auto;
         margin-left: 4em;
     }
 
