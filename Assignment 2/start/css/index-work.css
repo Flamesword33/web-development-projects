@@ -119,4 +119,18 @@ aside#popular_artists li:nth-child(7), aside#popular_genres li:nth-child(4){
     section#sidebar{
         margin-left: 4em;
     }
+
+
+    aside#cart .media p{
+        margin-bottom: 2em;
+    }
+
+    section#similar_products{
+        margin-bottom: 35em;
+    }
+
+    section#bottom_of_page{
+        margin-top: 18em;
+    }
+
 }
