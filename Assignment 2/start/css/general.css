@@ -24,6 +24,12 @@
 #logo_row{
     margin: 0em 4em 2em 4em; 
 }
+
+#logo_row .pull-right{
+    margin: 2em 4em 0 0;
+    width:25%;
+}
+
 /* main navigation row */
 #main_navigation_row{
     margin-left: 4em;
