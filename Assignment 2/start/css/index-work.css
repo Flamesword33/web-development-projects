@@ -64,6 +64,12 @@ section#bottom_of_page{
     position:relative;
     max-width: 80%;
 }
+
+#similar_products .thumbnail{
+    margin-right: 2%;
+    min-width: 14em;
+}
+
 /* bottom_of_page */
 #bottom_of_page{
     padding-left: 4em;
