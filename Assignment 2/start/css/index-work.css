@@ -51,6 +51,8 @@ section#bottom_of_page{
 /* similar_products */
 #similar_products{
     padding-left: 4em;
+    position:relative;
+    max-width: 80%;
 }
 /* bottom_of_page */
 #bottom_of_page{
