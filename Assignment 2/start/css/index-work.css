@@ -112,3 +112,5 @@ aside#popular_artists li:nth-child(7), aside#popular_genres li:nth-child(4){
     margin-bottom: 1em;
 }
 
+@media only screen and (max-width: 991px){
+}
