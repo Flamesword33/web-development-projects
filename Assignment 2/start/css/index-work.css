@@ -26,6 +26,11 @@ section#bottom_of_page{
     margin-top: 6em;
 }
 
+#beside_pic .price{
+    color: red;
+    font-size: large;
+}
+
 /* similar_products */
 #similar_products{
     padding-left: 4em;
