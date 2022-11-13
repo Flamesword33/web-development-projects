@@ -98,3 +98,17 @@ section#bottom_of_page{
     padding: 1em 2em 1em 4em;
 }
 
+/*work on ul throughout document */
+aside#popular_artists ul, aside#popular_genres ul, aside#customer_service ul{
+    list-style-type: none;
+    padding-left: 2em;
+}
+
+aside#popular_artists li, aside#popular_genres li, aside#customer_service li{
+    margin-bottom: 2em;
+}
+
+aside#popular_artists li:nth-child(7), aside#popular_genres li:nth-child(4){
+    margin-bottom: 1em;
+}
+
