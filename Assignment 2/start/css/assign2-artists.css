@@ -3,6 +3,16 @@ h2{
     font-size: 25px;
 }
 
+main>p.alert{
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+#art_by_artist{
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
 .artist p{
     margin: 1em 0.2em 1em 0.8em;
 }
