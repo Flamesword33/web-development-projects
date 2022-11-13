@@ -3,6 +3,10 @@
 #top_header_row{
     margin-left: 4em;
     margin-right: 4em;
+    color: white;
+}
+#top_header_row a{
+    color: white;
 }
 /* logo row */
 #logo_row{
