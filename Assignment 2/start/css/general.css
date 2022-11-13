@@ -8,6 +8,11 @@
 #top_header_row a{
     color: white;
 }
+
+#top_header_row a:hover{
+    color: grey;
+}
+
 /* logo row */
 #logo_row{
     margin: 0em 4em 2em 4em; 
