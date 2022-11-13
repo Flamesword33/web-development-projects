@@ -116,6 +116,11 @@ aside#popular_artists li:nth-child(7), aside#popular_genres li:nth-child(4){
     section#beside_pic{
         margin-left: 4em;
     }
+
+    #beside_pic>.container{
+        margin: 0 0 0 0;
+    }
+
     section#sidebar{
         margin-left: 4em;
     }
