@@ -48,6 +48,16 @@ section#bottom_of_page{
     height: 46em;
 }
 
+/* cart */
+#cart img.media-object{
+    float:left;
+}
+
+#cart .media p{
+    margin-left:3em;
+    margin-bottom: 10%;
+}
+
 /* similar_products */
 #similar_products{
     padding-left: 4em;
@@ -58,3 +68,15 @@ section#bottom_of_page{
 #bottom_of_page{
     padding-left: 4em;
 }
+
+/* just_ordered */
+#just_ordered img{
+    position: relative;
+    float: left;
+    margin-right: 0.5em;
+}
+
+#just_ordered>div.media-body>p{
+    margin-bottom: 3em;
+}
+
