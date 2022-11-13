@@ -6,3 +6,16 @@
 .darkgrey{
     background-color: #292929;
 }
+/* main_pic */
+#main_pic{
+    padding-left: 4em;
+}
+
+/* similar_products */
+#similar_products{
+    padding-left: 4em;
+}
+/* bottom_of_page */
+#bottom_of_page{
+    padding-left: 4em;
+}
