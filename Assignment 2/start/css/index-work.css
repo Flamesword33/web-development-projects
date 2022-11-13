@@ -6,6 +6,11 @@
 .darkgrey{
     background-color: #292929;
 }
+
+section#bottom_of_page{
+    margin-top: 2em;
+}
+
 /* main_pic */
 #main_pic{
     padding-left: 4em;
