@@ -3,8 +3,15 @@
 #top_header_row{
     margin-left: 4em;
     margin-right: 4em;
+    margin-bottom: 0.5em;
     color: white;
 }
+
+#top_header_row .navbar-header{
+    position: relative;
+    top:1em;
+}
+
 #top_header_row a{
     color: white;
 }
