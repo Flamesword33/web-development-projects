@@ -134,6 +134,13 @@ aside#popular_artists li:nth-child(7), aside#popular_genres li:nth-child(4){
         margin-bottom: 35em;
     }
 
+    section#similar_products .thumbnail{
+        margin-right: 2.5em;
+        
+        width: 14em;
+        float:left;
+    }
+
     section#bottom_of_page{
         margin-top: 18em;
     }
