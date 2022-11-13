@@ -39,6 +39,10 @@ section#bottom_of_page{
     padding: 0 0 0 0;
 }
 
+#beside_pic hr{
+    margin: 0 0 0 0;
+}
+
 /* similar_products */
 #similar_products{
     padding-left: 4em;
