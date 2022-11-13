@@ -92,3 +92,9 @@ section#bottom_of_page{
 
 }
 
+/* footer */
+#copyright_row{
+    color: grey;
+    padding: 1em 2em 1em 4em;
+}
+
