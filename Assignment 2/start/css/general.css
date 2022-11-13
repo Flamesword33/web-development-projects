@@ -1,0 +1,15 @@
+
+/* top header row */
+#top_header_row{
+    margin-left: 4em;
+    margin-right: 4em;
+}
+/* logo row */
+#logo_row{
+    margin: 0em 4em 2em 4em; 
+}
+/* main navigation row */
+#main_navigation_row{
+    margin-left: 4em;
+    margin-right: 4em;
+}
