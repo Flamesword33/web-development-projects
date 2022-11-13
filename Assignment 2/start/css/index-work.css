@@ -86,3 +86,9 @@ section#bottom_of_page{
     margin-bottom: 3em;
 }
 
+/* contact_us */
+#contact_us input, #contact_us textarea, #contact_us button{
+    width:75%;
+
+}
+
