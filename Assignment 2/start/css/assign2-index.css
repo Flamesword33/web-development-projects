@@ -23,4 +23,19 @@ header li{
 
 /* myCarousel */
 /* footer article */
+
+footer{
+    margin: 0em 3em 0em 3em;
+}
+
+footer article{
+    float:left;
+    text-align: center;
+    margin: 4em 1em 4em 1em;
+}
+
+footer article p{
+    text-align: justify;
+}
+
 /* font stuff */
