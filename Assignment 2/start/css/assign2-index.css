@@ -39,6 +39,21 @@ main article.container{
 #myCarousel .carousel-inner{
     height: 100%;
 }
+
+#carosel_1{
+    background-image: url("../images/boucher_cropped.jpg");
+    background-size:cover;
+}
+#carosel_2{
+    background-image: url("../images/david_cropped.jpg");
+    background-size:cover;
+}
+
+#carosel_3{
+    background-image: url("../images/vermeer_cropped.jpg");
+    background-size:cover;
+}
+
 .carousel-inner .item h2{
     font-size: 1.5em;
     padding-top: 20em;
