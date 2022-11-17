@@ -1,4 +1,26 @@
 /* header */
+header{
+    margin: 1em 0 0 8em;
+}
+
+header nav{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+header h1{
+    font-size: 1.5em;
+}
+
+header li{
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    list-style-type: none;
+    float:left;
+    padding-left: 1em;
+    padding-top: 0.7em;
+}
+
 /* myCarousel */
 /* footer article */
 /* font stuff */
