@@ -29,9 +29,15 @@ footer{
 }
 
 footer article{
+    width: 30%;
     float:left;
     text-align: center;
     margin: 4em 1em 4em 1em;
+}
+
+footer article img{
+    border-radius: 50%;
+    width: 6em;
 }
 
 footer article p{
