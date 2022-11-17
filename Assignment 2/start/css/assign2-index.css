@@ -1,6 +1,7 @@
 /* header */
 header{
     margin: 1em 0 0 8em;
+    position:relative;
     z-index: 10;
 }
 
@@ -37,6 +38,7 @@ main article.container{
     z-index: 1;
     width:100%;
     height: 40em;
+    position: relative;
     bottom: 7em;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -45,6 +47,7 @@ main article.container{
 }
 
 #myCarousel .carousel-inner{
+    position: relative;
     height: 100%;
 }
 
