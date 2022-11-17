@@ -149,4 +149,6 @@ aside#popular_artists li:nth-child(7), aside#popular_genres li:nth-child(4){
 }
 
 /* font stuff */
+#main_pic h2, #sidebar #popular_artists .panel-heading, #similar_products h3{
+    font-family: 'Noto Sans', sans-serif;
 }

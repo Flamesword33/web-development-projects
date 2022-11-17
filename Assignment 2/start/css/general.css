@@ -37,4 +37,6 @@
 }
 
 /* font stuff */
+#logo_row h1{
+    font-family: 'Playball', cursive;
 }
