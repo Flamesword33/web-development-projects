@@ -16,6 +16,7 @@
 function replace_large_image(small_image, small_title){
     //which image is it?
     var title = document.querySelector("#featured img").getAttribute("title");
+    
     if(small_title != title){
         overwrite_large_image(small_image, small_title);
     }//if new image otherwise we're done here
@@ -35,7 +36,7 @@ function overwrite_large_image(small_image, small_title){
 //===event listeners===//
 window.addEventListener("load", function(event) {
 
-    //for thumbnails
+    //thumbnails event
     var thumbnails = document.querySelectorAll("#thumbnails img");
 
     for(var i=0; i < thumbnails.length; i++){        
@@ -48,7 +49,6 @@ window.addEventListener("load", function(event) {
     }//for
 
 
+    //figure event
 
-    //for figure
-
-});//window.addEventListener */
+});//window.addEventListener
