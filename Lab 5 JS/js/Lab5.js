@@ -32,3 +32,6 @@ function overwrite_large_image(small_image, small_title){
 }//overwrite_large_image
 
 
+//===event listeners===//
+    //for thumbnails
+    //for figure
