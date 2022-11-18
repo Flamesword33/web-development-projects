@@ -46,4 +46,5 @@ function overwrite_large_image(small_image, small_title){
         console.log("path: " + img_path);
         console.log("image: " + img[2]); */
 
+        thumbnails[i].addEventListener("click", replace_large_image(img[2], title));
     //for figure
