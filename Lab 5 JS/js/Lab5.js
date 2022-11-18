@@ -11,3 +11,8 @@
  *  Subgoal: add animation to the effects.
  *  For this project don't touch html or css, only javascript
 */
+
+function replace_large_image(small_image, small_title){
+    //which image is it?
+}//replace_large_image
+    //get large image
