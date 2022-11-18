@@ -34,4 +34,7 @@ function overwrite_large_image(small_image, small_title){
 
 //===event listeners===//
     //for thumbnails
+    var thumbnails = document.querySelectorAll("#thumbnails img");
+/*  console.log(thumbnails);
+    console.log(thumbnails[0]); */
     //for figure
