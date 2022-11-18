@@ -12,8 +12,6 @@
  *  For this project don't touch html or css, only javascript
 */
 
-//event listeners for thumbnails
-
 
 function replace_large_image(small_image, small_title){
     //which image is it?
@@ -32,3 +30,5 @@ function overwrite_large_image(small_image, small_title){
     large_image.setAttribute("title", small_title);
     figure_caption.innerHTML = small_title;
 }//overwrite_large_image
+
+
