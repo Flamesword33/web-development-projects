@@ -37,12 +37,12 @@ window.addEventListener("load", function(event) {
 
     //for thumbnails
     var thumbnails = document.querySelectorAll("#thumbnails img");
-        var title = thumbnails[i].getAttribute("title");
-        var img_path = thumbnails[i].getAttribute("src");
-        var img = img_path.split("/");
 
     for(var i=0; i < thumbnails.length; i++){        
         thumbnails[i].addEventListener("click", function(event){
+            var title = event.target.getAttribute("title");
+            var img_path = event.target.getAttribute("src");
+            var img = img_path.split("/");
             replace_large_image(img[2], title);
         });
     }//for
