@@ -40,9 +40,11 @@ window.addEventListener("load", function(event) {
         var title = thumbnails[i].getAttribute("title");
         var img_path = thumbnails[i].getAttribute("src");
         var img = img_path.split("/");
-        thumbnails[i].addEventListener("click", replace_large_image(img[2], title));
 
     for(var i=0; i < thumbnails.length; i++){        
+        thumbnails[i].addEventListener("click", function(event){
+            replace_large_image(img[2], title);
+        });
     }//for
 
 
