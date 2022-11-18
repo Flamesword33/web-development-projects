@@ -13,15 +13,27 @@
 */
 
 
-function replace_large_image(small_image, small_title){
+/** 
+ * @docstring check_before_replace_large_image determines if the same image was clicked
+ * as the large version. If it isn't overwrite_large_image() is called
+ * @param {string} small_image example format "myImage.jpg"
+ * @param {string} small_title 
+ */
+function check_before_replace_large_image(small_image, small_title){
     //which image is it?
     var title = document.querySelector("#featured img").getAttribute("title");
-    
+
     if(small_title != title){
         overwrite_large_image(small_image, small_title);
     }//if new image otherwise we're done here
-}//replace_large_image
+}//check_before_replace_large_image
 
+/**
+ * @docstring overwrite_large_image overwrites the html #featured img and #featured figcaption
+ * new values are determined by the passed img file and title
+ * @param {string} small_image example format "myImage.jpg"
+ * @param {string} small_title 
+ */
 function overwrite_large_image(small_image, small_title){
     //get large image
     var large_image = document.querySelector("#featured img");
@@ -34,21 +46,34 @@ function overwrite_large_image(small_image, small_title){
 
 
 //===event listeners===//
-window.addEventListener("load", function(event) {
+window.addEventListener("load", function() {
 
-    //thumbnails event
-    var thumbnails = document.querySelectorAll("#thumbnails img");
+    thumbnails_event(document.querySelectorAll("#thumbnails img"));
 
+    figure_event(document.getElementById("featured"));
+
+});//window.addEventListener
+
+/**
+ * @docstring thumbnails_event listens for a clicked thumbnail, determines the thumbnails 
+ * picture name and title and passes said values to check_before_replace_large_image()
+ * @param {list} thumbnails a list of html elements 
+ */
+function thumbnails_event(thumbnails){
     for(var i=0; i < thumbnails.length; i++){        
         thumbnails[i].addEventListener("click", function(event){
             var title = event.target.getAttribute("title");
             var img_path = event.target.getAttribute("src");
             var img = img_path.split("/");
-            replace_large_image(img[2], title);
+            check_before_replace_large_image(img[2], title);
         });
     }//for
+}//thumbnails_event
 
+/**
+ * 
+ * @param {list} figure a list of html elements
+ */
+function figure_event(figure){
 
-    //figure event
-
-});//window.addEventListener
+}//figure_event
