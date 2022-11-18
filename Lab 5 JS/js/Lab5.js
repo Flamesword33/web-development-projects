@@ -33,6 +33,8 @@ function overwrite_large_image(small_image, small_title){
 
 
 //===event listeners===//
+window.addEventListener("load", function(event) {
+    console.log(event);
     //for thumbnails
     var thumbnails = document.querySelectorAll("#thumbnails img");
 /*  console.log(thumbnails);
@@ -47,4 +49,10 @@ function overwrite_large_image(small_image, small_title){
         console.log("image: " + img[2]); */
 
         thumbnails[i].addEventListener("click", replace_large_image(img[2], title));
+}//for
+
+
+
     //for figure
+
+});//window.addEventListener */
