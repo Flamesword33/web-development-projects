@@ -27,4 +27,5 @@ function overwrite_large_image(small_image, small_title){
     
     large_image.getAttribute("src") = "images/medium/" + small_image;
     large_image.getAttribute("title") = small_title;
+    figure_caption.innerHTML = small_title;
 }//overwrite_large_image
