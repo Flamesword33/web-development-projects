@@ -26,4 +26,5 @@ function overwrite_large_image(small_image, small_title){
     var figure_caption = document.querySelectorAll("#featured>figcaption");
     
     large_image.getAttribute("src") = "images/medium/" + small_image;
+    large_image.getAttribute("title") = small_title;
 }//overwrite_large_image
