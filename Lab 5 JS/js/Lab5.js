@@ -16,8 +16,12 @@ function replace_large_image(small_image, small_title){
     //which image is it?
     var title = document.querySelectorAll("#featured>img").getAttribute("title");
     if(small_title != title){
+        overwrite_large_image(small_image, small_title);
     }//if new image otherwise we're done here
 }//replace_large_image
+
+function overwrite_large_image(small_image, small_title){
     //get large image
     var large_image = document.querySelectorAll("#featured>img");
     var figure_caption = document.querySelectorAll("#featured>figcaption");
+}//overwrite_large_image
