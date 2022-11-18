@@ -34,15 +34,16 @@ function overwrite_large_image(small_image, small_title){
 
 //===event listeners===//
 window.addEventListener("load", function(event) {
-    
+
     //for thumbnails
     var thumbnails = document.querySelectorAll("#thumbnails img");
-    for(var i=0; i < thumbnails.length; i++){
         var title = thumbnails[i].getAttribute("title");
         var img_path = thumbnails[i].getAttribute("src");
         var img = img_path.split("/");
         thumbnails[i].addEventListener("click", replace_large_image(img[2], title));
-}//for
+
+    for(var i=0; i < thumbnails.length; i++){        
+    }//for
 
 
 
