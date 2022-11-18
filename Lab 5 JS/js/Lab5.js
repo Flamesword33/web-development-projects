@@ -16,3 +16,5 @@ function replace_large_image(small_image, small_title){
     //which image is it?
 }//replace_large_image
     //get large image
+    var large_image = document.querySelectorAll("#featured>img");
+    var figure_caption = document.querySelectorAll("#featured>figcaption");
