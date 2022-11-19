@@ -89,5 +89,11 @@ function thumbnails_event(thumbnails){
  * @param {tag} figure a html tag
  */
 function figure_event(figure){
+    figure.addEventListener("mouseover", function(event){    
+        make_visible(figcaption);
+    });
 
+    figure.addEventListener("mouseout", function(event){
+        make_invisible(figcaption);
+    });
 }//figure_event
