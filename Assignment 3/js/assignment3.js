@@ -27,3 +27,10 @@
  * 8. Connect Hide Highlight to step 5
 */
 
+class TagVisibility{
+    constructor(highlightNodes, hideHighlights){
+        this.highlightNodes = highlightNodes;
+        this.hideHighlights = hideHighlights;
+    }//constructor
+}//TagVisibility
+
