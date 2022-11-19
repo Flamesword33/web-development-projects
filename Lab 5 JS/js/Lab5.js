@@ -90,6 +90,7 @@ function thumbnails_event(thumbnails){
  */
 function figure_event(figure){
     var figcaption = document.querySelector("#featured figcaption");
+    figcaption.style.transition = "1s";
     
     figure.addEventListener("mouseover", function(event){    
         make_visible(figcaption);
