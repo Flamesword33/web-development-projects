@@ -34,3 +34,8 @@ class TagVisibility{
     }//constructor
 }//TagVisibility
 
+
+//===event listeners===//
+window.addEventListener("load", function() {
+    //eventName(document.querySelectorAll("where"));
+});//window.addEventListener
