@@ -86,7 +86,7 @@ function thumbnails_event(thumbnails){
 
 /**
  * 
- * @param {list} figure a list of html elements
+ * @param {tag} figure a html tag
  */
 function figure_event(figure){
 
