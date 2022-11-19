@@ -89,6 +89,8 @@ function thumbnails_event(thumbnails){
  * @param {tag} figure a html tag
  */
 function figure_event(figure){
+    var figcaption = document.querySelector("#featured figcaption");
+    
     figure.addEventListener("mouseover", function(event){    
         make_visible(figcaption);
     });
