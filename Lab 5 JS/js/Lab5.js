@@ -44,6 +44,20 @@ function overwrite_large_image(small_image, small_title){
     figure_caption.innerHTML = small_title;
 }//overwrite_large_image
 
+/**
+ * @param {tag} html_element 
+ */
+function make_visible(html_element){
+    html_element.style.opacity = '80%';
+}
+
+/**
+ * @param {tag} html_element 
+ */
+ function make_invisible(html_element){
+    html_element.style.opacity = '0%';
+}
+
 
 //===event listeners===//
 window.addEventListener("load", function() {
