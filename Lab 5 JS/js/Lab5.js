@@ -64,7 +64,7 @@ window.addEventListener("load", function() {
 
     thumbnails_event(document.querySelectorAll("#thumbnails img"));
 
-    figure_event(document.getElementById("featured"));
+    figure_event(document.querySelector("#featured img"));
 
 });//window.addEventListener
 
