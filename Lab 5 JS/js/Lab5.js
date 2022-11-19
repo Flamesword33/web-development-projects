@@ -1,6 +1,7 @@
 /**Lab5.js 
  * by Nathan Pelletier
  * started November 17, 2022
+ * finished November 18, 2022
  * 
  * This project has 2 goals:
  *   1. Add a click event handler to each of the small images 
