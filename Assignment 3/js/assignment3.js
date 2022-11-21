@@ -28,9 +28,9 @@
 */
 
 class TagVisibility{
-    constructor(highlightNodes, hideHighlights){
-        this.highlightNodes = highlightNodes;
-        this.hideHighlights = hideHighlights;
+    constructor(highlight, hide){
+        this.highlight = highlight;
+        this.hide = hide;
     }//constructor
 }//TagVisibility
 
