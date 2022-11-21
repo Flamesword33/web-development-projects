@@ -28,10 +28,33 @@
 */
 
 class TagVisibility{
+    /**
+     * @param {tag} highlight 
+     * @param {tag} hide 
+     */
     constructor(highlight, hide){
         this.highlight = highlight;
         this.hide = hide;
     }//constructor
+
+    /**
+     * Looks for elements throughout document where nodeType == 1
+     * Sends list into ___ 
+     */
+    lookForElements(self){}
+
+    /**
+     * Adds a span to the children of all elements in list 
+     * @param {list} elements 
+     */
+    addSpanToAll(elements){}
+
+    /**
+     * Adds a span element to the child of element
+     * @param {tag} element 
+     */
+    addSpan(element){}
+
 }//TagVisibility
 
 
