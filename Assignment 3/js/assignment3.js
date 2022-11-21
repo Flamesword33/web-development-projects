@@ -38,4 +38,15 @@ class TagVisibility{
 //===event listeners===//
 window.addEventListener("load", function() {
     //eventName(document.querySelectorAll("where"));
+    var visibility = new TagVisibility(
+        document.getElementById("highlight"), 
+        document.getElementById("hide"))
+
+    highlightNodesEvent(visibility);
+    hideHighlightsEvent(visibility);
+
 });//window.addEventListener
+
+function highlightNodesEvent(visibility){}
+
+function hideHighlightsEvent(visibility){}
