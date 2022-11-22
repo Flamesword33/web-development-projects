@@ -85,28 +85,47 @@ window.addEventListener("load", function() {
 
 });//window.addEventListener
 
+/**
+ * @docstring takes an object and starts an event when highlight button is pressed
+ * event should cause all elements on screen to display their tags in a child span tag
+ * event will also toggle the visiblity of the highlight and hide buttons 
+ * @param {object} visibility 
+ */
 function highlightNodesEvent(visibility){
     const highlight = document.getElementById("highlight");
     highlight.addEventListener("click", function(event){
         visibility.highlight();
         getHtmlDetails(visibility);
     });
-}
+}//highlightNodesEvent
 
+/**
+ * @docstring takes an object and starts an event when hide button is pressed
+ * event should cause all span elements with class hoverNode to be removed
+ * event will also toggle the visiblity of the hide and highlight buttons 
+ * @param {object} visibility 
+ */
 function hideHighlightsEvent(visibility){
     const hide = document.getElementById("hide");
     hide.addEventListener("click", function(event){
         visibility.hide();
+    //this will hide the hide button on first page load
     });
-}
+}//hideHighlightsEvent
 
 //This needs to be re-run each time highlightNodesEvent is run
+/**
+ * @docstring Takes object and creates event for all memebers of class hoverNode.
+ * Event should cause an on screen alert when a hoverNode is clicked.
+ * This will display the parent nodes: tag, id, class, ect...
+ * @param {object} visibility 
+ */
 function getHtmlDetails(visibility){
     var nodes = document.getElementsByClassName("hoverNode");
     for(var i = 0; i < nodes.length; i++){
         nodes[i].addEventListener("click", function(event){
             visibility.htmlDetails(event.target);
         });
-        
-    }
-}
+    }//for each node
+}//getHtmlDetails
+
