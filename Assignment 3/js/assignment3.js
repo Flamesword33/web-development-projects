@@ -130,3 +130,18 @@ function getHtmlDetails(visibility){
     }//for each node
 }//getHtmlDetails
 
+/** In a future project where I can touch css, these 2 functions would be 1 
+ * called toggle buttons.
+ *  
+ * Its code would be:
+ * visibility.highlight.classList.toggle("visible");
+ * visibility.hide.classList.toggle("visible");
+ * 
+ * and in css:
+ * .visible{display:"none";}
+ */ 
+function toggleHighlight(visibility){
+}//toggleHighlight
+
+function toggleHide(visibility){
+}//toggleHide
