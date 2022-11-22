@@ -110,6 +110,7 @@ function hideHighlightsEvent(visibility){
     hide.addEventListener("click", function(event){
         visibility.hide();
     //this will hide the hide button on first page load
+    visibility.hide.style.display = "none";
     });
 }//hideHighlightsEvent
 
