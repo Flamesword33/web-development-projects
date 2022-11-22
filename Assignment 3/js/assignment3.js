@@ -25,6 +25,12 @@
  * 6. Add Event to toggle between Highlight Nodes and Hide Highlight
  * 7. Connect Highlight Nodes to step 1, 2
  * 8. Connect Hide Highlight to step 5
+ * 
+ * Had a cheeky thought:
+ *   Could load page and add span with style display:"none";
+ *     then only one set of events would need to be created and not several
+ *   Assignment says I can't but this would be a way to optimize the pages load times
+ *    and vastly simplify the code
 */
 
 class TagVisibility{
