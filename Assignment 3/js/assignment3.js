@@ -34,7 +34,7 @@ class TagVisibility{
 
     /**
      * Looks for elements throughout document where nodeType == 1
-     * Sends list into ___ 
+     * @return {list} a list of tags
      */
     lookForElements(){}//lookForElements
 
