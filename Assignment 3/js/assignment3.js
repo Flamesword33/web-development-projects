@@ -102,6 +102,7 @@ window.addEventListener("load", function() {
 function highlightNodesEvent(visibility){
     visibility.highlight.addEventListener("click", function(event){
         visibility.highlightMain();
+        toggleHighlight(visibility);
         getHtmlDetails(visibility);
     });
 }//highlightNodesEvent
@@ -117,6 +118,7 @@ function hideHighlightsEvent(visibility){
     visibility.hide.style.display = "none";
     visibility.hide.addEventListener("click", function(event){
         visibility.hideMain();
+        toggleHide(visibility);
     });
 }//hideHighlightsEvent
 
