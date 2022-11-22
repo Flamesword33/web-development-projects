@@ -100,9 +100,8 @@ window.addEventListener("load", function() {
  * @param {object} visibility 
  */
 function highlightNodesEvent(visibility){
-    const highlight = document.getElementById("highlight");
-    highlight.addEventListener("click", function(event){
-        visibility.highlight();
+    visibility.highlight.addEventListener("click", function(event){
+        visibility.highlightMain();
         getHtmlDetails(visibility);
     });
 }//highlightNodesEvent
@@ -114,11 +113,10 @@ function highlightNodesEvent(visibility){
  * @param {object} visibility 
  */
 function hideHighlightsEvent(visibility){
-    const hide = document.getElementById("hide");
-    hide.addEventListener("click", function(event){
-        visibility.hide();
     //this will hide the hide button on first page load
     visibility.hide.style.display = "none";
+    visibility.hide.addEventListener("click", function(event){
+        visibility.hideMain();
     });
 }//hideHighlightsEvent
 
