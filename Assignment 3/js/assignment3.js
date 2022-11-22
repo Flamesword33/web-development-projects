@@ -101,7 +101,7 @@ function hideHighlightsEvent(visibility){
 
 //This needs to be re-run each time highlightNodesEvent is run
 function getHtmlDetails(visibility){
-    const nodes = document.getElementsByClassName("hoverNode");
+    var nodes = document.getElementsByClassName("hoverNode");
     for(var i = 0; i < nodes.length; i++){
         nodes[i].addEventListener("click", function(event){
             visibility.htmlDetails(event.target);
