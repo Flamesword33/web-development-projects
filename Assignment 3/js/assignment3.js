@@ -74,9 +74,7 @@ class TagVisibility{
 //===event listeners===//
 window.addEventListener("load", function() {
     //eventName(document.querySelectorAll("where"));
-    var visibility = new TagVisibility(
-        document.getElementById("highlight"), 
-        document.getElementById("hide"))
+    var visibility = new TagVisibility();
 
     highlightNodesEvent(visibility);
     hideHighlightsEvent(visibility);
