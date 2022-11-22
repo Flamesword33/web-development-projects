@@ -42,7 +42,9 @@ class TagVisibility{
      * Adds a span as the children of all elements in list 
      * @param {list} elements a list of tags
      */
-    addSpanToAll(elements){}
+    addSpanToAll(elements){
+        elements.forEach(this.addSpan);
+    }//addSpanToAll
 
     /**
      * Adds a span element as the child of element
