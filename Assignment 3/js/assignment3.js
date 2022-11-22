@@ -30,6 +30,8 @@
 class TagVisibility{
     // ANYTHING TO DO WITH BUTTON HIGHLIGHT //
     highlight(){
+        var elementList = this.lookForElements();
+        this.addSpanToAll(elementList);
     }//highlight
 
     /**
