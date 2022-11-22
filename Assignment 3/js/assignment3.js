@@ -28,6 +28,12 @@
 */
 
 class TagVisibility{
+    constructor(highlight, hide){
+        this.highlight = highlight;
+        this.hide = hide;
+    }//constructor
+
+
     // ANYTHING TO DO WITH BUTTON HIGHLIGHT //
     highlight(){
         var elementList = this.lookForElements();
@@ -76,8 +82,10 @@ class TagVisibility{
 
 //===event listeners===//
 window.addEventListener("load", function() {
-    //eventName(document.querySelectorAll("where"));
-    var visibility = new TagVisibility();
+    var visibility = new TagVisibility(
+        document.getElementById("highlight"),
+        document.getElementById("hide")
+    );
 
     highlightNodesEvent(visibility);
     hideHighlightsEvent(visibility);
