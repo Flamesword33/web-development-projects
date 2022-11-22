@@ -57,6 +57,7 @@ class TagVisibility{
         const spanElement = document.createElement("span");
         //THIS LINE NEEDS TO FIND WHAT TAG THE PARENT IS AND MAKE TEXT OUT OF IT
         const textNode = document.createTextNode(element.tag);
+        // add class = "hoverNode" here 
 
         spanElement.appendChild(textNode);
         element.appendChild(spanElement);
@@ -98,6 +99,7 @@ function hideHighlightsEvent(visibility){
     });
 }
 
+//This needs to be re-run each time highlightNodesEvent is run
 function getHtmlDetails(visibility){
     const nodes = document.getElementsByClassName("hoverNode");
     for(var i = 0; i < nodes.length; i++){
