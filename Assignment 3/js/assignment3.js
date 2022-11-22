@@ -35,7 +35,7 @@ class TagVisibility{
 
 
     // ANYTHING TO DO WITH BUTTON HIGHLIGHT //
-    highlight(){
+    highlightMain(){
         var elementList = this.lookForElements();
         this.addSpanToAll(elementList);
     }//highlight
@@ -71,11 +71,11 @@ class TagVisibility{
 
 
     // ANYTHING TO DO WITH HIDE BUTTON //
-    hide(){}//hide
+    hideMain(){}//hide
 
 
     // ANYTHING TO DO WITH ALERT //
-    htmlDetails(element){}//htmlDetails
+    htmlDetailsMain(element){}//htmlDetails
 
 }//TagVisibility
 
