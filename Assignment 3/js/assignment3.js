@@ -149,7 +149,11 @@ function getHtmlDetails(visibility){
  * .visible{display:"none";}
  */ 
 function toggleHighlight(visibility){
+    visibility.highlight.style.display = "none";
+    visibility.hide.style.display = "block";
 }//toggleHighlight
 
 function toggleHide(visibility){
+    visibility.highlight.style.display = "block";
+    visibility.hide.style.display = "none";
 }//toggleHide
