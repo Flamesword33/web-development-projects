@@ -83,6 +83,17 @@ window.addEventListener("load", function() {
 
 });//window.addEventListener
 
-function highlightNodesEvent(visibility){}
+function highlightNodesEvent(visibility){
+    const highlight = document.getElementById("highlight");
+    highlight.addEventListener("click", function(event){
+        visibility.highlight();
+    });
+}
 
-function hideHighlightsEvent(visibility){}
+function hideHighlightsEvent(visibility){
+    const hide = document.getElementById("hide");
+    hide.addEventListener("click", function(event){
+        visibility.hide();
+    });
+}
+
