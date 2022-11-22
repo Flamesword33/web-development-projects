@@ -28,6 +28,9 @@
 */
 
 class TagVisibility{
+    // ANYTHING TO DO WITH BUTTON HIGHLIGHT //
+    highlight(){
+    }//highlight
 
     /**
      * Looks for elements throughout document where nodeType == 1
@@ -46,6 +49,10 @@ class TagVisibility{
      * @param {tag} element 
      */
     addSpan(element){}
+    // ANYTHING TO DO WITH HIDE BUTTON //
+    hide(){}//hide
+    // ANYTHING TO DO WITH ALERT //
+    htmlDetails(element){}//htmlDetails
 
 }//TagVisibility
 
