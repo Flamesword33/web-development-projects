@@ -80,6 +80,7 @@ window.addEventListener("load", function() {
 
     highlightNodesEvent(visibility);
     hideHighlightsEvent(visibility);
+    getHtmlDetails(visibility);
 
 });//window.addEventListener
 
@@ -97,3 +98,9 @@ function hideHighlightsEvent(visibility){
     });
 }
 
+function getHtmlDetails(visibility){
+    const nodes = document.getElementsByClassName("hoverNode");
+        nodes[i].addEventListener("click", function(event){
+            visibility.htmlDetails(event.target);
+        });
+}
