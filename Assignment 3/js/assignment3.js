@@ -89,6 +89,7 @@ function highlightNodesEvent(visibility){
     const highlight = document.getElementById("highlight");
     highlight.addEventListener("click", function(event){
         visibility.highlight();
+        getHtmlDetails(visibility);
     });
 }
 
