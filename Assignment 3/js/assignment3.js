@@ -36,7 +36,7 @@ class TagVisibility{
      * Looks for elements throughout document where nodeType == 1
      * Sends list into ___ 
      */
-    lookForElements(self){}
+    lookForElements(){}//lookForElements
 
     /**
      * Adds a span to the children of all elements in list 
