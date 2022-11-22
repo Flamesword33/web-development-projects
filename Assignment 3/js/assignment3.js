@@ -51,9 +51,15 @@ class TagVisibility{
      * each span should have class = "hoverNode"
      * @param {tag} element 
      */
-    addSpan(element){}
+    addSpan(element){
+        element.appendChild(spanElement);
+    }//addSpan
+
+
     // ANYTHING TO DO WITH HIDE BUTTON //
     hide(){}//hide
+
+
     // ANYTHING TO DO WITH ALERT //
     htmlDetails(element){}//htmlDetails
 
