@@ -52,6 +52,11 @@ class TagVisibility{
      * @param {tag} element 
      */
     addSpan(element){
+        const spanElement = document.createElement("span");
+        //THIS LINE NEEDS TO FIND WHAT TAG THE PARENT IS AND MAKE TEXT OUT OF IT
+        const textNode = document.createTextNode(element.tag);
+
+        spanElement.appendChild(textNode);
         element.appendChild(spanElement);
     }//addSpan
 
