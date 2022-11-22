@@ -39,13 +39,14 @@ class TagVisibility{
     lookForElements(){}//lookForElements
 
     /**
-     * Adds a span to the children of all elements in list 
-     * @param {list} elements 
+     * Adds a span as the children of all elements in list 
+     * @param {list} elements a list of tags
      */
     addSpanToAll(elements){}
 
     /**
-     * Adds a span element to the child of element
+     * Adds a span element as the child of element
+     * each span should have class = "hoverNode"
      * @param {tag} element 
      */
     addSpan(element){}
