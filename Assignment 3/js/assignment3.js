@@ -28,14 +28,6 @@
 */
 
 class TagVisibility{
-    /**
-     * @param {tag} highlight 
-     * @param {tag} hide 
-     */
-    constructor(highlight, hide){
-        this.highlight = highlight;
-        this.hide = hide;
-    }//constructor
 
     /**
      * Looks for elements throughout document where nodeType == 1
