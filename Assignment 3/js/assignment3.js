@@ -66,6 +66,9 @@ class TagVisibility{
         var elementList = [body];
         const children = body.childNodes;
 
+        for(var i = 0; i < children.length; i++){
+        }//for all children of body
+
     }//lookForElements
      */
 
