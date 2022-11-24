@@ -34,6 +34,11 @@
 */
 
 class TagVisibility{
+
+    /**
+     * @param {tag} highlight 
+     * @param {tag} hide 
+     */
     constructor(highlight, hide){
         this.highlight = highlight;
         this.hide = hide;
@@ -43,14 +48,18 @@ class TagVisibility{
     // ANYTHING TO DO WITH BUTTON HIGHLIGHT //
     highlightMain(){
         var elementList = this.lookForElements();
+        //console.log(elementList);
         this.addSpanToAll(elementList);
     }//highlight
 
     /**
-     * Looks for elements throughout document where nodeType == 1
-     * @return {list} a list of tags
+     * @docstring Looks for elements throughout document where nodeType == 1.
+     * Uses depth first search.
+     * @return {list} a list of elements
      */
-    lookForElements(){}//lookForElements
+    lookForElements(){
+    }//lookForElements
+     */
 
     /**
      * Adds a span as the children of all elements in list 
@@ -63,7 +72,7 @@ class TagVisibility{
     /**
      * Adds a span element as the child of element
      * each span should have class = "hoverNode"
-     * @param {tag} element 
+     * @param {element} parent 
      */
     addSpan(element){
         const spanElement = document.createElement("span");
