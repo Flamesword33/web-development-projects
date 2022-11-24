@@ -68,11 +68,14 @@ class TagVisibility{
 
         for(var i = 0; i < children.length; i++){
             if(children[i].nodeType == 1){
+                elementList = this.lookForChildren(children[i], elementList);
             }//if children are elements
         }//for all children of body
 
     }//lookForElements
      */
+    lookForChildren(parent, elementList){
+    }//lookForChildren
 
     /**
      * Adds a span as the children of all elements in list 
