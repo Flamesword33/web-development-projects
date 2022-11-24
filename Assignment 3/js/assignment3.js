@@ -76,6 +76,16 @@ class TagVisibility{
     }//lookForElements
      */
     lookForChildren(parent, elementList){
+        elementList.push(parent);
+        const children = parent.childNodes;
+
+
+        for(var i = 0; i < children.length; i++){
+            if(children[i].nodeType == 1){
+                elementList = this.lookForChildren(children[i], elementList);
+            }
+        }//for all children of parent
+        return elementList;
     }//lookForChildren
 
     /**
