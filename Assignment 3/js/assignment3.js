@@ -118,6 +118,7 @@ class TagVisibility{
         //THIS LINE NEEDS TO FIND WHAT TAG THE PARENT IS AND MAKE TEXT OUT OF IT
         // add class = "hoverNode" here 
         const textNode = document.createTextNode(parent.tagName);
+        spanElement.className = "hoverNode";
 
         spanElement.appendChild(textNode);
         parent.appendChild(spanElement);
