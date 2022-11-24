@@ -74,6 +74,14 @@ class TagVisibility{
 
         return elementList;
     }//lookForElements
+
+    /**
+     * @docstring Recordes the parent element to elementList.
+     * Finds all child elements of parent element.
+     * Recursivly calls its self for each child found.
+     * @param {element} parent 
+     * @param {list} elementList 
+     * @return {list} a list of elements
      */
     lookForChildren(parent, elementList){
         elementList.push(parent);
