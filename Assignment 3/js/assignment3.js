@@ -58,6 +58,10 @@ class TagVisibility{
      * @return {list} a list of elements
      */
     lookForElements(){
+        /*found on https://stackoverflow.com/questions/16518015/select-all-elements-on-a-page
+          var allElements = document.getElementsByTagName("*"); //not defined, worth a shot though
+          ... x.children returns only nodeType = 1 nodes
+          screw it, no more shortcuts here */
     }//lookForElements
      */
 
