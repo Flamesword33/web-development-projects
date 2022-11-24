@@ -144,7 +144,6 @@ window.addEventListener("load", function() {
 
     highlightNodesEvent(visibility);
     hideHighlightsEvent(visibility);
-    getHtmlDetails(visibility);
 
 });//window.addEventListener
 
