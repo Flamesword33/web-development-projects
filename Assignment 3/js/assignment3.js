@@ -72,6 +72,7 @@ class TagVisibility{
             }//if children are elements
         }//for all children of body
 
+        return elementList;
     }//lookForElements
      */
     lookForChildren(parent, elementList){
