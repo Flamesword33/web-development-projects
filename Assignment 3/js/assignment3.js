@@ -62,6 +62,10 @@ class TagVisibility{
           var allElements = document.getElementsByTagName("*"); //not defined, worth a shot though
           ... x.children returns only nodeType = 1 nodes
           screw it, no more shortcuts here */
+        const body = document.querySelector("body");
+        var elementList = [body];
+        const children = body.childNodes;
+
     }//lookForElements
      */
 
