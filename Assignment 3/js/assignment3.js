@@ -79,6 +79,10 @@ class TagVisibility{
         elementList.push(parent);
         const children = parent.childNodes;
 
+        //base case
+        if (children.length == 0){
+            return elementList;
+        }//if no children
 
         for(var i = 0; i < children.length; i++){
             if(children[i].nodeType == 1){
