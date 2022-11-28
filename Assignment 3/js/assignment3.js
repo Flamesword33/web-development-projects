@@ -126,7 +126,12 @@ class TagVisibility{
 
 
     // ANYTHING TO DO WITH HIDE BUTTON //
-    hideMain(){}//hide
+    hideMain(){
+        var hoverNodes = document.getElementsByClassName("hoverNode");
+        this.removeNodes(hoverNodes);
+    }//hide
+    removeNodes(nodes){
+    }//removeNodes
 
 
     // ANYTHING TO DO WITH ALERT //
