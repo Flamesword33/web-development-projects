@@ -140,7 +140,10 @@ class TagVisibility{
 
 
     // ANYTHING TO DO WITH ALERT //
-    htmlDetailsMain(element){}//htmlDetails
+    htmlDetailsMain(element){
+        const parent = element.parentElement;
+        this.getDetailsFromParent(parent);
+    }//htmlDetails
 
 }//TagVisibility
 
