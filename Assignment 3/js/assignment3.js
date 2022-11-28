@@ -131,6 +131,9 @@ class TagVisibility{
         this.removeNodes(hoverNodes);
     }//hide
     removeNodes(nodes){
+        for(var i = 0; i < numNodes; i++){
+            nodes[0].remove();
+        }//for each hoverNode
     }//removeNodes
 
 
