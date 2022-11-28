@@ -152,6 +152,10 @@ class TagVisibility{
         const tagName = parent.tagName;
         const className = parent.className;
         const innerHtml = parent.innerHTML;
+        alert(" Id: " + id + 
+            "\n Tag name: " + tagName + 
+            "\n Class name: " + className +
+            "\n Inner HTML: " + innerHtml);
     }//getDetailsFromParent
 }//TagVisibility
 
