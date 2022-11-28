@@ -212,7 +212,7 @@ function getHtmlDetails(visibility){
     var nodes = document.getElementsByClassName("hoverNode");
     for(var i = 0; i < nodes.length; i++){
         nodes[i].addEventListener("click", function(event){
-            visibility.htmlDetails(event.target);
+            visibility.htmlDetailsMain(event.target);
         });
     }//for each node
 }//getHtmlDetails
