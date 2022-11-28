@@ -1,6 +1,7 @@
 /** assignment3.js 
  * by Nathan Pelletier
  * Started: November 19, 2022
+ * Finished: November 24, 2022
  * 
  * This program writes a helper script that visually identifies the tags on a given web page
  *   The helper script can be toggled on and off by this program
@@ -46,6 +47,11 @@ class TagVisibility{
 
 
     // ANYTHING TO DO WITH BUTTON HIGHLIGHT //
+    /**
+     * @docstring highlightMain finds all elements on a page with lookForElements. This 
+     * function then sends said elements off to addSpanToAll to add a child span to each
+     * element.
+     */
     highlightMain(){
         var elementList = this.lookForElements();
         //console.log(elementList);
@@ -53,9 +59,9 @@ class TagVisibility{
     }//highlight
 
     /**
-     * @docstring Looks for elements throughout document where nodeType == 1.
-     * Uses depth first search.
-     * @return {list} a list of elements
+     * @docstring lookForElements finds elements throughout document where nodeType == 1.
+     * It uses depth first search.
+     * @return {list} All elements of a given html page.
      */
     lookForElements(){
         /*found on https://stackoverflow.com/questions/16518015/select-all-elements-on-a-page
@@ -76,12 +82,12 @@ class TagVisibility{
     }//lookForElements
 
     /**
-     * @docstring Recordes the parent element to elementList.
+     * @docstring lookForChildrn recordes the parent element to elementList.
      * Finds all child elements of parent element.
      * Recursivly calls its self for each child found.
-     * @param {element} parent 
+     * @param {element} parent parent element of target child
      * @param {list} elementList 
-     * @return {list} a list of elements
+     * @return {list} a list of all elements found so far
      */
     lookForChildren(parent, elementList){
         elementList.push(parent);
@@ -101,16 +107,18 @@ class TagVisibility{
     }//lookForChildren
 
     /**
-     * Adds a span as the children of all elements in list 
-     * @param {list} elements a list of tags
+     * @docstring addSpanToAll loops through a list of elements and sends each element
+     * to addSpan to give it a child span element. 
+     * @param {list} elements a list of elements 
      */
     addSpanToAll(elements){
         elements.forEach(this.addSpan);
     }//addSpanToAll
 
     /**
-     * Adds a span element as the child of element
-     * each span should have class = "hoverNode"
+     * @docstring addSpan adds a span element as the child of element.
+     * Each span is marked with class = "hoverNode".
+     * Each spans innerHTML is the tagName of its parent element.
      * @param {element} parent 
      */
     addSpan(parent){
@@ -126,10 +134,19 @@ class TagVisibility{
 
 
     // ANYTHING TO DO WITH HIDE BUTTON //
+    /**
+     * @docstring hideMain finds all elements with class = hoverNode and passes them
+     * to removeNodes.
+     */
     hideMain(){
         var hoverNodes = document.getElementsByClassName("hoverNode");
         this.removeNodes(hoverNodes);
     }//hide
+
+    /**
+     * @docstring Loops through each node given in a list and removes them.
+     * @param {list} nodes a list of nodes for removal
+     */
     removeNodes(nodes){
         //needed as remove reduces the length of hoverNodes each pass
         var numNodes = nodes.length;
@@ -140,11 +157,22 @@ class TagVisibility{
 
 
     // ANYTHING TO DO WITH ALERT //
+    /**
+     * @docstring htmlDetailsMain takes an element, finds its parent and passes it off to
+     * getDetailsFromParent. This function should result in alerting the user to the details
+     * gained from the parent element.
+     * @param {element} element 
+     */
     htmlDetailsMain(element){
         const parent = element.parentElement;
         this.getDetailsFromParent(parent);
     }//htmlDetails
 
+    /**
+     * @docstring getDetailsFromParent grabs the id, tagName, className and innerHTML
+     * from a page element and displays it as an alert.
+     * @param {element} parent 
+     */
     getDetailsFromParent(parent){
         //saving these to help me remember key details, rather than search for them
         //each time. Yes I know this is a waste of memory. Sped up debugging though :P
@@ -173,9 +201,13 @@ window.addEventListener("load", function() {
 });//window.addEventListener
 
 /**
- * @docstring takes an object and starts an event when highlight button is pressed
- * event should cause all elements on screen to display their tags in a child span tag
- * event will also toggle the visiblity of the highlight and hide buttons 
+ * @docstring highlightNodesEvent takes an object and starts an event when the highlight button
+ * is pressed. The event should cause all elements on screen to display their tags
+ * in a child span tags innerHTML.The event will also toggle the visiblity of the 
+ * highlight and hide buttons.
+ * 
+ * This function also uses getHtmlDetails to create an onClick event for each of the class = hoverNode
+ * elements. This event will get the details of a parent element and alert the user. 
  * @param {object} visibility 
  */
 function highlightNodesEvent(visibility){
@@ -187,9 +219,9 @@ function highlightNodesEvent(visibility){
 }//highlightNodesEvent
 
 /**
- * @docstring takes an object and starts an event when hide button is pressed
- * event should cause all span elements with class hoverNode to be removed
- * event will also toggle the visiblity of the hide and highlight buttons 
+ * @docstring hideHighlightsEvent takes an object and starts an event when the hide 
+ * button is pressed. The event should cause all elements with class hoverNode to be removed.
+ * The event will also toggle the visiblity of the hide and highlight buttons.
  * @param {object} visibility 
  */
 function hideHighlightsEvent(visibility){
@@ -203,8 +235,8 @@ function hideHighlightsEvent(visibility){
 
 //This needs to be re-run each time highlightNodesEvent is run
 /**
- * @docstring Takes object and creates event for all memebers of class hoverNode.
- * Event should cause an on screen alert when a hoverNode is clicked.
+ * @docstring getHtmlDetails takes an object and creates events for all memebers 
+ * of class hoverNode. The events should cause an on screen alert when a hoverNode is clicked.
  * This will display the parent nodes: tag, id, class, ect...
  * @param {object} visibility 
  */
@@ -227,11 +259,22 @@ function getHtmlDetails(visibility){
  * and in css:
  * .visible{display:"none";}
  */ 
+
+/**
+ * @docstring toggleHighlight uses an object to get the highlight and hide buttons.
+ * With said buttons it toggles their visibility. Function toggleHide reverses the toggle.
+ * @param {object} visibility 
+ */
 function toggleHighlight(visibility){
     visibility.highlight.style.display = "none";
     visibility.hide.style.display = "block";
 }//toggleHighlight
 
+/**
+ * @docstring toggleHide uses an object to get the highlight and hide buttons.
+ * With said buttons it toggles their visibility. Function toggleHighlight reverses the toggle.
+ * @param {object} visibility 
+ */
 function toggleHide(visibility){
     visibility.highlight.style.display = "block";
     visibility.hide.style.display = "none";
