@@ -146,6 +146,12 @@ class TagVisibility{
     }//htmlDetails
 
     getDetailsFromParent(parent){
+        //saving these to help me remember key details, rather than search for them
+        //each time. Yes I know this is a waste of memory. Sped up debugging though :P
+        const id = parent.id;
+        const tagName = parent.tagName;
+        const className = parent.className;
+        const innerHtml = parent.innerHTML;
     }//getDetailsFromParent
 }//TagVisibility
 
