@@ -145,6 +145,8 @@ class TagVisibility{
         this.getDetailsFromParent(parent);
     }//htmlDetails
 
+    getDetailsFromParent(parent){
+    }//getDetailsFromParent
 }//TagVisibility
 
 
