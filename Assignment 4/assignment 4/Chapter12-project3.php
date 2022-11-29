@@ -58,6 +58,7 @@
               <tbody>
                                 
                 <!--My code here -->
+                <?php include 'includes/getCustomers.inc.php'; ?>
                                               
               </tbody>
             </table>
@@ -75,6 +76,7 @@
             <div class="mdl-card__supporting-text">
 
               <!--My code here -->
+              <?php include 'includes/getDetails.inc.php'; ?>
                                                                                                                                                                            
             </div>    
           </div>  <!-- / mdl-cell + mdl-card -->   
@@ -97,6 +99,7 @@
                 <tbody>
 
                   <!--My code here-->
+                  <?php include 'includes/displayOrder.inc.php'; ?>
 
                 </tbody>
               </table>
