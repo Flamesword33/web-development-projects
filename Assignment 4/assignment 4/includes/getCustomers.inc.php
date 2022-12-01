@@ -29,6 +29,9 @@ $customersList = fopen($dir . "/data/customers.txt", "r");
 while(! feof($customersList)) {
 	//get line and split on ;
 	$customer = explode(";", fgets($customersList)); 
+	if(count($customer) == 0){
+		continue;
+	}//if empty line in customer
 	$customerId = $customer[0];
 	$lastName = $customer[1];
 	$firstName = $customer[2];
