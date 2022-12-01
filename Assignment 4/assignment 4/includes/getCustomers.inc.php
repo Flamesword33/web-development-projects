@@ -23,6 +23,10 @@
 /* found on https://www.gavsblog.com/blog/move-up-directory-levels-relative-to-the-current-file-in-php */
 $dir = dirname(__DIR__, 1);
 $customersList = fopen($dir . "/data/customers.txt", "r");
+
+while(! feof($customersList)) {
+}//while end of file not reached
+
 fclose($customersList);
 
 ?>
