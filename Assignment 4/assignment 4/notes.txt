@@ -10,3 +10,5 @@ This project requires us to:
 
 It looks like there will be 2 states for this project, customer = Null and customer = #
 	$_GET["customer"] will be critical
+
+	2nd field in order.txt is customer id
