@@ -40,6 +40,10 @@ while(! feof($customersList)) {
 	echo '<td>' . $university . '</td>';
 	echo '<td>' . $city . '</td>';
 	echo '<td><span class="sparkline">';
+	echo $sales[0];
+	for($x = 1; $x < count($sales); $x++){
+		echo ',' . $sales[$x];
+	}//for all sales
 	echo '</span></td>';
 	echo '</tr>';
 
