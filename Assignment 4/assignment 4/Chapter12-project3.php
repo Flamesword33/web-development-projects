@@ -119,6 +119,12 @@
 
 
 <?php
+  if (! array_key_exists("customer", $_GET)){
+    echo "<style> section div.mdl-grid.mdl-cell--5-col{opacity:0;}</style>"; 
+  } //if customer is null
+  
+
+
   /**
    * @docstring getCustomerDetails takes a customer id and
    * finds the customers: name, university, address, city and country.
