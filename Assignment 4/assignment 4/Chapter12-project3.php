@@ -117,3 +117,13 @@
 </body>
 </html>
 
+
+<?php
+  function getCustomerDetails($customer){
+  }//getCustomerDetails 
+
+
+  function getOrderDetails($customer){
+  }//getOrderDetails
+
+?>
