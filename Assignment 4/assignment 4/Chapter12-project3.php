@@ -119,11 +119,33 @@
 
 
 <?php
+  /**
+   * @docstring getCustomerDetails takes a customer id and
+   * finds the customers: name, university, address, city and country.
+   * Given those details this function then displays as a header and 
+   * following paragraph
+   * @param int $customer
+   */
   function getCustomerDetails($customer){
+    //check if $customer == null
+    //read the file for details and return
+    //display the info
   }//getCustomerDetails 
 
 
+  /**
+   * @docstring getOrderDetails takes a customer id and
+   * finds the customers orders: Cover, ISBN and title.
+   * Given these details the function then displays them in a table.
+   * @param int $customer
+   */
   function getOrderDetails($customer){
+    //check if $customer == null
+    //read order.txt into an array
+    //find entries with $array[1] == $customer
+      //if no entries find $customer name from customer.txt
+      //in this case display "No orders for" + $firstName + " " + $lastName
+    //display details as a table
   }//getOrderDetails
 
 ?>
