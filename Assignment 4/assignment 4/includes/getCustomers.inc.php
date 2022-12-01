@@ -19,3 +19,8 @@
 </tr>
 -->
 
+<?php 
+$customersList = fopen($dir . "/data/customers.txt", "r");
+fclose($customersList);
+
+?>
