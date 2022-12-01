@@ -34,6 +34,15 @@ while(! feof($customersList)) {
 	$city = $customer[6];
 	$sales = explode(",", $customer[11]);
 
+	echo '<tr>';
+	echo '<td><a href="chapter12-project3.php?customer=' . $customerId .'">';
+	echo $lastName . ' ' . $firstName . '</a></td>';
+	echo '<td>' . $university . '</td>';
+	echo '<td>' . $city . '</td>';
+	echo '<td><span class="sparkline">';
+	echo '</span></td>';
+	echo '</tr>';
+
 }//while end of file not reached
 
 fclose($customersList);
