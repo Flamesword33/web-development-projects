@@ -25,6 +25,8 @@ $dir = dirname(__DIR__, 1);
 $customersList = fopen($dir . "/data/customers.txt", "r");
 
 while(! feof($customersList)) {
+	//get line and split on ;
+	$customer = explode(";", fgets($customersList)); 
 }//while end of file not reached
 
 fclose($customersList);
