@@ -76,7 +76,8 @@
             <div class="mdl-card__supporting-text">
 
               <!--My code here -->
-              <?php include 'includes/getDetails.inc.php'; ?>
+              <?php getCustomerDetails($_GET['customer']); ?>
+              <!--My code here -->
                                                                                                                                                                            
             </div>    
           </div>  <!-- / mdl-cell + mdl-card -->   
@@ -99,7 +100,7 @@
                 <tbody>
 
                   <!--My code here-->
-                  <?php include 'includes/displayOrder.inc.php'; ?>
+                  <?php getOrderDetails($_GET['customer']); ?>
 
                 </tbody>
               </table>
