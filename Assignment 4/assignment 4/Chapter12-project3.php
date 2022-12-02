@@ -138,7 +138,7 @@
    */
   function getCustomerDetails($customerId){
 
-    $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"));
+    $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"), 0);
     if($customer == false){
       echo "<script>console.log('Error: customer not found');</script>";
       return false;
@@ -161,9 +161,11 @@
    * Summary of openFileAndGetData
    * takes a file and matches an id to a line in the file, returns said line
    * @param int $id
+   * @param array<string> $file
+   * @param int $position where data is located in file line
    * @return array<string>|bool a string of data or false if empty
    */
-  function openFileAndGetData($id, $file){
+  function openFileAndGetData($id, $file, $position){
     /* error report: failes to find customerId > 16, return value is false
     *    no error prior to id=16, only after.
     * 
@@ -172,7 +174,7 @@
     */
     for($x = 0; $x< count($file); $x++){
       $line = explode(";", $file[$x]);
-      if($line[0] == $id){
+      if($line[$position] == $id){
         return $line;
       }//if customer id found
     }//for each line of customers.txt
