@@ -137,6 +137,7 @@
    */
   function getCustomerDetails($customerId){
 
+    $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"));
     //read the file for details and return
     $lastName = $customer[1];
     $firstName = $customer[2];
@@ -146,8 +147,13 @@
     $country = $customer[8];
 
     //display the info
+    outputCustomerDetailsData($lastName, $firstName, $university, $address, $city, $country);
   }//getCustomerDetails 
 
+  function openFileAndGetData($id, $file){
+  }//openFileAndGetData
+  function outputCustomerDetailsData(
+  }//outputCustomerDetailsData
 
   /**
    * @docstring getOrderDetails takes a customer id and
