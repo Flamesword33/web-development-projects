@@ -163,6 +163,7 @@
         return $line;
       }//if customer id found
     }//for each line of customers.txt
+    return false;
   }//openFileAndGetData
   function outputCustomerDetailsData(
   }//outputCustomerDetailsData
