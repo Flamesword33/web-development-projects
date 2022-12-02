@@ -25,12 +25,19 @@ $customersList = fopen($dir . "/data/customers.txt", "r");
 while(! feof($customersList)) {
 
 	$customer = getDataFromFile($customersList, ";");
+
+	if(count($customer) > 1){
+		$customerId = $customer[0];
+		$lastName = $customer[1];
+		$firstName = $customer[2];
+		$university = $customer[4];
+		$city = $customer[6];
+		$sales = explode(",", $customer[11]);
 	
 		outputData($customerId, $lastName, $firstName, $university, $city, $sales);
+	}//if customer is not empty
 
-	if(count($customer) == 1){
-		continue;
-	}//if empty line in customer*/
+}//while end of file not reached
 
 fclose($customersList);
 
