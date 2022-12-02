@@ -138,6 +138,11 @@
   function getCustomerDetails($customerId){
 
     $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"));
+    if($customer == false){
+      echo "<script>console.log('Error: customer not found');</script>";
+      return false;
+    }//if failed to find id end early
+
     //read the file for details and return
     $lastName = $customer[1];
     $firstName = $customer[2];
