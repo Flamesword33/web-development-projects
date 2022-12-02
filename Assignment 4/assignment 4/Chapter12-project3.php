@@ -138,6 +138,13 @@
   function getCustomerDetails($customerId){
 
     //read the file for details and return
+    $lastName = $customer[1];
+    $firstName = $customer[2];
+    $university = $customer[4];
+    $address = $customer[5];
+    $city = $customer[6];
+    $country = $customer[8];
+
     //display the info
   }//getCustomerDetails 
 
