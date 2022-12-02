@@ -23,24 +23,45 @@ $dir = dirname(__DIR__, 1);
 $customersList = fopen($dir . "/data/customers.txt", "r");
 
 while(! feof($customersList)) {
-	//get line and split on ;
-	$customerLine = fgets($customersList);
-	$encoding = mb_detect_encoding($customerLine);
-	$customerLine = iconv($encoding, "UTF-8", $customerLine);
-	$customer = explode(";", $customerLine);
+
+	$customer = getDataFromFile($customersList, ";");
 	
+		outputData($customerId, $lastName, $firstName, $university, $city, $sales);
 
 	if(count($customer) == 1){
 		continue;
 	}//if empty line in customer*/
 
-	$customerId = $customer[0];
-	$lastName = $customer[1];
-	$firstName = $customer[2];
-	$university = $customer[4];
-	$city = $customer[6];
-	$sales = explode(",", $customer[11]);
+fclose($customersList);
 
+/**
+ * Summary of getDataFromFile
+ * Gets a line from $file and splits it on $split, ensures encoding in UTF-8 and returns the data in array form
+ * @param mixed $file
+ * @param string $split
+ * @return array<string> a line of data in array form from $file
+ */
+function getDataFromFile($file, $split){
+	//get line and split on ;
+	$line = fgets($file);
+	$encoding = mb_detect_encoding($line);
+	$line = iconv($encoding, "UTF-8", $line);
+	$data = explode($split, $line);
+	return $data;
+}//getDataFromFile
+
+/**
+ * Summary of outputData
+ * creates rows of data with linked names and a graph of data
+ * @param int $customerId
+ * @param string $lastName
+ * @param string $firstName
+ * @param string $university
+ * @param string $city
+ * @param array<int> $sales 
+ * @return void
+ */
+function outputData($customerId, $lastName, $firstName, $university, $city, $sales){
 	echo '<tr>';
 	echo '<td><a href="chapter12-project3.php?customer=' . $customerId .'">';
 	echo $lastName . ' ' . $firstName . '</a></td>';
@@ -53,9 +74,6 @@ while(! feof($customersList)) {
 	}//for all sales
 	echo '</span></td>';
 	echo '</tr>';
-
-}//while end of file not reached
-
-fclose($customersList);
+}//outputData
 
 ?>
