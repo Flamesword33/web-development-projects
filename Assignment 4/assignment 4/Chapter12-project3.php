@@ -157,6 +157,12 @@
   }//getCustomerDetails 
 
   function openFileAndGetData($id, $file){
+    for($x = 0; $x< count($file); $x++){
+      $line = explode(";", $file[$x]);
+      if($line[0] == $id){
+        return $line;
+      }//if customer id found
+    }//for each line of customers.txt
   }//openFileAndGetData
   function outputCustomerDetailsData(
   }//outputCustomerDetailsData
