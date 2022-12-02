@@ -135,7 +135,8 @@
    * following paragraph
    * @param int $customer
    */
-  function getCustomerDetails($customer){
+  function getCustomerDetails($customerId){
+
     //read the file for details and return
     //display the info
   }//getCustomerDetails 
