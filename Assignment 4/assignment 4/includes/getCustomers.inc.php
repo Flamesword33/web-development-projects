@@ -38,8 +38,11 @@ while(! feof($customersList)) {
 	$customerLine = iconv($encoding, "UTF-8", $customerLine);
 	$customer = explode(";", $customerLine);
 	
+
+	if(count($customer) == 1){
 		continue;
-	}//if empty line in customer
+	}//if empty line in customer*/
+
 	$customerId = $customer[0];
 	$lastName = $customer[1];
 	$firstName = $customer[2];
