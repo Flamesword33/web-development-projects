@@ -122,6 +122,7 @@
 
 
 <?php
+  //this code hides unnessisary boxes when customer
   if (! array_key_exists("customer", $_GET)){
     echo "<style> section div.mdl-grid.mdl-cell--5-col{opacity:0;}</style>"; 
   } //if customer is null
@@ -133,7 +134,8 @@
    * finds the customers: name, university, address, city and country.
    * Given those details this function then displays as a header and 
    * following paragraph
-   * @param int $customer
+   * @param int $customerId
+   * @return bool status of functions success
    */
   function getCustomerDetails($customerId){
 
@@ -156,6 +158,12 @@
     return true;
   }//getCustomerDetails 
 
+  /**
+   * Summary of openFileAndGetData
+   * takes a file and matches an id to a line in the file, returns said line
+   * @param int $id
+   * @return array<string>|bool a string of data or false if empty
+   */
   function openFileAndGetData($id, $file){
     for($x = 0; $x< count($file); $x++){
       $line = explode(";", $file[$x]);
@@ -165,6 +173,17 @@
     }//for each line of customers.txt
     return false;
   }//openFileAndGetData
+
+  /**
+   * Summary of outputCustomerDetailsData
+   * outputs data in the Customer Details area
+   * @param string $lastName
+   * @param string $firstName
+   * @param string $university
+   * @param string $address
+   * @param string $city
+   * @param string $country
+   */
   function outputCustomerDetailsData(
     $lastName, 
     $firstName, 
