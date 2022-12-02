@@ -166,6 +166,16 @@
     return false;
   }//openFileAndGetData
   function outputCustomerDetailsData(
+    $lastName, 
+    $firstName, 
+    $university, 
+    $address, 
+    $city, 
+    $country){
+    echo "<h3>" . $lastName . " " . $firstName . "</h3>";
+    echo "<p>" . $university . "</p>";
+    echo "<p>" . $address . "</p>"; 
+    echo "<p>" . $city . " " . $country . "</p>";
   }//outputCustomerDetailsData
 
   /**
