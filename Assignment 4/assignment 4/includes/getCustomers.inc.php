@@ -4,6 +4,11 @@
 
 	Small problem: one last name contains a special character and it doesn't display-->
 
+	Debug statement in php
+		//echo "<script>console.log(" . $customer . ");</script>";
+	
+	iconv(fromencode, toencode, stingtoencode)-->
+
 <script type="text/javascript">
 	$(function() {
 		/** This code runs when everything has been loaded on the page */
@@ -28,8 +33,11 @@ $customersList = fopen($dir . "/data/customers.txt", "r");
 
 while(! feof($customersList)) {
 	//get line and split on ;
-	$customer = explode(";", fgets($customersList)); 
-	if(count($customer) == 0){
+	$customerLine = fgets($customersList);
+	$encoding = mb_detect_encoding($customerLine);
+	$customerLine = iconv($encoding, "UTF-8", $customerLine);
+	$customer = explode(";", $customerLine);
+	
 		continue;
 	}//if empty line in customer
 	$customerId = $customer[0];
