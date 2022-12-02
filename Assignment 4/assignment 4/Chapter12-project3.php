@@ -153,6 +153,7 @@
 
     //display the info
     outputCustomerDetailsData($lastName, $firstName, $university, $address, $city, $country);
+    return true;
   }//getCustomerDetails 
 
   function openFileAndGetData($id, $file){
