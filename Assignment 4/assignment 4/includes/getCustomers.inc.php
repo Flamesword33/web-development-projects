@@ -2,7 +2,6 @@
 		Their name, University, City and Sales
 	It then displays these details in table form
 
-	Small problem: one last name contains a special character and it doesn't display-->
 
 	Debug statement in php
 		//echo "<script>console.log(" . $customer . ");</script>";
