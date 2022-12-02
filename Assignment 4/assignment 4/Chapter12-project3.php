@@ -76,7 +76,8 @@
             <div class="mdl-card__supporting-text">
 
               <!--My code here -->
-              <?php getCustomerDetails($_GET['customer']); ?>
+              <?php if(array_key_exists("customer",$_GET)){
+                getCustomerDetails($_GET['customer']);} ?>
               <!--My code here -->
                                                                                                                                                                            
             </div>    
@@ -100,7 +101,9 @@
                 <tbody>
 
                   <!--My code here-->
-                  <?php getOrderDetails($_GET['customer']); ?>
+                  <?php if(array_key_exists("customer",$_GET)){
+                    getOrderDetails($_GET['customer']);} ?>
+                  <!--My code here -->
 
                 </tbody>
               </table>
@@ -133,7 +136,6 @@
    * @param int $customer
    */
   function getCustomerDetails($customer){
-    //check if $customer == null
     //read the file for details and return
     //display the info
   }//getCustomerDetails 
@@ -146,7 +148,6 @@
    * @param int $customer
    */
   function getOrderDetails($customer){
-    //check if $customer == null
     //read order.txt into an array
     //find entries with $array[1] == $customer
       //if no entries find $customer name from customer.txt
