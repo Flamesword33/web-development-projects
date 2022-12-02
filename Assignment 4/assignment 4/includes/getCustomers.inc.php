@@ -8,14 +8,6 @@
 	
 	iconv(fromencode, toencode, stingtoencode)-->
 
-<script type="text/javascript">
-	$(function() {
-		/** This code runs when everything has been loaded on the page */
-		/* Inline sparklines take their values from the contents of the tag */
-		$('.sparkline').sparkline('html', {type: 'bar', barColor: '#6200EA'}); 
-	});
-</script>  
-
 <!-- TEMPLATE FOR ROWS
 <tr>
 	<td><a href="chapter12-project3.php?customer=2">Leonie Kohler</a></td>
