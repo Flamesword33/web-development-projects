@@ -128,7 +128,6 @@
   } //if customer is null
   
 
-
   /**
    * @docstring getCustomerDetails takes a customer id and
    * finds the customers: name, university, address, city and country.
@@ -165,6 +164,12 @@
    * @return array<string>|bool a string of data or false if empty
    */
   function openFileAndGetData($id, $file){
+    /* error report: failes to find customerId > 16, return value is false
+    *    no error prior to id=16, only after.
+    * 
+    * figured it out: im compairing the first letter to customerId, so when I hit 10 my error happens
+    * need to explode in this function instead of outside it
+    */
     for($x = 0; $x< count($file); $x++){
       $line = explode(";", $file[$x]);
       if($line[0] == $id){
