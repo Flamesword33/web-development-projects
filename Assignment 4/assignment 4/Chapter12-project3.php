@@ -108,6 +108,7 @@
     elseif(count($data) == 0){
       $lastName = $customer[1];
       $firstName = $customer[2];
+      echo "<style> table.mdl-data-table.mdl-shadow--2dp thead{display:none;}</style>";
       echo "<p>No orders for " . $lastName . " " . $firstName . "</p>";
       return true;
     }//if data is empty
