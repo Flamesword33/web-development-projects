@@ -138,7 +138,7 @@
    */
   function getCustomerDetails($customerId){
 
-    $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"), 0);
+    $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"), 0, ";");
     if($customer == false){
       echo "<script>console.log('Error: customer not found');</script>";
       return false;
@@ -165,7 +165,7 @@
    * @param int $position where data is located in file line
    * @return array<string>|bool a string of data or false if empty
    */
-  function openFileAndGetData($id, $file, $position){
+  function openFileAndGetData($id, $file, $position, $seperator){
     /* error report: failes to find customerId > 16, return value is false
     *    no error prior to id=16, only after.
     * 
@@ -173,7 +173,7 @@
     * need to explode in this function instead of outside it
     */
     for($x = 0; $x< count($file); $x++){
-      $line = explode(";", $file[$x]);
+      $line = explode("$seperator", $file[$x]);
       if($line[$position] == $id){
         return $line;
       }//if customer id found
