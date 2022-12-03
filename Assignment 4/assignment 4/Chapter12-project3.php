@@ -216,6 +216,12 @@
   function getOrderDetails($customerId){
     $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"), 0, ";");
     $data = openFileAndGetMultiData($customerId, file(__DIR__ . "/data/orders.txt"), 1, ",");
+
+    if($customer == false){
+      echo "<script>console.log('Error: customer not found');</script>";
+      return false;
+    }//if failed to find id then end early
+
   }//getOrderDetails
 
   /**
