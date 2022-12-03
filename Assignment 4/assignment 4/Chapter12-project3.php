@@ -214,6 +214,8 @@
       //in this case display "No orders for" + $firstName + " " + $lastName
     //display details as a table
   function getOrderDetails($customerId){
+    $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"), 0, ";");
+    $data = openFileAndGetMultiData($customerId, file(__DIR__ . "/data/orders.txt"), 1, ",");
   }//getOrderDetails
 
   /**
