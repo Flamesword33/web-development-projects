@@ -205,14 +205,13 @@
   }//outputCustomerDetailsData
 
   /**
-   * @docstring getOrderDetails takes a customer id and
+   * Summary of getOrderDetails
+   * getOrderDetails takes a customer id and
    * finds the customers orders: Cover, ISBN and title.
    * Given these details the function then displays them in a table.
-   * @param int $customer
+   * @param int $customerId
+   * @return bool
    */
-      //if no entries find $customer name from customer.txt
-      //in this case display "No orders for" + $firstName + " " + $lastName
-    //display details as a table
   function getOrderDetails($customerId){
     $customer = openFileAndGetData($customerId, file(__DIR__ . "/data/customers.txt"), 0, ";");
     $data = openFileAndGetMultiData($customerId, file(__DIR__ . "/data/orders.txt"), 1, ",");
