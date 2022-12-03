@@ -222,6 +222,13 @@
       return false;
     }//if failed to find id then end early
 
+    elseif(count($data) == 0){
+      $lastName = $customer[1];
+      $firstName = $customer[2];
+      echo "<p>No orders for " . $lastName . " " . $firstName . "</p>";
+      return true;
+    }//if data is empty
+  
   }//getOrderDetails
 
   /**
