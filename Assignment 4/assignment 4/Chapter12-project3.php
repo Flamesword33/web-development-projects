@@ -211,11 +211,30 @@
    * @param int $customer
    */
   function getOrderDetails($customer){
-    //read order.txt into an array
-    //find entries with $array[1] == $customer
       //if no entries find $customer name from customer.txt
       //in this case display "No orders for" + $firstName + " " + $lastName
     //display details as a table
   }//getOrderDetails
+
+  /**
+   * Summary of openFileAndGetMultiData
+   * takes a file and matches an id to lines in the file, returns said lines
+   * @param int $id
+   * @param array<string> $file
+   * @param int $position
+   * @return array 
+   */
+  function openFileAndGetMultiData($id, $file, $position, $seperator){
+    $counter = 0;
+    $finalData = [];
+    for($x = 0; $x< count($file); $x++){
+      $line = explode("$seperator", $file[$x]);
+      if($line[$position] == $id){
+        $finalData[$counter] = $line;
+        $counter++;
+      }//if customer id found
+    }//for each line of customers.txt
+    return $finalData;
+  }//openFileAndGetMultiData
 
 ?>
