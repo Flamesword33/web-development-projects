@@ -210,10 +210,10 @@
    * Given these details the function then displays them in a table.
    * @param int $customer
    */
-  function getOrderDetails($customer){
       //if no entries find $customer name from customer.txt
       //in this case display "No orders for" + $firstName + " " + $lastName
     //display details as a table
+  function getOrderDetails($customerId){
   }//getOrderDetails
 
   /**
