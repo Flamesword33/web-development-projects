@@ -237,4 +237,24 @@
     return $finalData;
   }//openFileAndGetMultiData
 
+  /**
+   * Summary of displayOrderDetails
+   * Function loops through data and outputs table rows in html
+   * Creates content for order details 
+   * @param array<mixed> $data
+   */
+  function displayOrderDetails($data){
+    foreach($data as $row){
+      $isbn = $row[2];
+      $picture = "images/tinysquare/" . $isbn . ".jpg";
+      $title = $row[3];
+
+      echo '<tr>';
+      echo '<td><img src="' . $picture . '"></td>';
+      echo '<td>' . $isbn . '</td>';
+      echo '<td><a href="#">' . $title . '</a></td>';
+    }//for each data point
+
+  }//displayOrderDetails
+
 ?>
