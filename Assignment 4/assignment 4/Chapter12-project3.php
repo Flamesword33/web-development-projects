@@ -229,6 +229,10 @@
       return true;
     }//if data is empty
   
+    else {
+      displayOrderDetails($data);
+      return true;
+    }//else display details as a table
   }//getOrderDetails
 
   /**
