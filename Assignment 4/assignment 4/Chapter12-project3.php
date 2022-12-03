@@ -1,4 +1,10 @@
 <?php
+  /** Assignment 4
+   *  by Nathan Pelletier
+   *  Started: November 29, 2022
+   *  Finished: December 2, 2022
+   */
+
   //this code hides unnessisary boxes when customer
   if (! array_key_exists("customer", $_GET)){
     echo "<style> section div.mdl-grid.mdl-cell--5-col{opacity:0;}</style>"; 
@@ -81,6 +87,7 @@
     echo "<p>" . $city . " " . $country . "</p>";
   }//outputCustomerDetailsData
 
+
   /**
    * Summary of getOrderDetails
    * getOrderDetails takes a customer id and
@@ -149,7 +156,6 @@
       echo '<td>' . $isbn . '</td>';
       echo '<td><a href="#">' . $title . '</a></td>';
     }//for each data point
-
   }//displayOrderDetails
 
 ?>
@@ -215,6 +221,7 @@
                                 
                 <!--My code here -->
                 <?php include 'includes/getCustomers.inc.php'; ?>
+                <!--My code here -->
                                               
               </tbody>
             </table>
