@@ -1,0 +1,91 @@
+<!--lab1 part1.html 
+   by Nathan Pelletier
+   September 28, 2022
+-->
+
+<!--Instructions
+1.	Open chapter03-project01.html in the editor of your choice, so you can start making changes. 
+2.	Open a browser and direct it to the same file (or double click the file in most operating systems). You should see a page similar to Figure 3.10 . 
+3.	Start by adding an image to the <h1> heading. The image is in the images folder. 
+4.	In the unordered list, add links to the <h2> headings. This will require referencing in the href the id attribute of those headings. 
+5.	Add a new section for the related photos. In this new section, add three images from the ones provided in the images folder. Use the small images related-square1.jpg, related-square2.jpg, and related-square3.jpg, but link to the large images with almost the same names. 
+6.	Add an additional review. 
+
+Test
+1.	Firstly, test your page by seeing if it looks like the one in Figure 3.28 . 
+2.	Now check that the links at the top of the page work correctly and that clicking on the related images brings up the larger versions. 
+3.	Validate the page by either using a built-in tool in your editor, or pasting the HTML into https://validator.w3.org/nu and ensure that it displays a message that indicates it contains no errors.
+
+DONE: 
+   Add images/logo.png to <h1>
+   Add an unordered list under <h1>
+      each item should link to the headers (requires id)
+   Add related photos <h3> before reviews
+   Add: 
+      images/related-square1.jpg
+      images/related-square2.jpg
+      images/related-square3.jpg
+   link said images to their large couterparts
+   add alt text to each 
+   Add an additional review?
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Share Your Travels -- New York - Central Park</title>
+</head>
+
+<body>
+   <h1><img src="images/logo.png">Share Your Travels</h1>
+   <ul>
+      <li><a href="#Description">Description</a></li>
+      <li><a href="#Related-Photos">Related Photos</a></li>
+      <li><a href="#Reviews">Reviews</a></li>
+   </ul>
+   <h2>New York - Central Park</h2>
+   <h3 id="Description">Description</h3>
+   <p>Photo by Randy Connolly</p>
+   <p>This photo of Conservatory Pond in 
+      <a href="http://www.centralpark.com/">Central Park</a> New York City was 
+      taken on October 22, 2016 with a <strong>Canon EOS 30D</strong> camera. 
+   </p>
+   <img src="images/central-park.jpg" alt="Central Park" />
+
+   <p>Options: <img src="images/icon_download.png"> <img src="images/icon_mail.png"> <img src="images/icon_map.png"> <img src="images/icon_up.png"> <img src="images/icon_down.png"> </p>
+
+   
+   <h3 id="Related-Photos">Related Photos</h3>
+   <a href="images/related-large1.jpg"><img src="images/related-square1.jpg" title="Tsuder-church" alt="A bush amoung a grassy field. A church peers creeply from behind the shrubry." /></a>
+   <a href="images/related-large2.jpg"><img src="images/related-square2.jpg" title="Cloud face looks upon valley" alt="A vast pine valley, taken from a mountain top. Above the clouds form a face." /></a>
+   <a href="images/related-large3.jpg"><img src="images/related-square3.jpg" title="Skyscaper at night" alt="Skyscraper at night." /></a>
+
+   <h3 id="Reviews">Reviews</h3>
+
+   <div>
+      <p><img src="images/icon_comment.png"> By Ricardo on <time>2016-05-23</time></p>
+      <p>Easy on the HDR buddy.</p>
+   </div>
+
+   <hr/>
+   
+   <div>
+      <p><img src="images/icon_comment.png"> By Susan on <time>2016-11-18</time></p>
+      <p>I love Central Park.</p>
+   </div>  
+   
+   <hr/>
+
+   <div>
+      <p><img src="images/icon_comment.png"> By Nathan on<time>2022-09-28</time></p>
+      <p>Never been there. Told I'd get a free hotdog for filling this out? 0/10.</p>
+   </div>
+	
+   <hr/>
+
+   <p><small>Copyright &copy; 2017 Share Your Travels</small></p>
+</body>
+
+</html>

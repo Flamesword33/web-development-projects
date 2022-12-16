@@ -1,0 +1,106 @@
+/** chapter04-project01.css
+ * by Nathan Pelletier
+ * October 5, 2022 - October 13
+ */
+
+/**
+   TODO:
+      Setup colors                                    DONE
+      Setup margins                                   DONE
+      Setup borders                                   DONE
+      Change text size                                
+         Share your travels
+         New York-Central Park
+         Related Photos
+         Reviews
+      Add subtext below share your travels
+      Change comment.png out with By
+      Change line color
+      Hide options
+      Change out list with Option  Option  Option
+      Hide Description
+      Hide photo by Randy
+      Move New York-Central Park and 
+         photo description below photo
+      Delete New York from h2 
+
+      Bonus: set picture to resize with page
+ */ 
+
+/*margin --> border --> padding --> content*/
+
+/*Key note, page is read top to bottom and rules can override rules pending on order*/
+/*found on https://stackoverflow.com/questions/63760051/css-select-all-img-except-for-those-in-footer*/
+/* 
+*:not(footer) > p,h2,h3#description,h3#reviews,nav,section>figure,section:nth-child(3){
+   margin: 0em 4em 0.25em 4em;
+} */
+
+/* links*/
+a:link{
+   color: #00B0FF;
+}
+
+a:visited {
+   color: #00B0FF;
+}
+
+a:hover {
+   color: white;
+   background-color: #F50057;
+}
+
+header nav {
+   color: #00B0FF;
+   background-color: #3F51B5;
+   border: 1em solid #3F51B5;
+}
+
+/* h1,h2,h3 */
+
+h1,h2,h3 {
+   font-family: sans-serif;
+}
+
+h2,h3{
+   color: white;
+   background-color: #7986CB;
+   border: 0.5em solid #7986CB;
+   font-size: 1.5em;
+}
+
+h1{
+   color: white;
+   background-color: #1A237E;
+   margin: 0em 4em 0em 4em;
+   border: 1em solid #1A237E;
+}
+
+h2 {
+   margin: 0em 2.7em 0.25em 2.7em
+}
+
+p{
+   font-family: serif;
+   font-size: 16px;
+}
+
+nav, section{
+   margin: 0em 4em 0.25em 4em;
+   border: 0.1em solid #C5CAE9;
+}
+
+strong{
+   color: #7986CB;
+}
+
+time{
+   color: #FF80AB
+}
+
+footer {
+   color: white;
+   background-color: #1A237E;
+   margin: 0em 4em 4em 4em;
+   border: 1em solid #1A237E;
+}

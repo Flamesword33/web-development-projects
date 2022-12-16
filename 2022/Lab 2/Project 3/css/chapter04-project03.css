@@ -1,0 +1,134 @@
+/* chapter04-project03.css
+ * by Nathan Pelletier
+ * started: October 11, 2022
+ * finished: 
+ */
+
+/* 
+  TODO: 
+    Background image needs to grow and shrink with page         |DONE
+      Pictures head can't go into text                          |
+    All border-boxes:                                           |
+      are aligned left and right                                |DONE
+      have a shadow                                             |DONE
+    Header:                                                     |
+      One background color, ocpacity 50%                        |DONE
+      H1 needs to be big                                        |DONE
+      needs Merriweather font                                   |
+    Main:                                                       |
+      h1 in seperate box from rest of main                      | 90%
+      mini box inside bigger p box                              |DONE
+    Footer:                                                     |
+      pictures with borders                                     |DONE
+*/
+
+body{
+  background-image: url("../images/art-background4.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  /* NOT WORKING, COME BACK LATER 
+  min-width: 50%;
+    Shows white when screen is vertically stretched, not sure how to fix
+    demo has width unlocked and height locked to browser
+
+    Would like to know how to make image scale to the bigger window dimmension and simply 
+    dissapear from the smaller window dimmension without breaking the images aspect ration
+  */
+}
+
+/* HEADER */
+header{
+  width: 400px;
+  box-sizing: border-box;
+  border-left: 1em solid transparent;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  box-shadow:10px 10px 5px rgba(0, 0, 0, 0.7);
+  margin-left: 4em;
+  margin-bottom: 4em;
+  margin-top: 0.5em;
+  color: white;
+  background-color: rgba(33,33,33,0.5);
+  font-family: Marriweather;
+}
+
+header h1{
+  font-size: 300%;
+}
+
+header h2{
+  font-size: 80%;
+}
+
+/* MAIN   */
+main{
+  width: 400px;
+  box-sizing: border-box;
+  box-shadow:10px 10px 5px rgba(0, 0, 0, 0.7);
+  margin-left: 4em;
+  margin-bottom: 2em;
+  border-left: 1em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  background-color: rgba(255,255,255,0.5);
+}
+
+/*not 100% working, leaves a left boundary same as parent
+needs parent to not have left boundary.
+If instead I use a p tag to place the lower box then p#timeline
+overrides the p tag and the section looks off for it. 
+Could correct with div tags around the p section in html but unsure how else to fix*/
+main h2{
+  background-color:rgba(224, 224, 224, 0.5);
+  font-size: 125%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+}
+
+main p#announcement{
+  font-weight: bold;
+}
+
+main p#timeline{
+  width: 210px;
+  background-color: rgba(66,66,66,0.5);
+  border-left: 0.5em solid transparent;
+  color: white;
+  
+}
+
+main sup{
+  color: red;
+}
+
+main p#footnote{
+  color: red;
+  font-style:italic;
+}
+
+main p{
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+}
+
+
+/* FOOTER */
+
+footer{
+  width: 400px;
+  box-sizing: border-box;
+  border-left: 1em solid transparent;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  box-shadow:10px 10px 5px rgba(0, 0, 0, 0.7);
+  margin-left: 4em;
+  color: white;
+  background-color: rgba(33,33,33,0.5);
+}
+
+footer div img{
+  width:27%;
+  padding: 4px;
+  border: 2px solid rgba(212, 206, 206, 0.5);
+  border-radius: 2px;
+}

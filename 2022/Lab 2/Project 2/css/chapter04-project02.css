@@ -1,0 +1,184 @@
+/** chapter04-project02.css
+  * by Nathan Pelletier
+  * started: October 6, 2022
+  * finished: October 9, 2022
+  */
+
+/** This project required me to copy a picture exactly.
+
+   TODO: 
+      Grow CRM Admin to fill space                       DONE
+      center and border picture                          DONE
+      place name under picture and grow it				 DONE
+      Setup section headers with margins 				 DONE
+         to otherwise look like page title				 
+      Sections require borders and background colors	 DONE
+      Edit/Flag:
+         look like buttons								 DONE
+         require pictures								 DONE
+      Sales activity needs to grow/shrink with space	 DONE
+      footer needs to look like mainMenu                 DONE
+
+*/
+
+body{
+   background-color: #ECEFF1;
+   font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+
+/* link styling */
+
+a:link {
+   font-weight: bold;
+   color: #03A9F4;
+}
+a:visited {
+   color: #03A9F4;
+}
+a:hover {
+   background-color: #FF3D00;
+   color: white;
+   outline: 5px solid #FF3D00;
+}
+
+/*header & nav*/
+
+/* taken from Mohhameds code*/
+header nav ul li {
+   list-style: none;
+   display: inline;
+}
+
+nav#mainMenu{
+   text-align: right;
+   background-color: #263238;
+   border-left: 4em solid #263238;
+   border-right: 4em solid #263238;
+   height:1.5em;
+}
+
+nav#secondaryMenu{
+   background-color: #607D8B;
+   border-left: 4em solid #607D8B;
+   border-top: 5px solid #607D8B;
+   border-bottom: 3px solid #607D8B;
+   height: 1.4em;
+}
+
+nav#secondaryMenu li{
+   padding-right: 0.2em;
+   padding-left: 0.2em;
+}
+
+/* Trying to get highlight to cover entire menu area per button
+nav#secondaryMenu li a:hover{
+   width:1em;
+   height:1.4em;
+} */
+
+header h1{
+   background-image: url("../images/header-background.png"); 
+   background-repeat: repeat; 
+   height: 1.5em;
+   border-top: 0.3em solid transparent;
+   text-align: left;
+   border-left: 2em solid transparent;
+   color: white;
+   font-size: 2em;
+}
+
+header h1 span{
+   color: #FF3D00;
+}
+
+/* main body */
+
+article{
+   background-color: white;
+   margin: 0em 4em 0em 4em;
+}
+
+/* picture mess */
+
+:not(.actions) > article > div{
+   text-align: center;
+   padding-top: 2em;
+   padding-bottom: 1em;
+   font-size: 20px;
+   font-weight: bolder;
+}
+
+:not(.actions) > article > div img{
+   padding: 0.5em;
+   border: 0.1em solid #607D8B; 
+}
+
+/* sections */
+
+section{
+   box-sizing: border-box;
+   border: 0.1em solid #607D8B;
+   margin-bottom: 1em;
+}
+
+section h3{
+   font-weight: bold;
+   color: white;
+   height: 2em;
+   background-image: url("../images/header-background.png"); 
+   background-repeat: repeat; 
+   border-left: 10px solid transparent; 
+   border-top: 10px solid transparent; 
+}
+
+section p{
+   padding: 10px 0px 10px 10px;
+}
+
+section em{
+   color: grey;
+}
+
+div.actions{
+   background-color: #607D8B;
+   border-left: 10px solid transparent;
+   border-top: 10px solid transparent;
+   height: 2em;
+}
+
+div.actions ul li{
+   list-style: none;
+   display: inline;
+   border-left: 5px solid transparent;
+   border-right: 5px solid transparent;
+   background-color: #FF3D00;
+   outline: 5px solid #FF3D00;
+   border-radius: 1px;
+   margin-right: 20px;
+}
+
+div.actions ul li a:link{
+   color: white;
+}
+
+section img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+/* footer */
+
+footer{
+   color: white;
+   background-color: #263238;
+   margin-bottom: 1em;
+   padding: 1.25em;
+   border-left: 3em solid #263238;
+   font-size: .875em;
+}
+
+p#copyright{
+   font-style: italic
+}
