@@ -3,6 +3,9 @@
    *  by Nathan Pelletier
    *  Started: November 29, 2022
    *  Finished: December 2, 2022
+   * 
+   * Error log: 
+   *   Noticed December 5th: special characters are not displayed correctly in the asides.
    */
 
   //this code hides unnessisary boxes when customer
