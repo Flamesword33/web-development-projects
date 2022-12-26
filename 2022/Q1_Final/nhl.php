@@ -8,7 +8,9 @@
 <!DOCTYPE HTML>
 <HTML>
     <head>
+        <title>AUCSC 218 Final</title>
     </head>
     <body>
+      <h1>Top Scorers in the NHL</h1>
     </body>
 </HTML>
