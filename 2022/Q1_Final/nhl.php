@@ -1,6 +1,11 @@
 <?php
  
   function get_and_display_data(){
+    $data = get_data();
+    for($x=0; $x < count($data); $x++){
+        
+        display_data($row);
+    }
   } 
 
   function get_data(){
