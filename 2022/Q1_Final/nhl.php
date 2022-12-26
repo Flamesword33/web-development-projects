@@ -3,6 +3,7 @@
   function get_and_display_data(){
     $data = get_data();
     for($x=0; $x < count($data); $x++){
+        $row = explode("\t", $data[$x]);
         
         display_data($row);
     }
