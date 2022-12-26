@@ -1,1 +1,18 @@
+/**
+ * list-sort.css
+ * by Nathan Pelletier
+ * Started: December 26, 2022
+ * 
+ * Little idea for a stand alone library:
+ *   Javascript will handle sorting the list. 
+ *   Css will add icons and shading to sorted element based on class
+ *   Class = sortable
+ *     Add button like animations to the element
+ *   Class = sort-down
+ *     use caret-down-fill
+ *     shade/change color of element
+ *   Class = sort-up
+ *     use caret-up-fill
+ *     shade/change color of element (keep same as sort-down)
+ */
 
