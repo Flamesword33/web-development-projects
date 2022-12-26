@@ -15,6 +15,12 @@
   } 
 
   function get_and_display_total_points(){
+    $data = get_data();
+    $total = 0;
+    for ($x = 0; $x < count($data); $x++) {
+        $row = explode("\t", $data[$x]);
+    }
+    display_total($total);
   }
 
 ?>
