@@ -20,6 +20,12 @@
                 <th>Assists</th>
                 <th>Total Points</th>
             </tr>
+            <?php
+            get_and_display_data();
+            ?>
         </table>
+        <?php
+        get_and_display_total_points();
+        ?>
     </body>
 </HTML>
