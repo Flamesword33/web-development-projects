@@ -12,5 +12,14 @@
     </head>
     <body>
       <h1>Top Scorers in the NHL</h1>
+        <table border="solid 1 white">
+            <tr>
+                <th>Player Name</th>
+                <th>Team</th>
+                <th>Goals</th>
+                <th>Assists</th>
+                <th>Total Points</th>
+            </tr>
+        </table>
     </body>
 </HTML>
