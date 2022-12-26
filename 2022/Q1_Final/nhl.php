@@ -4,3 +4,11 @@
     return $data;
   } 
 ?>
+
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+    </head>
+    <body>
+    </body>
+</HTML>
