@@ -16,3 +16,6 @@
  *     shade/change color of element (keep same as sort-down)
  */
 
+.sort-down, .sort-up{
+  background-color: lightgrey;
+}
