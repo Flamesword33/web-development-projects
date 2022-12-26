@@ -1,8 +1,16 @@
 <?php
+ 
+  function get_and_display_data(){
+  } 
+
   function get_data(){
     $data = file(__DIR__."/players.txt", FILE_SKIP_EMPTY_LINES);
     return $data;
   } 
+
+  function get_and_display_total_points(){
+  }
+
 ?>
 
 <!DOCTYPE HTML>
