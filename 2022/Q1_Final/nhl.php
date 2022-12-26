@@ -19,6 +19,7 @@
     $total = 0;
     for ($x = 0; $x < count($data); $x++) {
         $row = explode("\t", $data[$x]);
+        $total = $total + $row[2] + $row[3];
     }
     display_total($total);
   }
