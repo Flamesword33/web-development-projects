@@ -14,6 +14,20 @@
     return $data;
   } 
 
+  function display_data($row){
+    echo "<tr>";
+    echo "<td> " . $row[0] . $row[1] . "</td>";
+
+    echo "<td> " . $row[4] . "</td>";
+    echo "<td> " . $row[2] . "</td>";
+    echo "<td> " . $row[3] . "</td>";
+    
+    $total_points = $row[2] + $row[3];
+    echo "<td> " . $total_points . "</td>";
+    echo "</tr>";
+  }
+
+
   function get_and_display_total_points(){
     $data = get_data();
     $total = 0;
@@ -24,6 +38,9 @@
     display_total($total);
   }
 
+  function display_total($total){
+    echo "<p>Sum Total # Points: " . $total . "</p>";
+  }
 ?>
 
 <!DOCTYPE HTML>
