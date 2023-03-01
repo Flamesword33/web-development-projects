@@ -13,6 +13,7 @@
 */
 
 
+/* //psudocode taken from https://www.mygreatlearning.com/blog/quick-sort-algorithm/
 //Classes and Functions//
 class ListSort{
     constructor(table){
@@ -21,14 +22,19 @@ class ListSort{
     }//constructor
 
     //initial click to sort down
+    normal_to_sort_down(list){
+    }//normal_to_sort_down
 
     //sort-down to sort-up
+    sort_down_to_sort_up(list){
+    }//sort_down_to_sort_up
 
     //sort-up to return to initial sort
+    show_table(table);
 }//ListSort
 
 
-
+//////////
 //EVENTS//
 
 //onclick table header without class
