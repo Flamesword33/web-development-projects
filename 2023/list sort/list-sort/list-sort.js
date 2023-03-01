@@ -79,10 +79,12 @@ class ListSort{
 
     //initial click to sort down
     normal_to_sort_down(list){
+        list.sort();
     }//normal_to_sort_down
 
     //sort-down to sort-up
     sort_down_to_sort_up(list){
+        list.reverse();
     }//sort_down_to_sort_up
 
     //sort-up to return to initial sort
