@@ -12,6 +12,7 @@
  *    3rd click on same element returns list to generic sorting based on data.
 */
 
+
 //Classes and Functions//
 class ListSort{
     constructor(table){
