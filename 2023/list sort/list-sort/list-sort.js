@@ -13,6 +13,10 @@
 */
 
 
+/** The following code was from an attempt to write a sorting algorithm 
+ * I got as far as number sorting but was then greeted with .sort() and .reverse()
+ * welp...
+ */ 
 /* //psudocode taken from https://www.mygreatlearning.com/blog/quick-sort-algorithm/
     quick_sort(list, begining, end){
         if (begining < end){
@@ -70,6 +74,7 @@
     }//reverse_list */
 
 
+/////////////////////////
 //Classes and Functions//
 class ListSort{
     constructor(table){
