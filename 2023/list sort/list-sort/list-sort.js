@@ -58,6 +58,18 @@
             return list;
         }//swap_elements
     }//quick_sort */
+
+    /*reverse_list(list){
+        var new_list = [];
+        reverse_count = list.length;
+        for(var x = 0; x < list.length; x++){
+            reverse_count = reverse_count - 1; //note array goes from 0 to length-1 so subtract first
+            new_list.push(list[reverse_count]);
+        }//for each list element
+        return new_list;
+    }//reverse_list */
+
+
 //Classes and Functions//
 class ListSort{
     constructor(table){
