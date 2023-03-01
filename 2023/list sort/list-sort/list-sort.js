@@ -14,6 +14,50 @@
 
 
 /* //psudocode taken from https://www.mygreatlearning.com/blog/quick-sort-algorithm/
+    quick_sort(list, begining, end){
+        if (begining < end){
+            var pivot = list[end];
+            list = sort_around_pivot(list, begining, end);
+            var pivot_index = find_pivot(list, begining, end, pivot);
+            list = quick_sort(list, begining, pivot_index);
+            list = quick_sort(list, pivot_index+1, end);
+        }//if items in list
+        return list;
+ 
+        /**
+         * if element is smaller then increase search index
+         * we are sorting all smaller elements left of pivot 
+         * and all greater or equal right of pivot
+        
+        function sort_around_pivot(array, start, finish){
+            var pivot = array[finish];
+            var search_index = start;
+
+            for(var x = start; x < finish - 1; x++){
+                if(array[x] < pivot){
+                    array = swap_elements(array, x, search_index);
+                    search_index++;
+                }
+            }//for all elements except our pivot
+            return swap_elements(array, search_index, finish);
+            
+        }//sort_around_pivot
+
+        function find_pivot(array, start, finish, pivot){
+            for(var x = start; x < finish; x++){
+                if(array[x] == pivot){
+                    return x;
+                }
+            }
+        }//find_pivot
+
+        function swap_elements(list, element1, element2){
+            var temp = list[element1];
+            list[element1] = list[element2];
+            list[element2] = temp;
+            return list;
+        }//swap_elements
+    }//quick_sort */
 //Classes and Functions//
 class ListSort{
     constructor(table){
