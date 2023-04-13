@@ -4,3 +4,13 @@
  *  simple project to copy a current resume to html
  *  Said style sheet will be combine with main html
  */
+
+body {
+    margin: 1em 2em 1em 2em;
+}
+
+header{
+    font-size: 11px;
+    float: right;
+    text-align: right;
+}
