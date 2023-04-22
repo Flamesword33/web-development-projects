@@ -5,6 +5,13 @@
  *  Said style sheet will be combine with main html
  */
 
+*{
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    font-size: 20px;
+    font-family: roboto;
+}
+
 body {
     margin: 1em 2em 1em 2em;
 }
