@@ -20,6 +20,7 @@ body {
     margin: 1em 2em 1em 2em;
 }
 
+/*Header stuff*/
 
 header{
     font-size: 11px;
@@ -35,6 +36,8 @@ header nav ul{
     list-style:none;
     padding: 0 0 0 0;
 }
+
+/*Main stuff*/
 
 main{
 }
