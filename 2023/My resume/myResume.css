@@ -20,43 +20,39 @@ body {
     margin: 1em 2em 1em 2em;
 }
 
+
 header{
     font-size: 11px;
-    text-align: right;
 }
 
-
 header nav{
-    float:left;
     text-align: left;
     position: relative;
     bottom: 4.8em;
 }
+
 header nav ul{
     list-style:none;
     padding: 0 0 0 0;
 }
 
-header li{
-    display: inline;
+main{
 }
 
 main h1{
     text-align: center;
-    margin-block-start: 2em;
+    margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
 
 main h3{
-    float: left;
     text-align: right;
     min-width: 6em;
 }
 
 .right-content{
-    float:right;
     text-align: left;
     max-width: 70%;
 }
