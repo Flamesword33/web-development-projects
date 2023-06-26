@@ -67,8 +67,12 @@ main h1{
     margin-inline-end: 0px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    background-color: darkorange;
 }
 
+main section{
+    background-color: #ffd1b6;
+    border-bottom: 6px solid darkorange;
 }
 
 main h3{
