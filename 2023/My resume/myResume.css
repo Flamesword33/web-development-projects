@@ -24,6 +24,11 @@ body {
 
 header{
     font-size: 11px;
+    display:block;
+}
+
+header h2{
+    text-align: right;
 }
 
 header nav{
