@@ -68,14 +68,21 @@ main h1{
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
 }
 
 main h3{
     text-align: right;
-    min-width: 6em;
+    min-width: 7em;
+    margin-right: 0.5em;
+    display:inline-block;
 }
 
 .right_content{
+    position:relative;
+    bottom: 1.1em;
+    display:inline-block;
     text-align: left;
     max-width: 70%;
+    margin-left: 10em;
 }
