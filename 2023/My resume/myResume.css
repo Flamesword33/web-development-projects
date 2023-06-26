@@ -45,6 +45,8 @@ header nav ul{
 /*Main stuff*/
 
 main{
+    position: relative;
+    bottom: 3.8em;
 }
 
 main h1{
