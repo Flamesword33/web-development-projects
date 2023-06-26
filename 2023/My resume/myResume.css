@@ -17,7 +17,12 @@
 }
 
 body {
-    margin: 1em 2em 1em 2em;
+    margin: auto;
+    width: 100%;
+    max-width: 740px;
+    min-width: 450px;
+    padding: 1em;
+}
 }
 
 /*Header stuff*/
