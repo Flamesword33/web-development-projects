@@ -101,9 +101,29 @@ class ListSort{
 
 //////////
 //EVENTS//
+window.addEventListener("load", function(){
+    inital_sort_event(document.getElementsByClassName("sortable"));
+    sort_down_to_up_event(document.getElementsByClassName("sort-down"));
+    sort_up_to_initial(document.getElementsByClassName("sort-up"));
+});//window.onload
 
 //onclick table header without class
+function inital_sort_event(sortable){
+    sortable.onclick = function(){
+        //add function call here
+    }
+}//initial_sort_event
 
 //onclick table header with sort-down class
+function sort_down_to_up_event(sort_down){
+    sort_down.onclick = function(){
+        //add function call here
+    }
+}//sort_down_to_up
 
 //onclick table header with sort-up class
+function sort_up_to_initial(sort_up){
+    sort_up.onclick = function(){
+        //add function call here
+    }
+}//sort_up_to_initial
