@@ -30,12 +30,14 @@ class ListSort{
 
     //initial click to sort down
     normal_to_sort_down(header){
+        let list = get_list_from_header(header);
         list.sort();
         sort_table_to_fit_list(list);
     }//normal_to_sort_down
 
     //sort-down to sort-up
     sort_down_to_sort_up(header){
+        let list = get_list_from_header(header);
         list.reverse();
         sort_table_to_fit_list(list);
     }//sort_down_to_sort_up
@@ -43,6 +45,12 @@ class ListSort{
     //sort-up to return to initial sort
     revert_table(header){
     }//revert_table
+
+    get_list_from_header(header){
+
+        return list;
+    }//get_list_from_header
+
 }//ListSort
 
 
