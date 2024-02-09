@@ -48,7 +48,7 @@
     <head>
         <title>AUCSC 218 Final</title>
         <link rel="stylesheet" href="list-sort/list-sort.css">
-        <script src="list-sort/list-sort.js">
+        <script src="list-sort/list-sort.js"> </script>
     </head>
     <body>
       <h1>Top Scorers in the NHL</h1>
