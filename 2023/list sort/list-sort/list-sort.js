@@ -108,11 +108,11 @@ class ListSort{
 //////////
 //EVENTS//
 window.addEventListener("load", function(){
-    inital_sort_event(document.getElementsByClassName("sortable"));
+    inital_sort_event(document.getElementsByTagName("table"));
 });//window.onload
 
 //onclick table header without class
-function inital_sort_event(sortable){
+function inital_sort_event(tables){
     /*
     headers.onclick = function(){
         //add function call here
