@@ -34,6 +34,7 @@ class ListSort{
         list.sort();
         sort_table_to_fit_list(list);
         header.onclick = current_sort.sort_down_to_sort_up(header);
+        header.class.toggle("sort-down");
     }//normal_to_sort_down
 
     //sort-down to sort-up
@@ -42,10 +43,14 @@ class ListSort{
         list.reverse();
         sort_table_to_fit_list(list);
         header.onclick = current_sort.revert_table(header);
+        header.class.toggle("sort-down");
+        header.class.toggle("sort-up");
     }//sort_down_to_sort_up
 
     //sort-up to return to initial sort
     revert_table(header){
+        //revert the table header
+        header.class.toggle("sort-up");
         header.onclick = current_sort.normal_to_sort_down(header);
     }//revert_table
 
