@@ -29,19 +29,20 @@ class ListSort{
     }//constructor
 
     //initial click to sort down
-    normal_to_sort_down(list){
+    normal_to_sort_down(header){
         list.sort();
         sort_table_to_fit_list(list);
     }//normal_to_sort_down
 
     //sort-down to sort-up
-    sort_down_to_sort_up(list){
+    sort_down_to_sort_up(header){
         list.reverse();
         sort_table_to_fit_list(list);
     }//sort_down_to_sort_up
 
     //sort-up to return to initial sort
-    show_table(table);
+    revert_table(header){
+    }//revert_table
 }//ListSort
 
 
