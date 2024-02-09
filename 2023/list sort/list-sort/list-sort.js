@@ -33,6 +33,7 @@ class ListSort{
         let list = get_list_from_header(header);
         list.sort();
         sort_table_to_fit_list(list);
+        header.onclick = current_sort.sort_down_to_sort_up(header);
     }//normal_to_sort_down
 
     //sort-down to sort-up
@@ -40,10 +41,12 @@ class ListSort{
         let list = get_list_from_header(header);
         list.reverse();
         sort_table_to_fit_list(list);
+        header.onclick = current_sort.revert_table(header);
     }//sort_down_to_sort_up
 
     //sort-up to return to initial sort
     revert_table(header){
+        header.onclick = current_sort.normal_to_sort_down(header);
     }//revert_table
 
     get_list_from_header(header){
