@@ -63,9 +63,4 @@ function inital_sort_event(tables){
         }//for each header
     }//for each table
     
-    /*
-    headers.onclick = function(){
-        //add function call here
-    }
-    */
 }//initial_sort_event
