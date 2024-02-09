@@ -113,7 +113,9 @@ window.addEventListener("load", function(){
 
 //onclick table header without class
 function inital_sort_event(sortable){
-    sortable.onclick = function(){
+    /*
+    headers.onclick = function(){
         //add function call here
     }
+    */
 }//initial_sort_event
