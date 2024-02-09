@@ -25,6 +25,7 @@ class ListSort{
     constructor(table){
         //table needs to remain unchanged while the html changes
         this.table = table;
+        this.current_table = this.table;
     }//constructor
 
     //initial click to sort down
