@@ -116,6 +116,7 @@ function inital_sort_event(tables){
     for(current_table in tables){
         headers = current_table.getElementsByTagName("th")
         for(current_header in headers){
+            //change headers to have onclick = "sort_down(table, header)"
         }//for each header
     }//for each table
     
