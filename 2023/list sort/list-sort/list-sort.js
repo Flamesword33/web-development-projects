@@ -52,6 +52,8 @@ class ListSort{
         //revert the table header
         header.class.toggle("sort-up");
         header.onclick = current_sort.normal_to_sort_down(header);
+        //revert table
+        current_table = table;  //personally don't think this line will work
     }//revert_table
 
     get_list_from_header(header){
