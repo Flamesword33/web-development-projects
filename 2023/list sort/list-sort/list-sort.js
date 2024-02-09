@@ -113,6 +113,12 @@ window.addEventListener("load", function(){
 
 //onclick table header without class
 function inital_sort_event(tables){
+    for(current_table in tables){
+        headers = current_table.getElementsByTagName("th")
+        for(current_header in headers){
+        }//for each header
+    }//for each table
+    
     /*
     headers.onclick = function(){
         //add function call here
