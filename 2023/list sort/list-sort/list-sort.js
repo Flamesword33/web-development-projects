@@ -55,6 +55,8 @@ window.addEventListener("load", function(){
 //onclick table header without class
 function inital_sort_event(tables){
     for(current_table in tables){
+        //need to setup object ListSort here
+        let current_sort = new ListSort(current_table);
         headers = current_table.getElementsByTagName("th");
         for(current_header in headers){
             current_header.onclick = current_sort.normal_to_sort_down(current_header);
