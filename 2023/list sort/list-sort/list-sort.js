@@ -55,9 +55,9 @@ window.addEventListener("load", function(){
 //onclick table header without class
 function inital_sort_event(tables){
     for(current_table in tables){
-        headers = current_table.getElementsByTagName("th")
+        headers = current_table.getElementsByTagName("th");
         for(current_header in headers){
-            //change headers to have onclick = "sort_down(table, header)"
+            current_header.onclick = current_sort.normal_to_sort_down(current_header);
         }//for each header
     }//for each table
     
