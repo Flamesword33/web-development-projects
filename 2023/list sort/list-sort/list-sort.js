@@ -112,9 +112,16 @@ class ListSort{
             }//if table data has changed
         }//for each
 
+        ///////////////////////////////////
+        //Needs to revert onclick for all headers
+
+        ///////////////////////////////////////
+        //Needs to check all headers class for sort-down and sort-up
+
     }//check_table_for_changes
 
     get_list_from_header(header){
+        let list = []
 
         return list;
     }//get_list_from_header
