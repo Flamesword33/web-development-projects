@@ -39,10 +39,10 @@ class ListSort{
     constructor(table){
         //table needs to remain unchanged while the html changes
         this.table = table;
-        this.current_table = this.table;
         //code to clone an object [1]
         //Used to keep a copy of current table state
         const static_table = structuredClone(table);
+        this.static_table = static_table;
     }//constructor
 
     /**
