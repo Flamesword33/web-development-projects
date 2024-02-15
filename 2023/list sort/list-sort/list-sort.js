@@ -25,7 +25,17 @@
 
 /////////////////////////
 //Classes and Functions//
+/** Object takes a table and sorts it 
+ *   Needs to be setup externally with onclick event
+ *   Once setup will loop based on how many times a given table header is clicked
+ *     Sorts a given table row alphabetically/numerically (sort_down)
+ *     Sorts a given table row reverse alphabetically/numerically (sort_up)
+ *     Reverts a given table to how it first entered the object
+ */
 class ListSort{
+    /**
+     * @param {object} table - a given <table> tag 
+     */
     constructor(table){
         //table needs to remain unchanged while the html changes
         this.table = table;
@@ -35,26 +45,42 @@ class ListSort{
         const static_table = structuredClone(table);
     }//constructor
 
-    //initial click to sort down
-    normal_to_sort_down(header){
+    /**
+     * Takes a unsorted row and sorts given row alphabetically/numerically
+     * Also changes the table headers onclick to sort_up and its class to sort-down
+     * @param {object} header - a given <th> tag object
+     */
+    sort_down(header){
         let list = get_list_from_header(header);
         list.sort();
         sort_table_to_fit_list(list);
         header.onclick = current_sort.sort_down_to_sort_up(header);
         header.class.toggle("sort-down");
-    }//normal_to_sort_down
+    }//sort_down
 
     //sort-down to sort-up
-    sort_down_to_sort_up(header){
+    /**
+     * Given a row that is sorted down, sort_up will sort reverse alphabetically/numerically
+     * Also changes the table headers onclick to revert_table and class to sort-up
+     * @param {object} header - a given <th> tag object
+     */
+    sort_up(header){
         let list = get_list_from_header(header);
         list.reverse();
         sort_table_to_fit_list(list);
         header.onclick = current_sort.revert_table(header);
         header.class.toggle("sort-down");
         header.class.toggle("sort-up");
-    }//sort_down_to_sort_up
+    }//sort_up
 
     //sort-up to return to initial sort
+    /**
+     * Given a row that is sorted up, revert_table will revert the table to its starting
+     * order. 
+     * Removes class = "sort-up"
+     * Changes onclick to sort_down
+     * @param {object} header - a given <th> tag object
+     */
     revert_table(header){
         //revert the table header
         header.class.toggle("sort-up");
