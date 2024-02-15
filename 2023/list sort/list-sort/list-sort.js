@@ -95,6 +95,7 @@ class ListSort{
         header.class.toggle("sort-up");
         header.onclick = this.sort_down(header);
         //revert table
+        this.check_table_for_changes();
     }//revert_table
 
     /**
