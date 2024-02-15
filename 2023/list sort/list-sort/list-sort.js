@@ -63,7 +63,7 @@ class ListSort{
         let list = get_list_from_header(header);
         list.sort();
         sort_table_to_fit_list(list);
-        header.onclick = current_sort.sort_down_to_sort_up(header);
+        header.onclick = this.sort_up(header);
         header.class.toggle("sort-down");
     }//sort_down
 
@@ -77,7 +77,7 @@ class ListSort{
         let list = get_list_from_header(header);
         list.reverse();
         sort_table_to_fit_list(list);
-        header.onclick = current_sort.revert_table(header);
+        header.onclick = this.revert_table(header);
         header.class.toggle("sort-down");
         header.class.toggle("sort-up");
     }//sort_up
@@ -93,7 +93,7 @@ class ListSort{
     revert_table(header){
         //revert the table header
         header.class.toggle("sort-up");
-        header.onclick = current_sort.normal_to_sort_down(header);
+        header.onclick = this.sort_down(header);
         //revert table
         current_table = table;  //personally don't think this line will work
     }//revert_table
