@@ -46,6 +46,15 @@ class ListSort{
     }//constructor
 
     /**
+     * Checks all table rows for changes and reverts them before entering sort_down
+     * @param {object} header - a given <th> tag object
+     */
+    first_click(header){
+        this.check_table_for_changes();
+        this.sort_down(header);
+    }//first_click
+
+    /**
      * Takes a unsorted row and sorts given row alphabetically/numerically
      * Also changes the table headers onclick to sort_up and its class to sort-down
      * @param {object} header - a given <th> tag object
