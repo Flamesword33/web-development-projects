@@ -98,6 +98,22 @@ class ListSort{
         current_table = table;  //personally don't think this line will work
     }//revert_table
 
+    /**
+     * Looks through elements of the objects table and reverts changed elements
+     */
+    check_table_for_changes(){
+        let table_data = this.table.getElementsByTagName("td");
+        let original_data = this.static_table.getElementsByTagName("td");
+        let counter;
+
+        for(counter = 0; counter < table_data.length; counter++){
+            if(table_data[counter].innerHTML != original_data[counter].innerHTML){
+                table_data[counter].innerHTML = original_data[counter].innerHTML;
+            }//if table data has changed
+        }//for each
+
+    }//check_table_for_changes
+
     get_list_from_header(header){
 
         return list;
