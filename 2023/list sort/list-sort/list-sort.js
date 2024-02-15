@@ -16,6 +16,10 @@
  * 
  *   Storage
  *     2 matrix's, one remembers initial sorting and one is sorted based on column
+ * 
+ * 
+ *   Citations
+ *     [1] https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object
 */
 
 
@@ -26,6 +30,9 @@ class ListSort{
         //table needs to remain unchanged while the html changes
         this.table = table;
         this.current_table = this.table;
+        //code to clone an object [1]
+        //Used to keep a copy of current table state
+        const static_table = structuredClone(table);
     }//constructor
 
     //initial click to sort down
