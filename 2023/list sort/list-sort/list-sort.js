@@ -55,6 +55,45 @@ class ListSort{
     }//first_click
 
     /**
+     * Looks through elements of the objects table and reverts changed elements
+     */
+    check_table_for_changes(){
+        let table_data = this.table.getElementsByTagName("td");
+        let original_data = this.static_table.getElementsByTagName("td");
+        let counter;
+    
+        for(counter = 0; counter < table_data.length; counter++){
+            if(table_data[counter].innerHTML != original_data[counter].innerHTML){
+                table_data[counter].innerHTML = original_data[counter].innerHTML;
+            }//if table data has changed
+        }//for each
+    
+        revert_headers();
+    }//check_table_for_changes
+
+    /**
+     * reverts the properties of each header in the objects table
+     *   reverts onclick to first_click()
+     *   removes sort-up and sort-down classes
+     */
+    revert_headers(){
+        let headers = this.table.getElementsByTagName("th");
+        for(th in headers){
+            th.onclick = this.first_click(th);
+            let classes = th.classList;
+            //used x below as class is a reserved word
+            for(x in classes){
+                if(x == "sort-up"){
+                    th.toggle("sort-up");
+                }//turn off sort-up if its on
+                elif(x == "sort-down"){
+                    th.toggle("sort-down");
+                }//turn off sort-down if its on
+            }//for each class
+        }//for each header
+    }//revert_headers
+
+    /**
      * Takes a unsorted row and sorts given row alphabetically/numerically
      * Also changes the table headers onclick to sort_up and its class to sort-down
      * @param {object} header - a given <th> tag object
@@ -66,6 +105,16 @@ class ListSort{
         header.onclick = this.sort_up(header);
         header.class.toggle("sort-down");
     }//sort_down
+
+    get_list_from_header(header){
+        let list = []
+
+        return list;
+    }//get_list_from_header
+
+    sort_table_to_fit_list(list){
+
+    }//sort_table_to_fit_list
 
     //sort-down to sort-up
     /**
@@ -97,56 +146,7 @@ class ListSort{
         //revert table
         this.check_table_for_changes();
     }//revert_table
-
-    /**
-     * Looks through elements of the objects table and reverts changed elements
-     */
-    check_table_for_changes(){
-        let table_data = this.table.getElementsByTagName("td");
-        let original_data = this.static_table.getElementsByTagName("td");
-        let counter;
-
-        for(counter = 0; counter < table_data.length; counter++){
-            if(table_data[counter].innerHTML != original_data[counter].innerHTML){
-                table_data[counter].innerHTML = original_data[counter].innerHTML;
-            }//if table data has changed
-        }//for each
-
-        revert_headers();
-    }//check_table_for_changes
-
-    get_list_from_header(header){
-        let list = []
-
-        return list;
-    }//get_list_from_header
-
-    sort_table_to_fit_list(list){
-
-    }//sort_table_to_fit_list
-
-        
-    /**
-     * reverts the properties of each header in the objects table
-     *   reverts onclick to first_click()
-     *   removes sort-up and sort-down classes
-     */
-    revert_headers(){
-        let headers = this.table.getElementsByTagName("th");
-        for(th in headers){
-            th.onclick = this.first_click(th);
-            let classes = th.classList;
-            //used x below as class is a reserved word
-            for(x in classes){
-                if(x == "sort-up"){
-                    th.toggle("sort-up");
-                }//turn off sort-up if its on
-                elif(x == "sort-down"){
-                    th.toggle("sort-down");
-                }//turn off sort-down if its on
-            }//for each class
-        }//for each header
-    }//revert_headers
+    
 }//ListSort
 
 
