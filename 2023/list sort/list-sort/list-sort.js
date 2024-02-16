@@ -132,6 +132,10 @@ class ListSort{
      *   removes sort-up and sort-down classes
      */
     revert_headers(){
+        let headers = this.table.getElementsByTagName("th");
+        for(th in headers){
+            th.onclick = this.first_click(th);
+        }//for each header
     }//revert_headers
 }//ListSort
 
