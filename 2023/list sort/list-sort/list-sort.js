@@ -135,6 +135,16 @@ class ListSort{
         let headers = this.table.getElementsByTagName("th");
         for(th in headers){
             th.onclick = this.first_click(th);
+            let classes = th.classList;
+            //used x below as class is a reserved word
+            for(x in classes){
+                if(x == "sort-up"){
+                    th.toggle("sort-up");
+                }//turn off sort-up if its on
+                elif(x == "sort-down"){
+                    th.toggle("sort-down");
+                }//turn off sort-down if its on
+            }//for each class
         }//for each header
     }//revert_headers
 }//ListSort
