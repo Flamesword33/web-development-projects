@@ -112,12 +112,7 @@ class ListSort{
             }//if table data has changed
         }//for each
 
-        ///////////////////////////////////
-        //Needs to revert onclick for all headers
-
-        ///////////////////////////////////////
-        //Needs to check all headers class for sort-down and sort-up
-
+        revert_headers();
     }//check_table_for_changes
 
     get_list_from_header(header){
@@ -129,6 +124,15 @@ class ListSort{
     sort_table_to_fit_list(list){
 
     }//sort_table_to_fit_list
+
+        
+    /**
+     * reverts the properties of each header in the objects table
+     *   reverts onclick to first_click()
+     *   removes sort-up and sort-down classes
+     */
+    revert_headers(){
+    }//revert_headers
 }//ListSort
 
 
