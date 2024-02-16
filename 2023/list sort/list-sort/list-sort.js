@@ -31,13 +31,13 @@
  *     Sorts a given table row alphabetically/numerically (sort_down)
  *     Sorts a given table row reverse alphabetically/numerically (sort_up)
  *     Reverts a given table to how it first entered the object
+ *   WARNING: will overwrite all previous onclick functions on all table header tags <th>
  */
 class ListSort{
     /**
      * @param {object} table - a given <table> tag 
      */
     constructor(table){
-        //table needs to remain unchanged while the html changes
         this.table = table;
         //code to clone an object [1]
         //Used to keep a copy of current table state
