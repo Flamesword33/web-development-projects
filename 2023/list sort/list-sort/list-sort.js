@@ -86,7 +86,7 @@ class ListSort{
                 if(x == "sort-up"){
                     th.toggle("sort-up");
                 }//turn off sort-up if its on
-                elif(x == "sort-down"){
+                else if(x == "sort-down"){
                     th.toggle("sort-down");
                 }//turn off sort-down if its on
             }//for each class
@@ -94,7 +94,7 @@ class ListSort{
     }//revert_headers
 
     /**
-     * Takes a unsorted row and sorts given row alphabetically/numerically
+     * Takes an unsorted row and sorts given row alphabetically/numerically
      * Also changes the table headers onclick to sort_up and its class to sort-down
      * @param {object} header - a given <th> tag object
      */
@@ -106,6 +106,8 @@ class ListSort{
         header.class.toggle("sort-down");
     }//sort_down
 
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    //NEXT TIME START HERE
     get_list_from_header(header){
         let list = []
 
@@ -146,7 +148,7 @@ class ListSort{
         //revert table
         this.check_table_for_changes();
     }//revert_table
-    
+
 }//ListSort
 
 
