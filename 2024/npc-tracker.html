@@ -33,6 +33,26 @@
     <title>NPC-tracker</title>
 </head>
 <body style="font-size:18px">
+    <form>
+        <input type="text" id="cname">
+        <input type="number" id="chp" style="width: 2em">
+        <input type="number" id="mhp" style="width: 2em"> 
+        <input type="number" id="ac" style="width: 2em">
+        <input type="number" id="hitmod" style="width: 2em">
+        <input type="number" id="dmgmod" style="width: 2em">
+        <input type="number" id="numdice" style="width: 2em">
+        <select name="dice" id="dice">
+            <option value="none">No dice</option>
+            <option value="d4">d4</option>
+            <option value="d6">d6</option>
+            <option value="d8">d8</option>
+            <option value="d10">d10</option>
+            <option value="d12">d12</option>
+            <option value="d20">d20</option>
+            <option value="d100">d100</option>
+        </select>
+        <input type="submit" value="Attack">
+    </form>
 
 </body>
 </html>
