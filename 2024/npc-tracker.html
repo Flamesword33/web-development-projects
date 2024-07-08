@@ -15,6 +15,7 @@
         ?auto fill hp based on inputing max?
         ?secondary box for temp hp?
         ?Close window upon going to 0 hp?
+        ?typing negative number or +x will add or subtract from current value?
       Give int box for AC
       Give int box for modifier to hit with weapon
         ? + button to add more attacks?
@@ -31,6 +32,7 @@
 <head>
     <meta charset="utf-8">
     <title>NPC-tracker</title>
+    <script type="text/javascript" src="npc-tracker.js"></script>
 </head>
 <body style="font-size:18px">
     <form>
@@ -55,16 +57,16 @@
         <input type="number" id="numdice" style="width: 2em">
         <select name="dice" id="dice">
             <option value="none">No dice</option>
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option>
-            <option value="d20">d20</option>
-            <option value="d100">d100</option>
+            <option value="4">d4</option>
+            <option value="6">d6</option>
+            <option value="8">d8</option>
+            <option value="10">d10</option>
+            <option value="12">d12</option>
+            <option value="20">d20</option>
+            <option value="100">d100</option>
         </select>
         <br>
-        <input type="submit" value="Attack">
+        <input type="submit" value="Attack" onclick="attack()">
 
     </form>
 
