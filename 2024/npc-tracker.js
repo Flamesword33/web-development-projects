@@ -11,11 +11,11 @@
         rename page title to said name                                              -->DONE
       Give user a int box for max hp                                                -->DONE
         give user a secondary box and + - buttons to change hp                      
-        Will not go over max hp                                                     -->Next
+        Will not go over max hp                                                     -->Desided not to, will use as temp hp
         ?auto fill hp based on inputing max?                                        
-        ?secondary box for temp hp?
-        ?Close window upon going to 0 hp?                                           -->Next
-        ?typing negative number or +x will add or subtract from current value?
+        ?secondary box for temp hp?                                                 
+        ?Close window upon going to 0 hp?                                           -->DONE
+        ?typing negative number or +x will add or subtract from current value?      -->Next
       Give int box for AC                                                           -->DONE
       Give int box for modifier to hit with weapon                                  -->DONE
         ? + button to add more attacks?
@@ -37,6 +37,11 @@
         numdice : number of dice to roll
         dice : type of dice to be rolled (string values: none, d4, d6, d8, d10, d12, d20, d100)
 */
+
+/////////
+//GLOBALS
+/** The previous Current hp value */
+let Current_Hp = 0;
 
 /** attack()
  *  scrubs page for battle data using id's
@@ -119,4 +124,32 @@ function change_title(){
 }//change_title
 
 
-//third event: prevent current hp > max hp && if current hp == 0 close window
+//third event: if current hp == 0 close window
+function hp_check(){
+    let hp = document.getElementById("chp").value;
+    //a safety check to make sure the page is setup before closing the window
+    let max_hp = document.getElementById("mhp").value;
+    
+    if(hp != ""){
+        hp = add_hp(hp);
+        if(hp <= 0 && max_hp != ""){
+            window.close();
+        }
+        Current_Hp = hp;
+    }
+}//hp_check
+
+/** add_hp()
+ * Interprets a string number, looks for +x or -x and adds said value to previous health recorded
+ * @param {string} hp 
+ * @returns {int}
+ */
+function add_hp(hp){
+    //if first char is + or -
+    let first_char = hp.charAt(0);
+    if(first_char == "+" || first_char == "-"){
+        hp = Current_Hp + Number(hp);
+    }
+    document.getElementById("chp").value = hp;
+    return Number(hp);
+}//add_hp
