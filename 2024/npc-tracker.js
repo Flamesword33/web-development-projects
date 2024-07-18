@@ -15,7 +15,8 @@
         ?auto fill hp based on inputing max?                                        
         ?secondary box for temp hp?                                                 
         ?Close window upon going to 0 hp?                                           -->DONE
-        ?typing negative number or +x will add or subtract from current value?      -->Next
+        ?typing negative number or +x will add or subtract from current value?      -->DONE
+        ?health bar?                                                                -->Next
       Give int box for AC                                                           -->DONE
       Give int box for modifier to hit with weapon                                  -->DONE
         ? + button to add more attacks?
@@ -36,6 +37,10 @@
         dmgmod : bonus damage per hit 
         numdice : number of dice to roll
         dice : type of dice to be rolled (string values: none, d4, d6, d8, d10, d12, d20, d100)
+
+    Bugs:
+        symbols such as space must be scrubbed from the input, currently give NaN error
+
 */
 
 /////////
