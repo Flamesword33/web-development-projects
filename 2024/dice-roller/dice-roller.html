@@ -37,8 +37,7 @@
   <output>24</output>-->
     <input id="dice-type" type="range"
       min="2" max="20" value="20" step="2"
-      oninput="this.nextElementSibling.value = this.value"
-      onchange="update_dice_type()">
+      oninput="this.nextElementSibling.value = this.value; update_dice_type()">
     <output>20</output>
     <br>
     <label for="how-many-dice">How many</label>
@@ -48,12 +47,12 @@
       oninput="this.nextElementSibling.value = this.value">
     <output>1</output>
     <br>
-    <input type="button" value="roll" onclick="main()">
+    <input type="button" value="roll" onclick="roll_dice()">
     <br>
     <div class="box">
       <p class="box">Result</p>
       <br>
-      <p id="roll-output" class="result"></p>
+      <p id="roll-output"></p>
     </div>
     <!--drop menu here-->
 
