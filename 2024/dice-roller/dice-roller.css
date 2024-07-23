@@ -25,7 +25,7 @@ div.box{
     background-color: white;
     border-radius: 25px;
     border-width: 3px;
-    height: 8em;
+    min-height: 8em;
     margin: auto;
     margin-top: 1em;
     width: 10em;
