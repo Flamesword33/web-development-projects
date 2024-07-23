@@ -28,4 +28,36 @@
 </head>
 
 <body>
+    <div class="box"></div> <!--This will be where the dice image goes-->
+    <br>
+    <label for="dice-type">Dice</label>
+    <br>
+<!--Code found: https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
+  <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+  <output>24</output>-->
+    <input id="dice-type" type="range"
+      min="2" max="20" value="20" step="2"
+      oninput="this.nextElementSibling.value = this.value"
+      onchange="update_dice_type()">
+    <output>20</output>
+    <br>
+    <label for="how-many-dice">How many</label>
+    <br>
+    <input id="how-many-dice" type="range"
+      min="1" max="100" value="1" 
+      oninput="this.nextElementSibling.value = this.value">
+    <output>1</output>
+    <br>
+    <input type="button" value="roll" onclick="main()">
+    <br>
+    <div class="box">
+      <p class="box">Result</p>
+      <br>
+      <p id="roll-output" class="result"></p>
+    </div>
+    <!--drop menu here-->
+
+
+
+
 </body>
