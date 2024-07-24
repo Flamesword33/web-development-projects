@@ -44,7 +44,7 @@ function basic_roll(dice_type, number_of_dice){
     result = result + " + " + String(current_number);
     final_number = current_number + final_number;
   }
-  change_dice_image(dice_type, current_number);
+  change_dice_image(dice_type, final_number);
   result = result + " = " + String(final_number);
   document.getElementById("roll-output").innerText = result;
 }//basic_roll
