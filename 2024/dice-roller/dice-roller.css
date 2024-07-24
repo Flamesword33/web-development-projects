@@ -11,10 +11,12 @@
       Provide boxes for content
 
  */
-
 body{
-    text-align: center;
     background-color: lightblue;
+}
+
+main{
+    text-align: center;
 }
 
 .box{
