@@ -44,6 +44,7 @@ function basic_roll(dice_type, number_of_dice){
     result = result + " + " + String(current_number);
     final_number = current_number + final_number;
   }
+  change_dice_image(dice_type, current_number);
   result = result + " = " + String(final_number);
   document.getElementById("roll-output").innerText = result;
 }//basic_roll
@@ -56,6 +57,12 @@ function basic_roll(dice_type, number_of_dice){
 function roll(dice){
   return Math.floor(Math.random() * dice) + 1;
 }//roll
+
+function change_dice_image(dice_type, roll){
+  document.getElementById("dice-image").style.backgroundImage = 
+    "url('../dice-roller/assets/d" + String(dice_type) + "-" + String(roll) + ".png')";
+}//change_dice_image
+
 //limit #'s on selector (maybe)
 /**update_dice_type()
  * Looks up the dice-type slider and updates the dice background image to fit
