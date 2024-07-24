@@ -20,10 +20,16 @@ main{
 }
 
 #dice-image{
-    background-image: url("../dice-roller/assets/d6-6.png");
+    background-image: url("../dice-roller/assets/d6.png");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: contain;
+}
+
+#dice-image p{
+    margin-top: 45px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .box{
