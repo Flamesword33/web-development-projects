@@ -17,6 +17,10 @@
       Populate result box
  */
 
+/** roll_dice()
+ * Function grabs 2 numbers by id: "dice-type" & "how-many-dice"
+ * Function then rolls "how-many-dice" with "dice-type" sides
+ */
 function roll_dice(){
   let dice_type = Number(document.getElementById("dice-type").value);
   let number_of_dice = Number(document.getElementById("how-many-dice").value);
@@ -24,6 +28,13 @@ function roll_dice(){
   basic_roll(dice_type, number_of_dice);
 }//roll_dice
 
+/** basic_roll()
+ * Performs a simple roll with dice_type sides and number_of_dice times
+ * It records every roll along the way and after totaling the result it outputs it to 
+ * a text element of id: "roll-output"
+ * @param {Number} dice_type number of faces on a dice
+ * @param {Number} number_of_dice 
+ */
 function basic_roll(dice_type, number_of_dice){
   let current_number = roll(dice_type);
   let final_number = current_number;
@@ -35,8 +46,13 @@ function basic_roll(dice_type, number_of_dice){
   }
   result = result + " = " + String(final_number);
   document.getElementById("roll-output").innerText = result;
-}
+}//basic_roll
 
+/** roll()
+ * Takes a max value and returns a random whole number result from 1-max
+ * @param {Number} dice number of faces on a dice
+ * @returns {Number}
+ */
 function roll(dice){
   return Math.floor(Math.random() * dice) + 1;
 }//roll
