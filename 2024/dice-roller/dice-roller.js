@@ -56,3 +56,14 @@ function basic_roll(dice_type, number_of_dice){
 function roll(dice){
   return Math.floor(Math.random() * dice) + 1;
 }//roll
+//limit #'s on selector (maybe)
+/**update_dice_type()
+ * Looks up the dice-type slider and updates the dice background image to fit
+ */
+function update_dice_type(){
+  let dice_type = document.getElementById("dice-type").value;
+  document.getElementById("dice-image").style.backgroundImage = 
+    "url('../dice-roller/assets/d" + dice_type + "-" + dice_type + ".png')";
+}//update_dice_type
+
+//document.getElementById(id).style.property = new style
