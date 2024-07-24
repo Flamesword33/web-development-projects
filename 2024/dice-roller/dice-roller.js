@@ -70,6 +70,7 @@ function change_dice_image(dice_type, roll){
     document.getElementById("dice-image").firstChild.innerText = roll;
   }
   else{
+    document.getElementById("dice-image").style.backgroundImage = "url('../dice-roller/assets/d1.png')";
     document.getElementById("dice-image").firstChild.innerText = roll;
   }
 }//change_dice_image
@@ -91,6 +92,7 @@ function update_dice_type(){
     document.getElementById("dice-image").firstChild.innerText = dice_type;
   }
   else{
+    document.getElementById("dice-image").style.backgroundImage = "url('../dice-roller/assets/d1.png')";
     document.getElementById("dice-image").firstChild.innerText = dice_type;
   }
 }//update_dice_type
