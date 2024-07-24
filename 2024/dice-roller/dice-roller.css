@@ -30,7 +30,15 @@ div.box{
     min-height: 8em;
     margin: auto;
     margin-top: 1em;
-    width: 10em;
+    min-width: 10em;
+    max-width: 30em;
+    width: 75%;
+}
+
+input.bar{
+    min-width: 10em;
+    max-width: 30em;
+    width: 75%;
 }
 
 p.box{
