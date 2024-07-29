@@ -18,4 +18,13 @@
         display correct title
         display correct text
       Work with workout-app-map.html button presses to change the map out
+
+    https://stackoverflow.com/questions/1034621/get-the-current-url-with-javascript  //link to get current url with js
+    window.location.href
+    https://stackoverflow.com/questions/36858508/how-to-send-a-parameter-in-html-link-and-how-to-retrieve-it //retrieve url info
+    var params = {};
+    location.search.slice(1).split("&").forEach(function(pair) {
+      pair = pair.split("=");
+      params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+    });
 */
