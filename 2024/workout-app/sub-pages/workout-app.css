@@ -19,5 +19,11 @@ img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  margin-top:10vh;
+  width: 70%;
+}
+
+img:hover{
+  border: 4px solid #ffffff;
+
 }
