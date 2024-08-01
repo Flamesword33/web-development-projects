@@ -15,3 +15,25 @@
       Organize buttons starting 4 wide, as screen shrinks show less
       Grow/shrink buttons in acordance with screen size
 */
+
+body{}
+
+header{}
+
+header #title-image{}
+
+header #back-button{}
+
+.machine{}
+
+.machine img{}
+
+.machine p{}
+
+.body-part{}
+
+.body-part img{}
+
+.body-part p{}
+
+footer{}
