@@ -27,4 +27,16 @@
       pair = pair.split("=");
       params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
     });
+    https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
+    window.onload = function() {
+      yourFunction(param1, param2);
+    };
+
 */
+
+
+window.onload = function() {
+  correct_page_content();
+};
+
+
