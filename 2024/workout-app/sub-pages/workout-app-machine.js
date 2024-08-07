@@ -40,3 +40,36 @@ window.onload = function() {
 };
 
 
+function correct_page_content(){
+  switch(id){
+    case "bicept_curl":
+      text = "bicepcurl.txt";
+      break;
+    case "tricept_extension":
+      break;
+    case "lat_pulldown":
+      break;
+    case "seated_row":
+      break;
+    case "rotary_shoulder":
+      break;
+    case "pec_fly":
+      break;
+    case "rotary_chest":
+      break;
+    case "inner_thigh":
+      break;
+    case "outer_thigh":
+      break;
+    case "calf_raise":
+      break;
+    case "glute_press":
+      break;
+    case "leg_extension":
+      break;
+    case "leg_press":
+      break;
+    case "leg_curl":
+      break;
+    
+  }
