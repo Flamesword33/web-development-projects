@@ -41,6 +41,9 @@ window.onload = function() {
 
 
 function correct_page_content(){
+  let id = get_url_id();
+  let text = "";
+  let video = "";
   switch(id){
     case "bicept_curl":
       text = "bicepcurl.txt";
@@ -73,3 +76,4 @@ function correct_page_content(){
       break;
     
   }
+}
