@@ -39,41 +39,53 @@ window.onload = function() {
   correct_page_content();
 };
 
-
 function correct_page_content(){
   let id = get_url_id();
-  let text = "";
-  let video = "";
   switch(id){
     case "bicept_curl":
-      text = "bicepcurl.txt";
+      fix_page("bicepcurl.mp4", "Biceps Curl", "bicepcurl.txt");
       break;
     case "tricept_extension":
+      fix_page("tricepextensionvideo.mp4", "Triceps Extension", "tricepextension.txt");
       break;
     case "lat_pulldown":
+      fix_page("latpulldownvideo.mp4", "Lat Pulldown", "latpulldown.txt");
       break;
     case "seated_row":
+      fix_page("seatedrowvideo.mp4", "Seated Row", "seatedrow.txt");
+      break;
+    case "chin_dip":
+      fix_page("chindipvideo.mp4", "Chin Dip", "chindip.txt");
       break;
     case "rotary_shoulder":
+      fix_page("shoulderpress.mp4", "Rotary Shoulder", "rotaryshoulder.txt");
       break;
     case "pec_fly":
+      fix_page("pecflyvideo.mp4", "Pec Fly/Rear Delt", "pecflyreardelt.txt");
       break;
     case "rotary_chest":
+      fix_page("chestpress.mp4", "Rotary Chest", "rotarychest.txt");
       break;
     case "inner_thigh":
+      fix_page("innerthighvideo.mp4", "Inner Thigh", "innerthigh.txt");
       break;
     case "outer_thigh":
+      fix_page("outerthigh.mp4", "Outer Thigh", "outerthigh.txt");
       break;
     case "calf_raise":
+      fix_page("calfraise.mp4", "Calf Raise", "calfraise.txt");
       break;
     case "glute_press":
+      fix_page("glutepressvideo.mp4", "Glute Press", "glutepress.txt");
       break;
     case "leg_extension":
+      fix_page("legextensionvideo.mp4", "Leg Extension", "legextension.txt");
       break;
     case "leg_press":
+      fix_page("legpressvideo.mp4", "Leg Press", "legpress.txt");
       break;
     case "leg_curl":
+      fix_page("seatedlegcurlvideo.mp4", "Seated Leg Curl", "seatedlegcurl.txt");
       break;
-    
   }
-}
+}//correct_page_content
