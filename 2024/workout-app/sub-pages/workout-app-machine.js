@@ -90,6 +90,14 @@ function correct_page_content(){
   }
 }//correct_page_content
 
+function get_url_id(){
+  let ID = "";
+  let endquery = location.search.slice(1); //this line grabs url after ?
+  let pair = endquery.split("=");
+  ID = decodeURIComponent(pair[1]);
+  return ID;
+}
+
 function fix_page(video, name, text){
   document.getElementById("video").src = "../assets/Edited videos/" + video;
   document.getElementsByTagName("h1")[0].innerHTML = name;
