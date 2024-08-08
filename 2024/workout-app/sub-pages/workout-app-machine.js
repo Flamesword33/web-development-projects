@@ -89,3 +89,9 @@ function correct_page_content(){
       break;
   }
 }//correct_page_content
+
+function fix_page(video, name, text){
+  document.getElementById("video").src = "../assets/Edited videos/" + video;
+  document.getElementsByTagName("h1")[0].innerHTML = name;
+  document.getElementById("text").src = "../assets/machine research/" + text;
+}//fix_page
