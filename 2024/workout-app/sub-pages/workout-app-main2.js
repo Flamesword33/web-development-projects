@@ -70,4 +70,15 @@ function get_url_id(){
 }//get_url_id
 
 function make_class_invisible(current_class){
+  let class_list = document.getElementsByClassName("machine");
+  let visible_class_list = document.getElementsByClassName(current_class);
+  
+  for(let i=0; i<class_list.length; i++){
+    class_list[i].style.display = "none";
+  }
+
+  //1 more loop to undo wanted class
+  for(let j=0; j<visible_class_list.length; j++){
+    visible_class_list[j].style.display = "initial";
+  }
 }//make_class_invisible
