@@ -34,7 +34,6 @@
 
 */
 
-
 window.onload = function() {
   correct_page_content();
 };

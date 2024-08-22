@@ -32,7 +32,42 @@
 
 */
 
-
 window.onload = function() {
   correct_page_content();
 };
+
+function correct_page_content(){
+  let id = get_url_id();
+  //switch preserves default state for all other possiblities
+  switch(id){
+    case "arms":
+      make_class_invisible("arms");
+      break;
+    case "back":
+      make_class_invisible("back");
+      break;
+    case "chest":
+      make_class_invisible("chest");
+      break;
+    case "shoulder":
+      make_class_invisible("shoulder");
+      break;
+    case "hips":
+      make_class_invisible("hips");
+      break;
+    case "legs":
+      make_class_invisible("legs");
+      break;
+  }
+}//correct_page_content
+
+function get_url_id(){
+  let ID = "";
+  let endquery = location.search.slice(1); //this line grabs url after ?
+  let pair = endquery.split("=");
+  ID = decodeURIComponent(pair[1]);
+  return ID;
+}//get_url_id
+
+function make_class_invisible(current_class){
+}//make_class_invisible
