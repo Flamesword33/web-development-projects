@@ -25,4 +25,60 @@
       pair = pair.split("=");
       params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
     });
+    https://stackoverflow.com/questions/3842614/how-do-i-call-a-javascript-function-on-page-load
+    window.onload = function() {
+      yourFunction(param1, param2);
+    };
+
 */
+
+window.onload = function() {
+  correct_page_content();
+};
+
+function correct_page_content(){
+  let id = get_url_id();
+  //switch preserves default state for all other possiblities
+  switch(id){
+    case "arms":
+      make_class_invisible("arms");
+      break;
+    case "back":
+      make_class_invisible("back");
+      break;
+    case "chest":
+      make_class_invisible("chest");
+      break;
+    case "shoulder":
+      make_class_invisible("shoulder");
+      break;
+    case "hips":
+      make_class_invisible("hips");
+      break;
+    case "legs":
+      make_class_invisible("legs");
+      break;
+  }
+}//correct_page_content
+
+function get_url_id(){
+  let ID = "";
+  let endquery = location.search.slice(1); //this line grabs url after ?
+  let pair = endquery.split("=");
+  ID = decodeURIComponent(pair[1]);
+  return ID;
+}//get_url_id
+
+function make_class_invisible(current_class){
+  let class_list = document.getElementsByClassName("machine");
+  let visible_class_list = document.getElementsByClassName(current_class);
+  
+  for(let i=0; i<class_list.length; i++){
+    class_list[i].style.display = "none";
+  }
+
+  //1 more loop to undo wanted class
+  for(let j=0; j<visible_class_list.length; j++){
+    visible_class_list[j].style.display = "initial";
+  }
+}//make_class_invisible
