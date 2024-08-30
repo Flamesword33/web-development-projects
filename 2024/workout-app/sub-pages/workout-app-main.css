@@ -12,11 +12,18 @@
     Said original app is lost to time. All that remains are the assets I created for the endevor.
     
     This file will:
+      Keep header and footer centered
       Organize buttons starting 4 wide, as screen shrinks show less
       Grow/shrink buttons in acordance with screen size
 */
 
 body{}
+.center{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 header{}
 
