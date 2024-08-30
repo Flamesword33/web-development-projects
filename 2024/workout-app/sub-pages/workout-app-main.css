@@ -26,6 +26,7 @@
 
 body{
   font-size: 3vw;
+  background-color: rgb(13, 177, 13);
 }
 
 header #title-image img{
@@ -45,19 +46,36 @@ header p{
   font-weight: bold;
 }
 
-.machine{}
+main{
+  display: inline-block;
+}
 
-.machine img{}
+.machine, .body-part{
+  width:200px;
+  margin: 5px 5px 5px 5px;
+  overflow:auto;
+  display:inline-block;
+  float:left;
+  clear:right;
+}
 
-.machine p{}
+.machine img, .body-part img{
+  width:inherit;
+}
 
-.body-part{}
+.machine p, .body-part p{}
 
-.body-part img{}
+a{
+  color: black;
+}
 
-.body-part p{}
+a:hover{
+  color: blue;
+  margin-left: 3px;
+  margin-right: 7px;
+}
 
-footer p{
+main a:hover img{
   
 }
 
