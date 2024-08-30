@@ -17,7 +17,6 @@
       Grow/shrink buttons in acordance with screen size
 */
 
-body{}
 .center{
   display:block;
   margin-left: auto;
@@ -25,11 +24,26 @@ body{}
   text-align: center;
 }
 
-header{}
+body{
+  font-size: 3vw;
+}
 
-header #title-image{}
+header #title-image img{
+  max-width: 30em;
+  width: 40%;
+  min-width: 10em;
+}
 
-header #back-button{}
+header #back-button span{
+  position:absolute;
+  top:0px;
+  left:2vw;
+  font-size: 10vw;
+}
+
+header p{
+  font-weight: bold;
+}
 
 .machine{}
 
@@ -43,4 +57,18 @@ header #back-button{}
 
 .body-part p{}
 
-footer{}
+footer p{
+  
+}
+
+@media screen and (min-width: 1000px) {
+  header #back-button span {
+     font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  body{
+    font-size: 10px;
+  }
+}
