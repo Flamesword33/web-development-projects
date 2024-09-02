@@ -16,3 +16,21 @@
       Keep content to 90% size of window
       Give text scroll wheel
 */
+
+#back-button span{
+  position:absolute;
+  top:0px;
+  left:2vw;
+  font-size: 10vw;
+}
+@media screen and (min-width: 1000px) {
+  #back-button span {
+     font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #back-button span{
+    font-size: 50px;
+  }
+}
