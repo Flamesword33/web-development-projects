@@ -24,22 +24,36 @@
   text-align: center;
 }
 
-body{
-  font-size: 3vw;
-  background-color: rgb(13, 177, 13);
+.machine, .body-part{
+  width:200px;
+  margin: 5px 5px 5px 5px;
+  display: inline-block;
 }
 
-header #title-image img{
+.machine img, .body-part img{
+  width:inherit;
+}
+
+#title-image img{
   max-width: 30em;
   width: 40%;
   min-width: 10em;
 }
 
-header #back-button span{
+#back-button span{
   position:absolute;
   top:0px;
   left:2vw;
   font-size: 10vw;
+}
+
+body{
+  background-color: rgb(13, 177, 13);
+  min-width: 313px;
+}
+
+header, footer{
+  font-size: 3vw;
 }
 
 header p{
@@ -47,23 +61,9 @@ header p{
 }
 
 main{
-  display: inline-block;
+  text-align: center;
+  font-size: 20px;
 }
-
-.machine, .body-part{
-  width:200px;
-  margin: 5px 5px 5px 5px;
-  overflow:auto;
-  display:inline-block;
-  float:left;
-  clear:right;
-}
-
-.machine img, .body-part img{
-  width:inherit;
-}
-
-.machine p, .body-part p{}
 
 a{
   color: black;
@@ -75,18 +75,17 @@ a:hover{
   margin-right: 7px;
 }
 
-main a:hover img{
-  
-}
-
 @media screen and (min-width: 1000px) {
-  header #back-button span {
+  #back-button span {
      font-size: 100px;
   }
 }
 
-@media screen and (max-width: 310px) {
-  body{
-    font-size: 10px;
+@media screen and (max-width: 500px) {
+  #title-image img, header p, footer p{
+    font-size: 20px;
+  }
+  #back-button span{
+    font-size: 50px;
   }
 }
