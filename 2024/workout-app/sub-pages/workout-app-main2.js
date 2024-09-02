@@ -79,6 +79,6 @@ function make_class_invisible(current_class){
 
   //1 more loop to undo wanted class
   for(let j=0; j<visible_class_list.length; j++){
-    visible_class_list[j].style.display = "initial";
+    visible_class_list[j].style.display = "inline-block";
   }
 }//make_class_invisible
