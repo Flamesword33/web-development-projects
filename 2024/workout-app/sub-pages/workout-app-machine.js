@@ -36,6 +36,7 @@
 
 window.onload = function() {
   correct_page_content();
+  resizeIframe();
 };
 
 function correct_page_content(){
@@ -102,3 +103,12 @@ function fix_page(video, name, text){
   document.getElementsByTagName("h1")[0].innerHTML = name;
   document.getElementById("text").src = "../assets/machine research/" + text;
 }//fix_page
+
+
+////////////////
+//IN PROGRESS
+//Currently not getting anything back for width from the element
+function resizeIframe(){
+  let width = document.getElementById("video").style.width;
+  window.alert(width);
+}
