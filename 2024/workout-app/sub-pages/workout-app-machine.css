@@ -23,6 +23,15 @@
   left:2vw;
   font-size: 10vw;
 }
+body{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  min-width: 435px;
+  background-color: rgb(13, 177, 13);
+}
+
 @media screen and (min-width: 1000px) {
   #back-button span {
      font-size: 100px;
