@@ -39,6 +39,10 @@ window.onload = function() {
   resizeIframe();
 };
 
+window.onresize = function() {
+  resizeIframe();
+};
+
 function correct_page_content(){
   let id = get_url_id();
   switch(id){
@@ -109,6 +113,7 @@ function fix_page(video, name, text){
 //IN PROGRESS
 //Currently not getting anything back for width from the element
 function resizeIframe(){
-  let width = document.getElementById("video").style.width;
-  window.alert(width);
+  let width = document.getElementById("video").offsetWidth;
+  width = width * 0.75;
+  document.getElementById("video").style.height = width + "px"; 
 }
