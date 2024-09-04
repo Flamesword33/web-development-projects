@@ -39,6 +39,10 @@ window.onload = function() {
   resizeIframe();
 };
 
+window.onresize = function() {
+  resizeIframe();
+};
+
 function correct_page_content(){
   let id = get_url_id();
   switch(id){
