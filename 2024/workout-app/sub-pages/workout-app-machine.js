@@ -113,6 +113,6 @@ function fix_page(video, name, text){
 //IN PROGRESS
 //Currently not getting anything back for width from the element
 function resizeIframe(){
-  let width = document.getElementById("video").style.width;
   window.alert(width);
+  let width = document.getElementById("video").offsetWidth;
 }
