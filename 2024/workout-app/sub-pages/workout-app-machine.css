@@ -17,6 +17,10 @@
       Give text scroll wheel
 */
 
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 #video{
@@ -41,9 +45,6 @@
 
 body{
   display:block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
   min-width: 435px;
   background-color: rgb(13, 177, 13);
 }
