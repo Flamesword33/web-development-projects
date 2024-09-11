@@ -26,15 +26,15 @@
  */
 
 window.onload = function() {
-  meta_code();
+  //meta_code();
 };
 
 function meta_code(){
-  const coin_name = ["nickle", "dime", "quarter", "dollar", "tunie", "5 dollar", "10 dollar", "20 dollar", "50 dollar", "100 dollar"];
+  const coin_name = ["nickle", "dime", "quarter", "loonie", "toonie", 
+    "5 dollar", "10 dollar", "20 dollar", "50 dollar", "100 dollar"];
   const coin_value = ["0.05", "0.10", "0.25", "1", "2", "5", "10", "20", "50", "100"];
-  for(let i=0; i < 12; i++){
+  for(let i=0; i < coin_name.length; i++){
     let temp_string = "<img src=\"assets/" + coin_name[i] + ".png\" onclick=\"CashRegister.add(" + coin_value[i] + ")\">";
-    window.alert(temp_string);
     console.log(temp_string);
   }
 }//meta_code
