@@ -27,6 +27,9 @@
 
 window.onload = function() {
   //meta_code();
+  const total = random_num();
+  const payed = random_num() + total;
+  let CashRegister = new CashRegister(total, payed);
 };
 
 function meta_code(){
@@ -38,3 +41,38 @@ function meta_code(){
     console.log(temp_string);
   }
 }//meta_code
+
+class CashRegister{ 
+  tally = 0;
+
+  constructor(total, payed){
+    this.total = total;
+    this.payed = payed;
+    this.owed = payed - total;
+    this.setup_page();
+  }
+
+  setup_page(){
+    document.getElementById("total").innerHTML = this.total;
+    document.getElementById("customer-payed").innerHTML = this.payed;
+  }
+
+  add(amount){
+    this.tally += amount;
+    this.set_page_tally();
+  }
+
+  reset(){
+    this.tally = 0;
+    this.set_page_tally();
+  }
+
+  set_page_tally(){
+    document.getElementById("running-tally").innerHTML = this.tally;
+  }
+
+  submit(){
+
+  }
+
+}
