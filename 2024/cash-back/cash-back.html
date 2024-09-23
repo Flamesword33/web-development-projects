@@ -33,8 +33,9 @@
   <script type="text/javascript" src="cash-back.js"></script>
 </head>
 <body>
-  <h1>The total comes to: <b id="total"></b></h1>
-  <h2>The customer payed: <b id="customer-payed"></b></h2>
+  <h1>The total comes to: <b id="total">0</b></h1>
+  <h2>The customer payed: <b id="customer-payed">0</b></h2>
+  <h3>Ammount payed so far: <b id="running-tally">0</b></h3>
   <br>
   <img src="assets/nickle.png" onclick="CashRegister.add(0.05)">
   <img src="assets/dime.png" onclick="CashRegister.add(0.10)">
@@ -48,8 +49,8 @@
   <img src="assets/50 dollar.png" onclick="CashRegister.add(50)">
   <img src="assets/100 dollar.png" onclick="CashRegister.add(100)">
   <br>
-  <button onclick="reset()">Reset</button>
-  <button onclick="submit()">Submit</button>
+  <button onclick="CashRegister.reset()">Reset</button>
+  <button onclick="CashRegister.submit()">Submit</button>
 
 </body>
 </html>
