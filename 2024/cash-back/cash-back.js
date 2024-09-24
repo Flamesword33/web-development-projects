@@ -34,8 +34,8 @@ let my_register;
 
 window.onload = function() {
   //meta_code();
-  const total = random_num();
-  const payed = addition_round(random_num() + total);
+  const total = random_num(500);
+  const payed = addition_round(random_num(500) + total);
   setup_page(total, payed);
   my_register = new CashRegister(total, payed);
 };
@@ -49,6 +49,20 @@ function meta_code(){
     console.log(temp_string);
   }
 }//meta_code
+
+/**
+ * Generates a random integer between 0 and max.
+ * Said number has 2 decimal places
+ * @param {int} max 
+ * @returns {float}
+ */
+function random_num(max){
+  let rand = Math.random();
+  rand = rand * max * 100;
+  rand = Math.round(rand);
+  rand = rand / 100;
+  return rand;
+}//random_num
 
 function setup_page(total, payed){
   document.getElementById("total").innerHTML = total;
