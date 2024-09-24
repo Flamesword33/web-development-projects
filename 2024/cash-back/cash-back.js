@@ -25,11 +25,14 @@
         Output to alert timer and total - total owed
  */
 
+let my_register;
+
 window.onload = function() {
   //meta_code();
   const total = random_num();
-  const payed = random_num() + total;
-  let CashRegister = new CashRegister(total, payed);
+  const payed = addition_round(random_num() + total);
+  setup_page(total, payed);
+  my_register = new CashRegister(total, payed);
 };
 
 function meta_code(){
@@ -42,6 +45,23 @@ function meta_code(){
   }
 }//meta_code
 
+function setup_page(total, payed){
+  document.getElementById("total").innerHTML = total;
+  document.getElementById("customer-payed").innerHTML = payed;
+}
+
+function add(num){
+  my_register.add(num);
+}
+
+function reset(){
+  my_register.reset();
+}
+
+function submit(){
+  my_register.submit();
+}
+
 class CashRegister{ 
   tally = 0;
 
@@ -49,12 +69,6 @@ class CashRegister{
     this.total = total;
     this.payed = payed;
     this.owed = payed - total;
-    this.setup_page();
-  }
-
-  setup_page(){
-    document.getElementById("total").innerHTML = this.total;
-    document.getElementById("customer-payed").innerHTML = this.payed;
   }
 
   add(amount){
