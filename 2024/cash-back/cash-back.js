@@ -23,6 +23,11 @@
       On submit button press:
         compare hidden total to total owed
         Output to alert timer and total - total owed
+
+
+    Current bugs:
+      Page thinks that I owe customer 0 dollars regardless
+        142, 91
  */
 
 let my_register;
@@ -62,6 +67,42 @@ function submit(){
   my_register.submit();
 }
 
+function addition_round(unrounded){
+  return (Math.round(unrounded * 100))/100;
+}
+
+/**
+ * Rounds a numbers last digit to 0 or 5
+ * @param {int} unrounded 
+ * @returns {int}
+ */
+function custom_round(unrounded){
+  let rounded = 0;
+  let last_digit = unrounded % 10;
+  switch(last_digit){
+    case 0:
+    case 5:
+      rounded = unrounded;
+      break;
+    case 6:
+    case 7:
+      last_digit = last_digit - 5;
+    case 1:
+    case 2:
+      rounded = unrounded - last_digit;
+      break;
+    case 8:
+    case 9:
+      last_digit = last_digit - 5;
+    case 3:
+    case 4:
+      last_digit = 5 - last_digit;
+      rounded = unrounded + last_digit;
+      break;
+  }
+  return rounded;
+}//custom_round
+
 class CashRegister{ 
   tally = 0;
 
@@ -72,7 +113,7 @@ class CashRegister{
   }
 
   add(amount){
-    this.tally += amount;
+    this.tally = addition_round(this.tally + amount);
     this.set_page_tally();
   }
 
@@ -86,7 +127,19 @@ class CashRegister{
   }
 
   submit(){
+    let owed = custom_round(this.owed);
+    if(this.tally == owed){
+      window.alert("Good work!");
+      window.location.reload();
+    }
+    else if(this.tally > owed){
+      window.alert("You're giving them too much! Try again");
+      this.reset();
+    }
+    else if(this.tally < owed){
+      window.alert("Stop stealing from the customer.");
+      this.reset();
+    }
+  }//submit
 
-  }
-
-}
+}//CashRegister
