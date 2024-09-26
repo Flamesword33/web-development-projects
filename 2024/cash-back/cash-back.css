@@ -16,4 +16,22 @@
       put padding and borders around every form of change
         should look like a cash register grid
       round borders of reset and submit buttons
+*/
 
+.bill{
+  width: 150px;
+}
+
+.coin{
+  width: 150px;
+}
+
+body{
+  text-align: center;
+  background-color: lightblue;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+  margin-bottom: 0px;
+}
