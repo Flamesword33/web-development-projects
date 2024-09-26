@@ -23,11 +23,6 @@
       On submit button press:
         compare hidden total to total owed
         Output to alert timer and total - total owed
-
-
-    Current bugs:
-      Page thinks that I owe customer 0 dollars regardless
-        142, 91
  */
 
 let my_register;
@@ -36,7 +31,6 @@ window.onload = function() {
   //meta_code();
   const total = random_num(500);
   const payed = addition_round(random_num(500) + total);
-  setup_page(total, payed);
   my_register = new CashRegister(total, payed);
 };
 
@@ -64,11 +58,6 @@ function random_num(max){
   return rand;
 }//random_num
 
-function setup_page(total, payed){
-  document.getElementById("total").innerHTML = total;
-  document.getElementById("customer-payed").innerHTML = payed;
-}
-
 function add(num){
   my_register.add(num);
 }
@@ -92,6 +81,7 @@ function addition_round(unrounded){
  */
 function custom_round(unrounded){
   let rounded = 0;
+  unrounded = Math.round(unrounded);
   let last_digit = unrounded % 10;
   switch(last_digit){
     case 0:
@@ -122,8 +112,14 @@ class CashRegister{
 
   constructor(total, payed){
     this.total = total;
-    this.payed = payed;
-    this.owed = payed - total;
+    this.payed = custom_round(payed * 100)/100;
+    this.owed = payed - custom_round(total*100)/100;
+    this.setup_page();
+  }
+
+  setup_page(){
+    document.getElementById("total").innerHTML = this.total;
+    document.getElementById("customer-payed").innerHTML = this.payed;
   }
 
   add(amount){
@@ -141,7 +137,7 @@ class CashRegister{
   }
 
   submit(){
-    let owed = custom_round(this.owed);
+    const owed = this.owed;
     if(this.tally == owed){
       window.alert("Good work!");
       window.location.reload();
