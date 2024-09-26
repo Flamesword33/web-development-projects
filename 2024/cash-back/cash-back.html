@@ -31,23 +31,24 @@
   <title>Cash Back trainer</title>
   <meta charset="utf-8">
   <script type="text/javascript" src="cash-back.js"></script>
+  <link rel="stylesheet" href="cash-back.css">
 </head>
 <body>
   <h1>The total comes to: <b id="total">0</b></h1>
   <h2>The customer payed: <b id="customer-payed">0</b></h2>
-  <h3>Ammount payed so far: <b id="running-tally">0</b></h3>
+  <h2>Ammount payed so far: <b id="running-tally">0</b></h2>
   <br>
-  <img src="assets/nickle.png" onclick="add(0.05)">
-  <img src="assets/dime.png" onclick="add(0.10)">
-  <img src="assets/quarter.png" onclick="add(0.25)">
-  <img src="assets/loonie.png" onclick="add(1)">
-  <img src="assets/toonie.png" onclick="add(2)">
+  <img src="assets/nickle.png" onclick="add(0.05)" class="coin">
+  <img src="assets/dime.png" onclick="add(0.10)" class="coin">
+  <img src="assets/quarter.png" onclick="add(0.25)" class="coin">
+  <img src="assets/loonie.png" onclick="add(1)" class="coin">
+  <img src="assets/toonie.png" onclick="add(2)" class="coin">
   <br>
-  <img src="assets/5 dollar.png" onclick="add(5)">
-  <img src="assets/10 dollar.png" onclick="add(10)">
-  <img src="assets/20 dollar.png" onclick="add(20)">
-  <img src="assets/50 dollar.png" onclick="add(50)">
-  <img src="assets/100 dollar.png" onclick="add(100)">
+  <img src="assets/5 dollar.png" onclick="add(5)" class="bill">
+  <img src="assets/10 dollar.png" onclick="add(10)" class="bill">
+  <img src="assets/20 dollar.png" onclick="add(20)" class="bill">
+  <img src="assets/50 dollar.png" onclick="add(50)" class="bill">
+  <img src="assets/100 dollar.png" onclick="add(100)" class="bill">
   <br>
   <button onclick="reset()">Reset</button>
   <button onclick="submit()">Submit</button>
