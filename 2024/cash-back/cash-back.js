@@ -31,6 +31,7 @@ window.onload = function() {
   const max_total = 500;
   const max_overpay = 500;
   //meta_code();
+  //test();
   const total = random_num(max_total);
   const payed = addition_round(random_num(max_overpay) + total);
   my_register = new CashRegister(total, payed);
@@ -46,9 +47,31 @@ function meta_code(){
   }
 }//meta_code
 
+function test(){
+  const test_passes = 1000;
+  for(let i = 0; i < test_passes; i++){
+    let sample = Math.PI * i;
+    if(random_num(sample) > sample){
+      console.log("Function random_num returns higher than max bounds.");
+      return sample;
+    }
+    if(random_num(sample) < 0){
+      console.log("Function random_num returns below 0");
+      return -1;
+    }
+    console.log(sample + ": " + addition_round(sample) + "\n");
+  }
+
+  console.log("Beginning custom round test: \n")
+  for(let j = 10; j < 20; j++){
+    console.log(j + ": " + custom_round(j) + "\n");
+  }
+}//test
+
 /**
  * Generates a random integer between 0 and max.
  * Said number has 2 decimal places
+ * Do not put in 0 for max
  * @param {int} max 
  * @returns {float}
  */
