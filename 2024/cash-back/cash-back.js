@@ -28,9 +28,11 @@
 let my_register;
 
 window.onload = function() {
+  const max_total = 500;
+  const max_overpay = 500;
   //meta_code();
-  const total = random_num(500);
-  const payed = addition_round(random_num(500) + total);
+  const total = random_num(max_total);
+  const payed = addition_round(random_num(max_overpay) + total);
   my_register = new CashRegister(total, payed);
 };
 
