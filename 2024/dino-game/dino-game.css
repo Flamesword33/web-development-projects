@@ -14,4 +14,14 @@
   Score counts up based on timer * 10
 
   This file will:
+    set height and width of elements
+    center score
 */
+
+#score {
+  text-align: center;
+}
+
+#game{
+  margin: auto;
+}
