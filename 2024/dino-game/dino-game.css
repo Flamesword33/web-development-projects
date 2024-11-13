@@ -31,6 +31,13 @@
   background-size: cover;
 }
 
+#bird{
+  height: 75px;
+  width: 75px;
+  top: 170px;
+  background-image: url("");
+}
+
 #dino, #tree, #bird{
   position: relative;
   background-size: cover;
