@@ -31,4 +31,16 @@
   background-size: cover;
 }
 
+#dino, #tree, #bird{
+  position: relative;
+  background-size: cover;
+}
+
+
+#dino{
+  height: 75px;
+  width: 75px;
+  top: 170px;
+  background-image: url("images/dino\ idle.png");
+}
 }
