@@ -25,10 +25,15 @@
 #game{
   width: 600px;
   height: 300px;
-  border: 2px solid black;
   margin: auto;
-  background-image: url("images/dino\ game\ background.jpg");
-  background-size: cover;
+}
+
+#canvas1{
+  /*background-image: url("images/dino\ game\ background.jpg");*/
+  background-size: contain;
+  width: 600px;
+  height: 300px;
+  border: 2px solid black;
 }
 
 #bird{
