@@ -31,10 +31,12 @@ window.addEventListener('keypress', function(event){
 function scroll_screen(){
   var can = document.getElementById('canvas1');    
   
+  //starting img_width at width and going to 0 makes right to left camera
+  //starting img_width at 0 and increasing to width makes left to right camera
   // the initial image height
-  var img_width = 0;
   var height = can.height;
   var width = can.width;
+  var img_width = width;
  
   // the scroll speed
   // an important thing to ensure here is that can.height
@@ -65,11 +67,11 @@ function scroll_screen(){
           ctx.drawImage(img, img_width - width, 0, width, height);
    
           // update image height
-          img_width += scrollSpeed;
+          img_width -= scrollSpeed;
    
           //resetting the images when the first image entirely exits the screen
-          if (img_width == width)
-              img_width = 0;
+          if (img_width == 0)
+              img_width = width;
    
           // this function creates a 60fps animation by scheduling a
           // loop function call before the
