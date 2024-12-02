@@ -5,6 +5,7 @@
   A copy of the crome out of internet dino-game. Made with the tutorials:
   "https://youtu.be/4Oz34co7VLY"
   https://www.geeksforgeeks.org/html5-game-development-infinitely-scrolling-background/
+  https://youtu.be/Mg7ibYWhjPI?si=XFEpe7vEQimztiaK
   At end dino can:
     run
     jump
@@ -29,11 +30,12 @@
 }
 
 #canvas1{
-  /*background-image: url("images/dino\ game\ background.jpg");*/
+  background-image: url("images/dino\ game\ background.jpg");
   background-size: contain;
   width: 600px;
   height: 300px;
   border: 2px solid black;
+  z-index: -1;
 }
 
 #bird{
@@ -41,6 +43,7 @@
   width: 75px;
   top: 170px;
   background-image: url("");
+  
 }
 
 #dino, #tree, #bird{
@@ -54,6 +57,7 @@
   width: 75px;
   top: 170px;
   background-image: url("images/dino\ idle.png");
+  z-index: 1;
 }
 
 
@@ -62,5 +66,6 @@
   width: 20px;
   top: 45px;
   background-color: green;
+  
   /*background-image: url("");*/
 }
