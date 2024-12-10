@@ -299,4 +299,31 @@ void free_pointers(int* stats, int* derived_stats, int* skills){
 
 
 function main(){
+  meta_code();
 }//main
+
+/** meta_code
+ *  created to print off a list of code for quick development of repetitive sections
+ */
+function meta_code(){
+  let data = ["STR", "DEX", "INT", "CON", "APP", "POW", "SIZ", "EDU", 
+    "Move", "Accounting", "Anthropology", "Appraise", "Archaeology", 
+    "Art", "Charm", "Climb", "Credit", "Mythos", "Disguise", "Dodge", 
+    "Drive", "elecR", "Ftalk", "Fist", "Handgun", "Rifle", "First-aid", 
+    "History", "Intimidate", "Jump", "Language-other", "Language-own",
+    "Law", "Library-use", "Listen", "Locksmith", "Mrepair", "Medicine", 
+    "Nature", "Navigate", "Occult", "Heavy-Machine", "Persuade", 
+    "Pilot", "Psychoanalysis", "Ride", "Science", "Sleight-of-hand", 
+    "Spot-hidden", "Stealth", "Survival", "Swim", "Throw", "Track"];
+  data.forEach(meta_print);
+}//meta_code
+
+function meta_print(data){
+/* TEMPLATE
+  <label for="data" class="box4">data</label>
+  <input type="tel" class="box4 data primary" id="data">
+  <input type="tel" class="box4 data secondary">
+  <input type="tel" class="box4 data third"></input>*/
+
+
+}
