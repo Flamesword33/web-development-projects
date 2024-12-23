@@ -328,8 +328,8 @@ function meta_print(data){
   //Concatination in Javascript: either use variable.concat(), + or , 
   //  concatinating with a , adds a space to the final string
   console.log("<label for=\"" + data + "\" class=\"box4\">" + data + "</label> \n");
-  console.log("<input type=\"tel\" class=\"box4 data primary\" id=\"" + data + "\"> \n");
-  console.log("<input type=\"tel\" class=\"box4 data secondary\"> \n");
-  console.log("<input type=\"tel\" class=\"box4 data third\"> \n \n");
+  console.log("<input type=\"tel\" class=\"box4 " + data +" primary\" id=\"" + data + "\"> \n");
+  console.log("<input type=\"tel\" class=\"box4 " + data +" secondary\"> \n");
+  console.log("<input type=\"tel\" class=\"box4 " + data +" third\"> \n \n");
 
 }
