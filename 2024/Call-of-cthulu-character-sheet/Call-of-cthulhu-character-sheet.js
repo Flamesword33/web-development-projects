@@ -8,9 +8,8 @@
   This file will:
 */
 
-
-
-/** Call of Cthulu NPC generator
+/** === ORIGINAL C FILE === 
+ * Call of Cthulu NPC generator
  * by Nathan Pelletier
  * started August 27 2021
  */
