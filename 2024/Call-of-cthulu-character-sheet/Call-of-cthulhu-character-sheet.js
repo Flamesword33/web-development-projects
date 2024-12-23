@@ -8,11 +8,6 @@
   This file will:
 */
 
-window.addEventListener('keypress', function(event){
-  if(event.code == "Space"){
-    main();
-  }
-})
 
 
 /** Call of Cthulu NPC generator
