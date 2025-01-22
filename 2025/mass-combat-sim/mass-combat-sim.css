@@ -1,0 +1,64 @@
+/** dice-roller.css
+    by Nathan Pelletier
+    started July 19 2024
+
+    A program to roll a bunch of dice. It can roll a number of dice with a modifier.
+    It can roll advantage (2 dice take the higher), disadvantage (2 dice take the lower).
+    It can also roll 4 dice and drop the lowest.
+
+    File will
+      Center content
+      Provide boxes for content
+
+ */
+body{
+    background-color: lightblue;
+}
+
+main{
+    text-align: center;
+}
+
+#dice-image{
+    background-image: url("../dice-roller/assets/d6.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+
+#dice-image p{
+    margin-top: 45px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.box{
+    border-style: solid;
+}
+
+div.box{
+    background-color: white;
+    border-radius: 25px;
+    border-width: 3px;
+    min-height: 8em;
+    margin: auto;
+    margin-top: 1em;
+    min-width: 10em;
+    max-width: 30em;
+    width: 75%;
+}
+
+input.bar{
+    min-width: 10em;
+    max-width: 30em;
+    width: 75%;
+}
+
+p.box{
+    border-right-width: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 3px;
+    margin:0;
+    width:100%;
+}

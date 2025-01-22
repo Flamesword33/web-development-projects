@@ -1,0 +1,64 @@
+<!--dice-roller.html
+    by Nathan Pelletier
+    started July 19 2024
+
+    A program to roll a bunch of dice. It can roll a number of dice with a modifier.
+    It can roll advantage (2 dice take the higher), disadvantage (2 dice take the lower).
+    It can also roll 4 dice and drop the lowest.
+
+    File will
+      Slider to select dice type
+      Slider to select how many dice
+      Roll button
+      Drop menu containing options to:
+        Roll with advantage
+        Roll with disadvantage
+        Roll character stats
+          User should be able to de-select options in advanced menu
+      A results box for larger rolls
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dice Roller</title>
+    <script type="text/javascript" src="dice-roller.js"></script>
+    <link rel="stylesheet" href="dice-roller.css"/>
+</head>
+
+<body>
+  <main>
+    <div id="dice-image" class="box"><p>6</p></div> <!--This will be where the dice image goes-->
+    <br>
+    <label for="dice-type">Dice</label>
+    <br>
+<!--Code found: https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
+  <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+  <output>24</output>-->
+    <input id="dice-type" class="bar" type="range"
+      min="2" max="20" value="6" step="2"
+      oninput="this.nextElementSibling.value = this.value; update_dice_type()">
+    <output>6</output>
+    <br>
+    <label for="how-many-dice">How many</label>
+    <br>
+    <input id="how-many-dice" class="bar" type="range"
+      min="1" max="100" value="1" 
+      oninput="this.nextElementSibling.value = this.value">
+    <output>1</output>
+    <br>
+    <input type="button" value="roll" onclick="roll_dice()">
+    <br>
+    <div class="box">
+      <p class="box">Result</p>
+      <br>
+      <p id="roll-output"></p>
+    </div>
+  </main>
+    <!--drop menu here-->
+
+
+
+
+</body>
