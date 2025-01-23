@@ -1,20 +1,26 @@
-/** dice-roller.js
+/** mass-combat-sim.html
     by Nathan Pelletier
-    started July 19 2024
+    started January 22 2025
 
-    A program to roll a bunch of dice. It can roll a number of dice with a modifier.
-    It can roll advantage (2 dice take the higher), disadvantage (2 dice take the lower).
-    It can also roll 4 dice and drop the lowest.
+    A program to roll a bunch of dice. It will simplify a turn of combat in D&D 5e where many attackers with the same attack hit a single target.
+    It will have a way to input how many attacks, their modifier to hit, the damage they do and the targets AC (Armor class).
+    It will then output a damage number for each successful attack and a final damage total. 
+    In the case of natural 20's it will roll another set of damage dice.
 
     File will
-      Display Dice & max number or number last rolled
+      Display Dice with max number 
+        + modifier beside
       Slider to select dice type
         Only gives options for dice used in D&D
-        Should show dice at max number before roll
       Logic for Roll button
-      Takes info from Drop menu
-        Prevent multiple buttons in drop menu
+      Takes info from
+        Number of attacks 
+        AC box
+        modifier to hit
+        Drop menu
+        dice sliders 
       Populate result box
+        Sum(1 to number of attacks)[if (AC-modifier to hit)<=random(20, drop_menu) then roll_dice(dice_type, number_of_dice)]
  */
 
 /** roll_dice()

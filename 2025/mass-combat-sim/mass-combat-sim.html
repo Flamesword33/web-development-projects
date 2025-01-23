@@ -1,21 +1,24 @@
-<!--dice-roller.html
+<!--mass-combat-sim.html
     by Nathan Pelletier
-    started July 19 2024
+    started January 22 2025
 
-    A program to roll a bunch of dice. It can roll a number of dice with a modifier.
-    It can roll advantage (2 dice take the higher), disadvantage (2 dice take the lower).
-    It can also roll 4 dice and drop the lowest.
+    A program to roll a bunch of dice. It will simplify a turn of combat in D&D 5e where many attackers with the same attack hit a single target.
+    It will have a way to input how many attacks, their modifier to hit, the damage they do and the targets AC (Armor class).
+    It will then output a damage number for each successful attack and a final damage total. 
+    In the case of natural 20's it will roll another set of dice.
 
-    File will
+    File will provide
+      Input for targets AC
+      Input for number of attacks
+      Input for modifier to hit
       Slider to select dice type
       Slider to select how many dice
       Roll button
       Drop menu containing options to:
+        Roll normally
         Roll with advantage
         Roll with disadvantage
-        Roll character stats
-          User should be able to de-select options in advanced menu
-      A results box for larger rolls
+      A results box
     -->
 
 <!DOCTYPE html>
