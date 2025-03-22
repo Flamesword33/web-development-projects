@@ -8,9 +8,9 @@
     In the case of natural 20's it will roll another set of damage dice.
 
     File will
-      Display Dice with max number 
+      Display Dice with max number     --DONE
         + modifier beside
-      Slider to select dice type
+      Slider to select dice type       --DONE
         Only gives options for dice used in D&D
       Logic for Roll button
       Takes info from
@@ -18,7 +18,7 @@
         AC box
         modifier to hit
         Drop menu
-        dice sliders 
+        dice sliders                   --DONE
       Populate result box
         Sum(1 to number of attacks)[if (AC-modifier to hit)<=random(20, drop_menu) then roll_dice(dice_type, number_of_dice)]
  */
