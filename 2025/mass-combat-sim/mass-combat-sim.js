@@ -67,16 +67,16 @@ function roll(dice){
 function change_dice_image(dice_type, roll){
   if(dice_type == 2){
     document.getElementById("dice-image").style.backgroundImage = 
-      "url('../dice-roller/assets/d2-" + String(roll) + ".png')";
+      "url('../mass-combat-sim/assets/d2-" + String(roll) + ".png')";
     document.getElementById("dice-image").firstChild.innerText = "";
   }
   else if(dice_type < 14 || dice_type == 20){
     document.getElementById("dice-image").style.backgroundImage = 
-      "url('../dice-roller/assets/d" + String(dice_type) + ".png')";
+      "url('../mass-combat-sim/assets/d" + String(dice_type) + ".png')";
     document.getElementById("dice-image").firstChild.innerText = roll;
   }
   else{
-    document.getElementById("dice-image").style.backgroundImage = "url('../dice-roller/assets/d1.png')";
+    document.getElementById("dice-image").style.backgroundImage = "url('../mass-combat-sim/assets/d1.png')";
     document.getElementById("dice-image").firstChild.innerText = roll;
   }
 }//change_dice_image
@@ -89,16 +89,16 @@ function update_dice_type(){
   let dice_type = document.getElementById("dice-type").value;
   if(Number(dice_type) == 2){
     document.getElementById("dice-image").style.backgroundImage = 
-      "url('../dice-roller/assets/d2-2.png')";
+      "url('../mass-combat-sim/assets/d2-2.png')";
     document.getElementById("dice-image").firstChild.innerText = "";
   }
   else if(Number(dice_type) < 14 || Number(dice_type) == 20){
     document.getElementById("dice-image").style.backgroundImage = 
-      "url('../dice-roller/assets/d" + dice_type + ".png')";
+      "url('../mass-combat-sim/assets/d" + dice_type + ".png')";
     document.getElementById("dice-image").firstChild.innerText = dice_type;
   }
   else{
-    document.getElementById("dice-image").style.backgroundImage = "url('../dice-roller/assets/d1.png')";
+    document.getElementById("dice-image").style.backgroundImage = "url('../mass-combat-sim/assets/d1.png')";
     document.getElementById("dice-image").firstChild.innerText = dice_type;
   }
 }//update_dice_type
