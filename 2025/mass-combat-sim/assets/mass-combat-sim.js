@@ -44,6 +44,7 @@ function roll_dice(number_of_hits){
  * @param {Number} number_of_hits how many attacks were made
  */
 function basic_roll(dice_type, number_of_dice, number_of_hits){
+  let dmg_mod = Number(document.getElementById("dmg-mod").value) * number_of_hits;
   let current_number = 0;
   let final_number = 0;
   let result = "";
@@ -52,9 +53,13 @@ function basic_roll(dice_type, number_of_dice, number_of_hits){
     for(let x = 0; x < number_of_dice; x++){
       current_number = roll(dice_type);
       result = result + " + " + String(current_number);
-      final_number = current_number + final_number;
+      final_number = final_number + current_number;
     }
     result = result + ")";
+  }
+  if(dmg_mod != 0){
+    final_number = final_number + dmg_mod;
+    result = result + " + " + Number(dmg_mod);
   }
   change_dice_image(dice_type, final_number);
   result = result + " = " + String(final_number);
@@ -113,7 +118,7 @@ function update_dice_type(){
 function mass_combat_against_AC(){
   let enemy_count = Number(document.getElementById("enemy-count").value);
   let AC = Number(document.getElementById("AC").value);
-  let mod = Number(document.getElementById("mod").value);
+  let hit_mod = Number(document.getElementById("hit-mod").value);
   let number_of_hits = 0;
   let current_roll = 0;
   for(let x=0; x<enemy_count; x++){
@@ -125,7 +130,7 @@ function mass_combat_against_AC(){
     if(current_roll == 1){
       continue;
     }
-    if(current_roll + mod >= AC){
+    if(current_roll + hit_mod >= AC){
       number_of_hits += 1;
     }
   }

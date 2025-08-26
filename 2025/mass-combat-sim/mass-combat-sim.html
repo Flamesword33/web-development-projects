@@ -26,8 +26,8 @@
 <head>
     <meta charset="utf-8">
     <title>Mass Combat Simulator</title>
-    <script type="text/javascript" src="mass-combat-sim.js"></script>
-    <link rel="stylesheet" href="mass-combat-sim.css"/>
+    <script type="text/javascript" src="../mass-combat-sim/assets/mass-combat-sim.js"></script>
+    <link rel="stylesheet" href="../mass-combat-sim/assets/mass-combat-sim.css"/>
 </head>
 
 <body onload="update_dice_type()">
@@ -40,9 +40,9 @@
     min="0" max="30" value="10"
     style="text-align: center;">
     <br>
-    <label for="mod">Modifier to hit</label>
+    <label for="hit-mod">Modifier to hit</label>
     <br>
-    <input id="mod" type="number"
+    <input id="hit-mod" type="number"
     min="-20" max="20" value="0"
     style="text-align: center;">
     <br>
@@ -57,16 +57,18 @@
 <!--Code found: https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
   <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
   <output>24</output>-->
-    <input id="dice-type" class="number" type="range"
-      min="2" max="20" value="6" step="2"
-      oninput="update_dice_type()">
-    <br>
-    <label for="how-many-dice">How many Dice</label>
-    <br>
     <input id="how-many-dice" type="number"
       min="1" max="100" value="1"
       style="text-align: center;">
-    <br>
+    <label>d</label>
+    <input id="dice-type" type="number"
+      min="2" max="20" value="6" step="2"
+      oninput="update_dice_type()">
+    <label>+</label>
+    <input id="dmg-mod" type="number"
+      min="-5" max="10" value="0">
+    <!-- I want to do 5d10+2 format here -->
+    
     <input type="button" value="roll" onclick="mass_combat_against_AC()">
     <br>
     <div class="box">
@@ -76,8 +78,5 @@
     </div>
   </main>
     <!--drop menu here-->
-
-
-
 
 </body>
