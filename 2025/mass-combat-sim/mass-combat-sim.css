@@ -21,7 +21,7 @@ main{
 }
 
 #dice-image{
-    background-image: url("../dice-roller/assets/d6.png");
+    background-image: url("../mass-combat-sim/assets/d6.png");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: contain;

@@ -8,9 +8,9 @@
     In the case of natural 20's it will roll another set of dice.
 
     File will provide
-      Input for targets AC
-      Input for number of attacks            
-      Input for modifier to hit
+      Input for targets AC                  --DONE
+      Input for number of attacks            --DONE
+      Input for modifier to hit              --DONE
       Slider to select dice type             --DONE 
       Slider to select how many dice         --DONE
       Roll button                            --DONE
@@ -34,24 +34,40 @@
   <main>
     <div id="dice-image" class="box"><p>6</p></div> <!--This will be where the dice image goes-->
     <br>
+    <label for="AC">Your AC</label>
+    <br>
+    <input id="AC" type="number"
+    min="0" max="30" value="10"
+    style="text-align: center;">
+    <br>
+    <label for="mod">Modifier to hit</label>
+    <br>
+    <input id="mod" type="number"
+    min="-20" max="20" value="0"
+    style="text-align: center;">
+    <br>
+    <label for="enemy-count">Enemy count</label>
+    <br>
+    <input id="enemy-count" type="number"
+    min="1" max="100" value="1"
+    style="text-align: center;">
+    <br>
     <label for="dice-type">Dice</label>
     <br>
 <!--Code found: https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
   <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
   <output>24</output>-->
-    <input id="dice-type" class="bar" type="range"
+    <input id="dice-type" class="number" type="range"
       min="2" max="20" value="6" step="2"
-      oninput="this.nextElementSibling.value = this.value; update_dice_type()">
-    <output>6</output>
+      oninput="update_dice_type()">
     <br>
-    <label for="how-many-dice">How many</label>
+    <label for="how-many-dice">How many Dice</label>
     <br>
-    <input id="how-many-dice" class="bar" type="range"
-      min="1" max="100" value="1" 
-      oninput="this.nextElementSibling.value = this.value">
-    <output>1</output>
+    <input id="how-many-dice" type="number"
+      min="1" max="100" value="1"
+      style="text-align: center;">
     <br>
-    <input type="button" value="roll" onclick="roll_dice()">
+    <input type="button" value="roll" onclick="mass_combat_against_AC()">
     <br>
     <div class="box">
       <p class="box">Result</p>
