@@ -1,0 +1,71 @@
+<!--Aoe-Spell-sim.html
+    by Nathan Pelletier
+    started January 1 2026
+
+    A program to roll a bunch of dice. It will simplify a turn of combat in D&D 5e where a mage hits multiple targets with a spell save.
+    It will have a way to input how many targets, their modifier to hit, the damage it does and the Casters DC (Difficulty class).
+    It will then output a damage number for each failed roll, 1/2 damage for successful one and a final damage total. 
+
+    File will:
+      
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Area of Effect spell calculator</title>
+    <script type="text/javascript" src="../AoE-spell/assets/Aoe-spell.js"></script>
+    <link rel="stylesheet" href="../AoE-spell/assets/Aoe-spell.css"/>
+</head>
+
+<body onload="update_dice_type()">
+  <main>
+    <div id="dice-image" class="box"><p>6</p></div> <!--This will be where the dice image goes-->
+    <br>
+    <label for="AC">Your AC</label>
+    <br>
+    <input id="AC" type="number"
+    min="0" max="30" value="10"
+    style="text-align: center;">
+    <br>
+    <label for="hit-mod">Modifier to hit</label>
+    <br>
+    <input id="hit-mod" type="number"
+    min="-20" max="20" value="0"
+    style="text-align: center;">
+    <br>
+    <label for="enemy-count">Enemy count</label>
+    <br>
+    <input id="enemy-count" type="number"
+    min="1" max="100" value="1"
+    style="text-align: center;">
+    <br>
+    <label for="dice-type">Dice</label>
+    <br>
+<!--Code found: https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value
+  <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+  <output>24</output>-->
+    <input id="how-many-dice" type="number"
+      min="1" max="100" value="1"
+      style="text-align: center;">
+    <label>d</label>
+    <input id="dice-type" type="number"
+      min="2" max="20" value="6" step="2"
+      oninput="update_dice_type()">
+    <label>+</label>
+    <input id="dmg-mod" type="number"
+      min="-5" max="10" value="0">
+    <!-- I want to do 5d10+2 format here -->
+    
+    <input type="button" value="roll" onclick="mass_combat_against_AC()">
+    <br>
+    <div class="box">
+      <p class="box">Result</p>
+      <br>
+      <p id="roll-output"></p>
+    </div>
+  </main>
+    <!--drop menu here-->
+
+</body>

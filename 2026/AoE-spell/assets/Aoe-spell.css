@@ -1,0 +1,65 @@
+/** mass-combat-sim.html
+    by Nathan Pelletier
+    started January 22 2025
+
+    A program to roll a bunch of dice. It will simplify a turn of combat in D&D 5e where many attackers with the same attack hit a single target.
+    It will have a way to input how many attacks, their modifier to hit, the damage they do and the targets AC (Armor class).
+    It will then output a damage number for each successful attack and a final damage total. 
+    In the case of natural 20's it will roll another set of dice.
+
+    File will
+      Center content                 --DONE
+      Provide boxes for content
+
+ */
+body{
+    background-color: lightblue;
+}
+
+main{
+    text-align: center;
+}
+
+#dice-image{
+    background-image: url("../assets/d6.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+
+#dice-image p{
+    margin-top: 45px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.box{
+    border-style: solid;
+}
+
+div.box{
+    background-color: white;
+    border-radius: 25px;
+    border-width: 3px;
+    min-height: 8em;
+    margin: auto;
+    margin-top: 1em;
+    min-width: 10em;
+    max-width: 30em;
+    width: 75%;
+}
+
+input.bar{
+    min-width: 10em;
+    max-width: 30em;
+    width: 75%;
+}
+
+p.box{
+    border-right-width: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 3px;
+    margin:0;
+    width:100%;
+}
