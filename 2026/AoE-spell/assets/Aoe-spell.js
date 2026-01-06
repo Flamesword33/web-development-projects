@@ -1,26 +1,18 @@
-/** mass-combat-sim.html
+/** Aoe-spell.js
     by Nathan Pelletier
-    started January 22 2025
+    started January 3 2026
 
-    A program to roll a bunch of dice. It will simplify a turn of combat in D&D 5e where many attackers with the same attack hit a single target.
-    It will have a way to input how many attacks, their modifier to hit, the damage they do and the targets AC (Armor class).
-    It will then output a damage number for each successful attack and a final damage total. 
-    In the case of natural 20's it will roll another set of damage dice.
+    A program to roll a bunch of dice. It is here to simplify if multiple enemies are hit by an area of effect.
+    In D&D a DC (difficulty class) is given as a number to beat via rolls. Characters then make a roll based on a stat
+    with a given modifier. d20+X vs DC: Y. If they hit a higher number than the DC the character takes 1/2 damage 
+    otherwise they take full damage. Normally in tabletop games 1 damage roll is given for the group. 
+    In this sim I will give unique rolls for all effected.
+
+    This program needs a way to diplay successful saves (maybe different color?).
+    The final result needs to be each individual characters damage total. 
 
     File will
-      Display Dice with max number     --DONE
-        + modifier beside              --DONE
-      Slider to select dice type       --DONE
-        Only gives options for dice used in D&D
-      Logic for Roll button            --DONE
-      Takes info from
-        Number of attacks              --DONE
-        AC box                         --DONE
-        modifier to hit                --DONE
-        Drop menu                     
-        dice sliders                   --DONE
-      Populate result box
-        Sum(1 to number of attacks)[if (AC-modifier to hit)<=random(20, drop_menu) then roll_dice(dice_type, number_of_dice)]
+      
  */
 
 /** roll_dice(int)
