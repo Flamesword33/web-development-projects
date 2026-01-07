@@ -12,11 +12,15 @@
     The final result needs to be each individual characters damage total. 
 
     File will
+
+
+    Only need to change:
+      mass_combat_against_AC()
       
  */
 
 /** roll_dice(int)
- * Function grabs 2 numbers by id: "dice-type" & "how-many-dice"
+ * Function grabs an int by id: "dice-type" & "how-many-dice"
  * Function then rolls "how-many-dice" with "dice-type" sides
  * @param {Number} number_of_hits how many times damage dice must be rolled
  */
@@ -107,9 +111,9 @@ function update_dice_type(){
 }//update_dice_type
 
 
-function mass_combat_against_AC(){
+function mass_combat_against_DC(){
   let enemy_count = Number(document.getElementById("enemy-count").value);
-  let AC = Number(document.getElementById("AC").value);
+  let DC = Number(document.getElementById("DC").value);
   let hit_mod = Number(document.getElementById("hit-mod").value);
   let number_of_hits = 0;
   let current_roll = 0;
@@ -122,11 +126,11 @@ function mass_combat_against_AC(){
     if(current_roll == 1){
       continue;
     }
-    if(current_roll + hit_mod >= AC){
+    if(current_roll + hit_mod >= DC){
       number_of_hits += 1;
     }
   }
   roll_dice(number_of_hits);
-}//mass_combat_agaisnt_AC
+}//mass_combat_agaisnt_DC
 
 //document.getElementById(id).style.property = new style
