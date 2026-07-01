@@ -137,8 +137,8 @@ class CashRegister{
 
   constructor(total, payed){
     this.total = total;
-    this.payed = custom_round(payed * 100)/100;
-    this.owed = payed - custom_round(total*100)/100;
+    this.payed = payed;
+    this.owed = custom_round((payed - total)*100)/100;
     this.setup_page();
   }
 
