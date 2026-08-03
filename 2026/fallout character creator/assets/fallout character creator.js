@@ -18,7 +18,32 @@
         Allow 3 stats to be increased
  */
 
+/**check_special()
+ * Checks each special for a value between 0 and 10
+ * Checks point pool for value 0 and above
+ */  
+function check_special(){
 
+}
+
+/**minus_sign(int special)
+ * Checks if Special value above 1
+ * Reduces given special value by 1
+ * Increases point total by 1 
+ */
+function minus_sign(special){
+
+}
+
+/**plus_sign(int special)
+ * Checks if Special value is below 10
+ * Checks if point value is greater than 0
+ * Increases Special value by 1
+ * Reduces point value by 1
+ */
+function plus_sign(special){
+  
+}
 
 //let enemy_count = Number(document.getElementById("enemy-count").value);
 //document.getElementById(id).style.property = new style
