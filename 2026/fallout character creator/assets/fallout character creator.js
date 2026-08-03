@@ -18,5 +18,7 @@
         Allow 3 stats to be increased
  */
 
+
+
 //let enemy_count = Number(document.getElementById("enemy-count").value);
 //document.getElementById(id).style.property = new style
