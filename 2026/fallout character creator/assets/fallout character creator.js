@@ -45,5 +45,14 @@ function plus_sign(special){
   
 }
 
+/**next_page()
+ * sets the url for the next page with the current SPECIAL values
+ * jumps to the next html page
+ * <!--href="../fallout character creator/assets/stats screen.html?ST=5&PE=5&EN=5&CH=5&IN=5&AG=5&LK=5"-->
+ */
+function next_page(){
+
+}
+
 //let enemy_count = Number(document.getElementById("enemy-count").value);
 //document.getElementById(id).style.property = new style
