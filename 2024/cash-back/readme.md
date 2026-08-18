@@ -4,7 +4,7 @@
 
 A website based simulator to teach a user to run a cash register. 
 
-![cash-back-teaser](./demo pictures/Default game.jpg) 
+![cash-back-teaser](/2024/cash-back/demo pictures/Default-game.jpg) 
 
 ## To Run
 
