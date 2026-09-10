@@ -76,12 +76,23 @@ function set_hp(){
   let Strength = parseInt(document.getElementById("ST").innerHTML);
   let Endurance = parseInt(document.getElementById("EN").innerHTML);
   let HP = 15 + Strength + (2 * Endurance)
+
+  //https://stackoverflow.com/questions/7409478/replace-innerhtml-of-all-divs-with-same-class
+  let divs = document.getElementsByClassName("hp");
+  [].slice.call( divs ).forEach(function ( div ) {
+    div.innerHTML = HP;
+  });
 }
 
 function set_ap(){
   let Agility = parseInt(document.getElementById("AG").innerHTML);
   let AP = 5 + Math.floor(Agility/2)
 
+  //https://stackoverflow.com/questions/7409478/replace-innerhtml-of-all-divs-with-same-class
+  let divs = document.getElementsByClassName("ap");
+  [].slice.call( divs ).forEach(function ( div ) {
+    div.innerHTML = AP;
+  });
 }
 
 /**next_page()
