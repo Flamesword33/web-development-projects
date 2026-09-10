@@ -8,10 +8,10 @@
 
     File will:
       Govern SPECIAL stats and point pool:
-        Link point pool decrease with SPECIAL stat increases
         Set a max of 10 for all SPECIAL stats                  --> DONE
         Set a min of 1 for all SPECIAL stats                   --> DONE
         Set min of 0 in the point pool                         --> DONE
+        Link point pool decrease with SPECIAL stat increases   --> DONE was overcomplicating
       Govern 2nd page stats:
         Link SPECIAL to stats
         Link custom perks to stats
@@ -32,10 +32,17 @@ function check_special(){
  * Increases point total by 1 
  */
 function minus_sign(special){
+  let stat = parseInt(document.getElementById(special).innerHTML);
+  let points = parseInt(document.getElementById("points-left").innerHTML);
 
-}
   if(stat > 1){
+    stat = stat - 1;
+    points = points + 1;
   }
+
+  document.getElementById(special).innerHTML = stat;
+  document.getElementById("points-left").innerHTML = points;
+}//minus_sign
 
 /**plus_sign(int special)
  * Checks if Special value is below 10
@@ -45,8 +52,17 @@ function minus_sign(special){
  */
 function plus_sign(special){
   
+  let stat = parseInt(document.getElementById(special).innerHTML);
+  let points = parseInt(document.getElementById("points-left").innerHTML);
+
   if(points > 0 && stat < 10){
+    stat = stat + 1;
+    points = points - 1;
   }
+
+  document.getElementById(special).innerHTML = stat;
+  document.getElementById("points-left").innerHTML = points;
+}//plus_sign
 }
 
 /**next_page()
