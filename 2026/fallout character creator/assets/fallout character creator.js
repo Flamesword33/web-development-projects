@@ -71,6 +71,17 @@ function set_sub_stats(special){
     set_ap();
   }
 }//set_sub_stats
+
+function set_hp(){
+  let Strength = parseInt(document.getElementById("ST").innerHTML);
+  let Endurance = parseInt(document.getElementById("EN").innerHTML);
+  let HP = 15 + Strength + (2 * Endurance)
+}
+
+function set_ap(){
+  let Agility = parseInt(document.getElementById("AG").innerHTML);
+  let AP = 5 + Math.floor(Agility/2)
+
 }
 
 /**next_page()
