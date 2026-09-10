@@ -18,14 +18,6 @@
         Allow 3 stats to be increased
  */
 
-/**check_special()
- * Checks each special for a value between 0 and 10
- * Checks point pool for value 0 and above
- */  
-function check_special(){
-
-}
-
 /**minus_sign(int special)
  * Checks if Special value above 1
  * Reduces given special value by 1
