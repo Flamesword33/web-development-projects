@@ -27,6 +27,7 @@
  * Increases point total by 1 
  */
 function minus_sign(special){
+  change_image(special);
   let stat = parseInt(document.getElementById(special).innerHTML);
   let points = parseInt(document.getElementById("points-left").innerHTML);
 
@@ -47,6 +48,7 @@ function minus_sign(special){
  * Reduces point value by 1
  */
 function plus_sign(special){
+  change_image(special);
   let stat = parseInt(document.getElementById(special).innerHTML);
   let points = parseInt(document.getElementById("points-left").innerHTML);
 
@@ -106,3 +108,39 @@ function next_page(){
 
 //let enemy_count = Number(document.getElementById("enemy-count").value);
 //document.getElementById(id).style.property = new style
+
+function change_image(stat){
+  let images = document.getElementsByClassName("center-image");
+  let url = "../fallout character creator/assets/" + stat + ".png"
+  images[0].src = url;
+
+  change_text(stat);
+}
+
+function change_text(stat){
+  let new_text = "";
+  if(stat == "ST"){
+    new_text = "Strength is a measure of your raw physical power. It affects your initial health, how much you can carry, and determines the effectiveness of all melee attacks.";
+  }
+  else if(stat == "PE"){
+    new_text = "Perception is your environmental awareness and sixth sense, and affects effective range, turn order, ranged attacks and medical skills";
+  }
+  else if(stat == "EN"){
+    new_text = "Endurance is the measure of overall physical fitness. It affects your health, resistances, healing rate and unarmed combat";
+  }
+  else if(stat == "CH"){
+    new_text = "Charisma is your ability to charm and convince others. It affects your ability to persuade others and prices when you barter.";
+  }
+  else if(stat == "IN"){
+    new_text = "Intelligence is the measure of your book and street smarts. It affects your experience points earned each level, energy weapons and medical skills";
+  }
+  else if(stat == "AG"){
+    new_text = "Agility is a measure of your overall finesse and reflexes. It affects your Action Points, light weapons and your ability to sneak.";
+  }
+  else if(stat == "LK"){
+    new_text = "Luck is a measure of your general good fortune. It affects crit hits, traps/mines and gambling";
+  }
+
+  document.querySelector(".right-panel p").innerHTML = new_text;
+  //document.getElementsByClassName("right-panel")[0].getElementsByTagName("p")[0].innerHTML = new_text;
+}
