@@ -12,6 +12,15 @@
       Have a next page button.          -> done
       Display Health                    -> done
       Display AP                        -> done
+
+
+function get_url_id(){
+  let ID = "";
+  let endquery = location.search.slice(1); //this line grabs url after ?
+  let pair = endquery.split("=");
+  ID = decodeURIComponent(pair[1]);
+  return ID;
+}
       
     -->
 
@@ -33,43 +42,43 @@
     <div class="left-panel">
       <table>
         <tr>
-          <td>Strength</td>
+          <td onclick = "change_image('ST')">Strength</td>
           <td><button onclick="minus_sign('ST')">-</button></td>
           <td id="ST">5</td>
           <td><button onclick="plus_sign('ST')">+</button></td>
         </tr>
         <tr>
-          <td>Perception</td>
+          <td onclick = "change_image('PE')">Perception</td>
           <td><button onclick="minus_sign('PE')">-</button></td>
           <td id="PE">5</td>
           <td><button onclick="plus_sign('PE')">+</button></td>
         </tr>
         <tr>
-          <td>Endurance</td>
+          <td onclick = "change_image('EN')">Endurance</td>
           <td><button onclick="minus_sign('EN')">-</button></td>
           <td id="EN">5</td>
           <td><button onclick="plus_sign('EN')">+</button></td>
         </tr>
         <tr>
-          <td>Charisma</td>
+          <td onclick = "change_image('CH')">Charisma</td>
           <td><button onclick="minus_sign('CH')">-</button></td>
           <td id="CH">5</td>
           <td><button onclick="plus_sign('CH')">+</button></td>
         </tr>
         <tr>
-          <td>Intelligence</td>
+          <td onclick = "change_image('IN')">Intelligence</td>
           <td><button onclick="minus_sign('IN')">-</button></td>
           <td id="IN">5</td>
           <td><button onclick="plus_sign('IN')">+</button></td>
         </tr>
         <tr>
-          <td>Agility</td>
+          <td onclick = "change_image('AG')">Agility</td>
           <td><button onclick="minus_sign('AG')">-</button></td>
           <td id="AG">5</td>
           <td><button onclick="plus_sign('AG')">+</button></td>
         </tr>
         <tr>
-          <td>Luck</td>
+          <td onclick = "change_image('LK')">Luck</td>
           <td><button onclick="minus_sign('LK')">-</button></td>
           <td id="LK">5</td>
           <td><button onclick="plus_sign('LK')">+</button></td>
@@ -77,7 +86,11 @@
       </table>
     </div>
     <div class="right-panel">
-      <img src="../fallout character creator/assets/pipboy thumbs up.jpg" id="main-image">
+      <img src="../fallout character creator/assets/pipboy thumbs up.jpg" class="center-image">
+      <!--//for whatever reason the picutes are not loading. brute force attempt style="display: none;
+      <img src="../fallout character creator/assets/ST.png" class="center-image">
+      <img src="../fallout character creator/assets/PE.png" class="center-image">
+      <img src="../fallout character creator/assets/IN.png" class="center-image">-->
       <p>Welcome to the Fallout character creator. </p>
     </div>
   </main>
