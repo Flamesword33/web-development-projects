@@ -9,7 +9,8 @@
     File will:
       Display character stats
       Display optional perks
-      
+      Each item has a check box and a total
+      Below (with css will be to the right) a text blurb for each skill
     -->
 
 <!DOCTYPE html>
@@ -22,13 +23,132 @@
 </head>
 
 <body>
-  <header>
-    
+  <header align="center">
+    <h1>STATS</h1>
+    <p>Choose 3 stats to raise and up to 2 perks</p>
   </header>
   <main>
-    
-  </main>
-  <footer>
+    <div class="left-panel">
+      <h2>COMBAT STATS</h2>
+      <table>
+        <tr>
+          <td onclick = "change_text()">Strength</td>
+          <input type="checkbox" onclick="increase()">
+          <td id="ST">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Perception</td>
+          
+          <td id="PE">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Endurance</td>
+          
+          <td id="EN">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Charisma</td>
+          
+          <td id="CH">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Intelligence</td>
+          
+          <td id="IN">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Agility</td>
+          
+          <td id="AG">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Luck</td>
+          
+          <td id="LK">5</td>
+        </tr>
+      </table>
 
-  </footer>
+      <h2>ROLE PLAYING STATS</h2>
+      <table>
+        <tr>
+          <td onclick = "change_text()">Strength</td>
+          
+          <td id="ST">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Perception</td>
+          
+          <td id="PE">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Endurance</td>
+          
+          <td id="EN">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Charisma</td>
+          
+          <td id="CH">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Intelligence</td>
+          
+          <td id="IN">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Agility</td>
+          
+          <td id="AG">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Luck</td>
+          
+          <td id="LK">5</td>
+        </tr>
+      </table>
+
+      <h2>PERKS</h2>
+      <table>
+        <tr>
+          <td onclick = "change_text()">Strength</td>
+          
+          <td id="ST">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Perception</td>
+          
+          <td id="PE">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Endurance</td>
+          
+          <td id="EN">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Charisma</td>
+          
+          <td id="CH">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Intelligence</td>
+          
+          <td id="IN">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Agility</td>
+          
+          <td id="AG">5</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text()">Luck</td>
+          
+          <td id="LK">5</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="right-panel">
+      <p class="right-text">Welcome to the Fallout character creator stat screen. </p>
+    </div>
+  </main>
 </body>
