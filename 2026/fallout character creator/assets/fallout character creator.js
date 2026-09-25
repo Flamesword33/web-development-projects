@@ -103,7 +103,20 @@ function set_ap(){
  * <!--href="../fallout character creator/assets/stats screen.html?ST=5&PE=5&EN=5&CH=5&IN=5&AG=5&LK=5"-->
  */
 function next_page(){
-
+  let stats = [document.getElementById("ST").innerHTML,
+            document.getElementById("PE").innerHTML,
+            document.getElementById("EN").innerHTML,
+            document.getElementById("CH").innerHTML,
+            document.getElementById("IN").innerHTML,
+            document.getElementById("AG").innerHTML,
+            document.getElementById("LK").innerHTML];
+  let special = ["ST", "PE", "EN", "CH", "IN", "AG", "LK"];
+  let url = "../fallout character creator/assets/stats screen.html?";
+  for(let x=0; x < stats.length - 1; x++){
+    url = url + special[x] + "=" + stats[x] + "&";
+  }
+  url = url + special[6] + "=" + stats[6];
+  window.open(url);
 }
 
 //let enemy_count = Number(document.getElementById("enemy-count").value);
