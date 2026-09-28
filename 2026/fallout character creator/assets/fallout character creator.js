@@ -44,6 +44,48 @@ function change_st(plus_or_minus){
   set_hp();
   set_carry_weight();
 }
+
+function change_pe(plus_or_minus){
+  if(plus_or_minus == "+"){
+    plus_sign("PE");
+  }
+  else if(plus_or_minus == "-"){
+    minus_sign("PE");
+  }
+  //stats associated with pe here
+}
+
+function change_en(plus_or_minus){
+  if(plus_or_minus == "+"){
+    plus_sign("EN");
+  }
+  else if(plus_or_minus == "-"){
+    minus_sign("EN");
+  }
+  //stats associated with en here
+  set_resistance(); //poison, radiation, healing rate
+}
+
+function change_ag(plus_or_minus){
+  if(plus_or_minus == "+"){
+    plus_sign("AG");
+  }
+  else if(plus_or_minus == "-"){
+    minus_sign("AG");
+  }
+  set_ap();
+}
+
+function change_lk(plus_or_minus){
+  if(plus_or_minus == "+"){
+    plus_sign("LK");
+  }
+  else if(plus_or_minus == "-"){
+    minus_sign("LK");
+  }
+  //stats associated with lk here
+}
+
 /**minus_sign(int special)
  * Checks if Special value above 1
  * Reduces given special value by 1
