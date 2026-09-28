@@ -53,6 +53,7 @@ function change_pe(plus_or_minus){
     minus_sign("PE");
   }
   //stats associated with pe here
+  set_effective_range(); //also sets sequence
 }
 
 function change_en(plus_or_minus){
@@ -63,6 +64,7 @@ function change_en(plus_or_minus){
     minus_sign("EN");
   }
   //stats associated with en here
+  set_hp();
   set_resistance(); //poison, radiation, healing rate
 }
 
@@ -73,6 +75,7 @@ function change_ag(plus_or_minus){
   else if(plus_or_minus == "-"){
     minus_sign("AG");
   }
+  //stats associated with st here
   set_ap();
 }
 
@@ -84,6 +87,7 @@ function change_lk(plus_or_minus){
     minus_sign("LK");
   }
   //stats associated with lk here
+  set_crit();
 }
 
 /**minus_sign(int special)
@@ -158,6 +162,18 @@ function set_ap(){
   [].slice.call( divs ).forEach(function ( div ) {
     div.innerHTML = AP;
   });
+}
+
+function set_effective_range(){
+}
+
+function set_carry_weight(){
+}
+
+function set_resistance(){
+}
+
+function set_crit(){
 }
 
 /**next_page()
