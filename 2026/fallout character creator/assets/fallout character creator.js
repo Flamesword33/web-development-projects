@@ -153,6 +153,9 @@ function set_ap(){
 }
 
 function set_effective_range(){
+  let perception = parseInt(document.getElementById("PE").innerHTML);
+  let effective_range = perception * 5;
+  document.getElementById("effective-range").innerHTML = effective_range;
 }
 
 function set_carry_weight(){
