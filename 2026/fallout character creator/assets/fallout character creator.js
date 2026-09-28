@@ -33,6 +33,17 @@
       
  */
 
+function change_st(plus_or_minus){
+  if(plus_or_minus == "+"){
+    plus_sign("ST");
+  }
+  else if(plus_or_minus == "-"){
+    minus_sign("ST");
+  }
+  //stats associated with st here
+  set_hp();
+  set_carry_weight();
+}
 /**minus_sign(int special)
  * Checks if Special value above 1
  * Reduces given special value by 1
@@ -50,7 +61,6 @@ function minus_sign(special){
 
   document.getElementById(special).innerHTML = stat;
   document.getElementById("points-left").innerHTML = points;
-  set_sub_stats(special, stat);
 }//minus_sign
 
 /**plus_sign(int special)
@@ -71,7 +81,6 @@ function plus_sign(special){
 
   document.getElementById(special).innerHTML = stat;
   document.getElementById("points-left").innerHTML = points;
-  set_sub_stats(special);
 }//plus_sign
 
 function set_sub_stats(special){
