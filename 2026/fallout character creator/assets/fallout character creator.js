@@ -143,7 +143,7 @@ function set_hp(){
 
 function set_ap(){
   let Agility = parseInt(document.getElementById("AG").innerHTML);
-  let AP = 5 + Math.floor(Agility/2)
+  let AP = 5 + Math.floor(Agility/2);
 
   //https://stackoverflow.com/questions/7409478/replace-innerhtml-of-all-divs-with-same-class
   let divs = document.getElementsByClassName("ap");
