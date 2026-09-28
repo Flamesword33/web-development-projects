@@ -155,16 +155,40 @@ function set_ap(){
 function set_effective_range(){
   let perception = parseInt(document.getElementById("PE").innerHTML);
   let effective_range = perception * 5;
+  let sequence = perception * 2;
+
   document.getElementById("effective-range").innerHTML = effective_range;
+  document.getElementById("sequence").innerHTML = sequence;
 }
 
 function set_carry_weight(){
+  let strength = parseInt(document.getElementById("ST").innerHTML);
+  let carry_weight = strength * 25 + 25;
+  let unarmed_dmg_bonus = strength - 5;
+  if (unarmed_dmg_bonus < 1){
+    unarmed_dmg_bonus = 1;
+  } 
+
+  document.getElementById("carry-weight").innerHTML = carry_weight;
+  document.getElementById("unarmed-damage-bonus").innerHTML = unarmed_dmg_bonus;
 }
 
 function set_resistance(){
+  let endurance = parseInt(document.getElementById("EN").innerHTML);
+  let poison = endurance * 5;
+  let radiation = endurance * 2;
+  let heal_rate = Math.floor(endurance/3) + 1;
+
+  document.getElementById("poison-resist").innerHTML = poison;
+  document.getElementById("rad-resist").innerHTML = radiation;
+  document.getElementById("heal-rate").innerHTML = heal_rate;
 }
 
 function set_crit(){
+  let luck = parseInt(document.getElementById("LK").innerHTML);
+  let crit = luck;
+
+  document.getElementById("crit-chance").innerHTML = crit;
 }
 
 /**next_page()
