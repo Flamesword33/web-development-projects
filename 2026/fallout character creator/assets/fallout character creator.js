@@ -13,12 +13,24 @@
         Set min of 0 in the point pool                         --> DONE
         Link point pool decrease with SPECIAL stat increases   --> DONE was overcomplicating
       Govern current page stats: 
-        Link SPECIAL to HP
-        Link SPECIAL to AP
+        Link SPECIAL to HP                                     --> DONE
+        Link SPECIAL to AP                                     --> DONE
+        Link SPECIAL to other derived stats
       Govern 2nd page stats:
         Link SPECIAL to stats
         Link custom perks to stats
         Allow 3 stats to be increased
+
+
+    I'm changing plus_sign/minus_sign to change_st("+/-") to cut down on the number of if/then calls
+      That way its 1 function per stat and each handles its own sub stats
+      Instead of 1 if/then per stat (5), there is now only 2 if/thens but 5 extra functions 
+
+    CH, IN lacks sub stats
+
+    === BUGS ===
+    
+      
  */
 
 /**minus_sign(int special)
