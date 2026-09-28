@@ -129,18 +129,6 @@ function plus_sign(special){
   document.getElementById("points-left").innerHTML = points;
 }//plus_sign
 
-function set_sub_stats(special){
-  //if HP changed
-  if (special == "ST" || special == "EN"){
-    set_hp();
-  } 
-
-  //if AP changed
-  if (special == "AG"){
-    set_ap();
-  }
-}//set_sub_stats
-
 function set_hp(){
   let Strength = parseInt(document.getElementById("ST").innerHTML);
   let Endurance = parseInt(document.getElementById("EN").innerHTML);
