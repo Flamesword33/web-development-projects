@@ -57,78 +57,108 @@
       <h2>COMBAT STATS</h2>
       <table>
         <tr>
-          <td onclick = "change_text()">Strength</td>
-          <input type="checkbox" onclick="increase()">
-          <td id="ST">5</td>
+          <td onclick = "change_text('pistol')">Pistols & Shotguns</td>
+          <td><input type="checkbox" onclick="increase('pistol')"></td>
+          <td id="pistol">25</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Perception</td>
-          
-          <td id="PE">5</td>
+          <td onclick = "change_text('rifle')">Machine guns & rifles</td>
+          <td><input type="checkbox" onclick="increase('rifle')"></td>
+          <td id="rifle">25</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Endurance</td>
-          
-          <td id="EN">5</td>
+          <td onclick = "change_text('big')">Big Guns</td>
+          <td><input type="checkbox" onclick="increase('big')"></td>
+          <td id="big">25</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Charisma</td>
-          
-          <td id="CH">5</td>
+          <td onclick = "change_text('energy')">Energy Weapons</td>
+          <td><input type="checkbox" onclick="increase('energy')"></td>
+          <td id="energy">25</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Intelligence</td>
-          
-          <td id="IN">5</td>
+          <td onclick = "change_text('one-hand')">One handed Melee</td>
+          <td><input type="checkbox" onclick="increase('one-hand')"></td>
+          <td id="one-hand">25</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Agility</td>
-          
-          <td id="AG">5</td>
+          <td onclick = "change_text('two-hand')">Two handed Melee</td>
+          <td><input type="checkbox" onclick="increase('two-hand')"></td>
+          <td id="two-hand">25</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Luck</td>
-          
-          <td id="LK">5</td>
+          <td onclick = "change_text('unarmed')">Unarmed</td>
+          <td><input type="checkbox" onclick="increase('unarmed')"></td>
+          <td id="unarmed">25</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text('throw')">Throwing</td>
+          <td><input type="checkbox" onclick="increase('throw')"></td>
+          <td id="throw">25</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text('trap')">Traps & Mines</td>
+          <td><input type="checkbox" onclick="increase('trap')"></td>
+          <td id="trap">25</td>
         </tr>
       </table>
 
       <h2>ROLE PLAYING STATS</h2>
       <table>
         <tr>
-          <td onclick = "change_text()">Strength</td>
-          
-          <td id="ST">5</td>
+          <td onclick = "change_text('first-aid')">First Aid</td>
+          <td><input type="checkbox" onclick="increase('first-aid')">
+          <td id="first-aid">40</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Perception</td>
-          
-          <td id="PE">5</td>
+          <td onclick = "change_text('doctor')">Doctor</td>
+          <td><input type="checkbox" onclick="increase('doctor')">
+          <td id="doctor">12</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Endurance</td>
-          
-          <td id="EN">5</td>
+          <td onclick = "change_text('sneak')">Sneak</td>
+          <td><input type="checkbox" onclick="increase('sneak')">
+          <td id="sneak">25</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Charisma</td>
-          
-          <td id="CH">5</td>
+          <td onclick = "change_text('lockpick')">Lockpick</td>
+          <td><input type="checkbox" onclick="increase('lockpick')">
+          <td id="lockpick">20</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Intelligence</td>
-          
-          <td id="IN">5</td>
+          <td onclick = "change_text('steal')">Pickpocket</td>
+          <td><input type="checkbox" onclick="increase('steal')">
+          <td id="steal">15</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Agility</td>
-          
-          <td id="AG">5</td>
+          <td onclick = "change_text('science')">Science</td>
+          <td><input type="checkbox" onclick="increase('science')">
+          <td id="science">20</td>
         </tr>
         <tr>
-          <td onclick = "change_text()">Luck</td>
-          
-          <td id="LK">5</td>
+          <td onclick = "change_text('repair')">Repair</td>
+          <td><input type="checkbox" onclick="increase('repair')">
+          <td id="repair">20</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text('speech')">Speech</td>
+          <td><input type="checkbox" onclick="increase('speech')">
+          <td id="speech">25</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text('barter')">Barter</td>
+          <td><input type="checkbox" onclick="increase('barter')">
+          <td id="barter">20</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text('gamble')">Gambling</td>
+          <td><input type="checkbox" onclick="increase('gamble')">
+          <td id="gamble">20</td>
+        </tr>
+        <tr>
+          <td onclick = "change_text('survive')">Survival</td>
+          <td><input type="checkbox" onclick="increase('survive')">
+          <td id="survive">25</td>
         </tr>
       </table>
 
@@ -136,38 +166,31 @@
       <table>
         <tr>
           <td onclick = "change_text()">Strength</td>
-          
-          <td id="ST">5</td>
+          <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
         <tr>
           <td onclick = "change_text()">Perception</td>
-          
-          <td id="PE">5</td>
+          <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
         <tr>
           <td onclick = "change_text()">Endurance</td>
-          
-          <td id="EN">5</td>
+          <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
         <tr>
           <td onclick = "change_text()">Charisma</td>
-          
-          <td id="CH">5</td>
+          <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
         <tr>
           <td onclick = "change_text()">Intelligence</td>
-          
-          <td id="IN">5</td>
+          <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
         <tr>
           <td onclick = "change_text()">Agility</td>
-          
-          <td id="AG">5</td>
+          <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
         <tr>
           <td onclick = "change_text()">Luck</td>
-          
-          <td id="LK">5</td>
+          <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
       </table>
     </div>
