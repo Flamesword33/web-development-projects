@@ -48,6 +48,13 @@ Survival:       Endurance + Intelligence + 15               survive
 // let x = document.getvalue...;
 // x.checked == true/false;
 
+function main(){
+  let stats = [5,5,5,5,5,5,5];
+  stats = get_stats_from_url(stats);
+  let character = new stat_screen(stats[0],stats[1],stats[2],stats[3],stats[4],stats[5],stats[6]);
+  character.set_combat();
+  character.set_role_play();
+}
 
 class stat_screen{
   constructor(ST, PE, EN, CH, IN, AG, LK){
