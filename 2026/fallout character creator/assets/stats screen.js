@@ -63,5 +63,21 @@ class stat_screen{
     this.perk_counter = 2;
   }
 
+  set_combat(){
+    set_cstat("pistol", this.AG, this.AG);
+    set_cstat("rifle", this.PE, this.AG);
+    set_cstat("big", this.PE, this.ST);
+    set_cstat("energy", this.PE, this.IN);
+    set_cstat("one-hand", this.ST, this.AG);
+    set_cstat("two-hand", this.ST, this.ST);
+    set_cstat("unarmed", this.ST, this.EN);
+    set_cstat("throw", this.ST, this.PE);
+    set_cstat("trap", this.IN, this.LK);
+  }
+
+  set_cstat(id, stat1, stat2){
+    let final = stat1 + stat2 + 15;
+    document.getElementById(id).innerHTML = final;
+  }
 
 }//stat_screen
