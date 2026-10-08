@@ -80,4 +80,23 @@ class stat_screen{
     document.getElementById(id).innerHTML = final;
   }
 
+  set_role_play(){
+    set_rstat("first-aid", this.PE+this.IN+30);
+    set_rstat("doctor", this.PE/2 + this.IN + 5);
+    set_rstat("sneak", this.AG+20);
+    set_rstat("lockpick", Math.floor((this.PE+this.AG)/2) +15);
+    set_rstat("steal", Math.floor((this.PE+this.LK)/2) + 15);
+    set_rstat("science", this.IN+this.IN+10);
+    set_rstat("repair", this.PE+this.IN+10);
+    set_rstat("speech", this.CH+this.CH+15);
+    set_rstat("barter", this.CH+this.CH+this.IN+5);
+    set_rstat("gamble", this.LK*3 + 5);
+    set_rstat("survive", this.EN+this.IN+15);
+  }
+
+  set_rstat(id, stat){
+    document.getElementById(id).innerHTML = stat;
+  }
+
+
 }//stat_screen
