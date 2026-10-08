@@ -42,4 +42,26 @@ Survival:       Endurance + Intelligence + 15               survive
        
  */
 
-//needs a class to hold global variables based on url stats
+//needs to create event on window start, said event:
+//  reads url and sets stats on page
+
+// let x = document.getvalue...;
+// x.checked == true/false;
+
+
+class stat_screen{
+  constructor(ST, PE, EN, CH, IN, AG, LK){
+    this.ST = ST;
+    this.PE = PE;
+    this.EN = EN;
+    this.CH = CH;
+    this.IN = IN;
+    this.AG = AG;
+    this.LK = LK;
+    
+    this.stat_counter = 3;
+    this.perk_counter = 2;
+  }
+
+
+}//stat_screen
