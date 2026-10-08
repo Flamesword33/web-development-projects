@@ -7,7 +7,7 @@
     Second webpage will then ask the user to select 3 stats they are good at and for 2 optional perks.
 
     File will:
-      Display character stats
+      Display character stats              --DONE
         Combat skills:
           Pistols & Shotguns:  2*Agility + 15
           Machine guns & Rifles:  Perception + Agility + 15         
@@ -31,7 +31,7 @@
           Barter:         Charisma x 2 + Intelligence + 5 
           Gambling:       Luck x 3 + 5
           Survival:       Endurance + Intelligence + 15
-      Display optional perks
+      Display optional perks                --DONE
         Fast Metabolism, Bruiser, Small frame, Assassin Strike, Finesse, Kamikaze, Heavy handed, Fast Shooter, Jinxed, Chem Addict, Ghoul, Light Weight, Night Owl, Morning Bird, Bloody Mess, Wacky Wasteland
       Each item has a check box and a total
       Below (with css will be to the right) a text blurb for each skill
@@ -165,32 +165,68 @@
       <h2>PERKS</h2>
       <table>
         <tr>
-          <td onclick = "change_text()">Strength</td>
+          <td onclick = "change_text('fast-met')">Fast Metabolism</td>
+          <td><input type="checkbox" onclick="check_perks('fast-met')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('bruiser')">Bruiser</td>
+          <td><input type="checkbox" onclick="check_perks('bruiser')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('small-frame')">Small Frame</td>
+          <td><input type="checkbox" onclick="check_perks('small-frame')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('a-strike')">Assassin Strike</td>
+          <td><input type="checkbox" onclick="check_perks('a-strike')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('finesse')">Finesse</td>
+          <td><input type="checkbox" onclick="increase('finesse')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('kamikaze')">Kamikaze</td>
+          <td><input type="checkbox" onclick="increase('kamikaze')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('heavy-hand')">Heavy Handed</td>
           <td><input type="checkbox" onclick="increase('one-hand-gun')">
         </tr>
         <tr>
-          <td onclick = "change_text()">Perception</td>
-          <td><input type="checkbox" onclick="increase('one-hand-gun')">
+          <td onclick = "change_text('fast-shooter')">Fast Shooter</td>
+          <td><input type="checkbox" onclick="increase('fast-shooter')">
         </tr>
         <tr>
-          <td onclick = "change_text()">Endurance</td>
-          <td><input type="checkbox" onclick="increase('one-hand-gun')">
+          <td onclick = "change_text('jinx')">Jinxed</td>
+          <td><input type="checkbox" onclick="increase('jinx')">
         </tr>
         <tr>
-          <td onclick = "change_text()">Charisma</td>
-          <td><input type="checkbox" onclick="increase('one-hand-gun')">
+          <td onclick = "change_text('chem')">Chem Addict</td>
+          <td><input type="checkbox" onclick="increase('chem')">
         </tr>
         <tr>
-          <td onclick = "change_text()">Intelligence</td>
-          <td><input type="checkbox" onclick="increase('one-hand-gun')">
+          <td onclick = "change_text('ghoul')">Ghoul</td>
+          <td><input type="checkbox" onclick="increase('ghoul')">
         </tr>
         <tr>
-          <td onclick = "change_text()">Agility</td>
-          <td><input type="checkbox" onclick="increase('one-hand-gun')">
+          <td onclick = "change_text('light-weight')">Light Weight</td>
+          <td><input type="checkbox" onclick="increase('light-weight')">
         </tr>
         <tr>
-          <td onclick = "change_text()">Luck</td>
-          <td><input type="checkbox" onclick="increase('one-hand-gun')">
+          <td onclick = "change_text('night')">Night Owl</td>
+          <td><input type="checkbox" onclick="increase('night')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('morning')">Mornign Bird</td>
+          <td><input type="checkbox" onclick="increase('morning')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('bloody')">Bloody Mess</td>
+          <td><input type="checkbox" onclick="increase('bloody')">
+        </tr>
+        <tr>
+          <td onclick = "change_text('wacky')">Wacky Wasteland</td>
+          <td><input type="checkbox" onclick="increase('wacky')">
         </tr>
       </table>
     </div>
