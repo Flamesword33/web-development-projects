@@ -74,15 +74,15 @@ class stat_screen{
   }
 
   set_combat(){
-    set_cstat("pistol", this.AG, this.AG);
-    set_cstat("rifle", this.PE, this.AG);
-    set_cstat("big", this.PE, this.ST);
-    set_cstat("energy", this.PE, this.IN);
-    set_cstat("one-hand", this.ST, this.AG);
-    set_cstat("two-hand", this.ST, this.ST);
-    set_cstat("unarmed", this.ST, this.EN);
-    set_cstat("throw", this.ST, this.PE);
-    set_cstat("trap", this.IN, this.LK);
+    this.set_cstat("pistol", this.AG, this.AG);
+    this.set_cstat("rifle", this.PE, this.AG);
+    this.set_cstat("big", this.PE, this.ST);
+    this.set_cstat("energy", this.PE, this.IN);
+    this.set_cstat("one-hand", this.ST, this.AG);
+    this.set_cstat("two-hand", this.ST, this.ST);
+    this.set_cstat("unarmed", this.ST, this.EN);
+    this.set_cstat("throw", this.ST, this.PE);
+    this.set_cstat("trap", this.IN, this.LK);
   }
 
   set_cstat(id, stat1, stat2){
@@ -91,17 +91,17 @@ class stat_screen{
   }
 
   set_role_play(){
-    set_rstat("first-aid", this.PE+this.IN+30);
-    set_rstat("doctor", this.PE/2 + this.IN + 5);
-    set_rstat("sneak", this.AG+20);
-    set_rstat("lockpick", Math.floor((this.PE+this.AG)/2) +15);
-    set_rstat("steal", Math.floor((this.PE+this.LK)/2) + 15);
-    set_rstat("science", this.IN+this.IN+10);
-    set_rstat("repair", this.PE+this.IN+10);
-    set_rstat("speech", this.CH+this.CH+15);
-    set_rstat("barter", this.CH+this.CH+this.IN+5);
-    set_rstat("gamble", this.LK*3 + 5);
-    set_rstat("survive", this.EN+this.IN+15);
+    this.set_rstat("first-aid", this.PE+this.IN+30);
+    this.set_rstat("doctor", Math.floor(this.PE/2) + this.IN + 5);
+    this.set_rstat("sneak", this.AG+20);
+    this.set_rstat("lockpick", Math.floor((this.PE+this.AG)/2) +15);
+    this.set_rstat("steal", Math.floor((this.PE+this.LK)/2) + 15);
+    this.set_rstat("science", this.IN+this.IN+10);
+    this.set_rstat("repair", this.PE+this.IN+10);
+    this.set_rstat("speech", this.CH+this.CH+15);
+    this.set_rstat("barter", this.CH+this.CH+this.IN+5);
+    this.set_rstat("gamble", this.LK*3 + 5);
+    this.set_rstat("survive", this.EN+this.IN+15);
   }
 
   set_rstat(id, stat){
