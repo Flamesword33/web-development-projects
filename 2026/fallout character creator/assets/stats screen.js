@@ -50,6 +50,10 @@ Survival:       Endurance + Intelligence + 15               survive
 // let x = document.getvalue...;
 // x.checked == true/false;
 
+/////////
+//GLOBALS
+let Stat_points = 3;
+let Perk_points = 2;
 function main(){
   let stats = [5,5,5,5,5,5,5];
   stats = get_stats_from_url(stats);
@@ -67,9 +71,6 @@ class stat_screen{
     this.IN = IN;
     this.AG = AG;
     this.LK = LK;
-    
-    this.stat_counter = 3;
-    this.perk_counter = 2;
   }
 
   set_combat(){
