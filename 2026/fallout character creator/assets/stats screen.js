@@ -9,7 +9,7 @@
     File will:
       Govern 2nd page stats:           --DONE
         Link SPECIAL to stats          --DONE
-        Link custom perks to stats
+        Link custom perks to stats     
         Allow 3 stats to be increased
         Prevent more than 3 stat boxes from being checked
         Prevent more than 2 perks from being checked
@@ -63,6 +63,19 @@ function main(){
   let character = new stat_screen(stats[0],stats[1],stats[2],stats[3],stats[4],stats[5],stats[6]);
   character.set_combat();
   character.set_role_play();
+}
+
+function get_stats_from_url(stats){
+  let url = window.location.search;
+  let key_value = ["",""];
+  //this will turn url into ?ST=5&EN=5&...
+  url = url.slice(1); //remove ?
+  url = url.split('&');
+  for(let x = 0; x<stats.length; x++){
+    key_value = url[x].split('=');
+    stats[x] = parseInt(key_value[1]); 
+  }
+  return stats;
 }
 
 class stat_screen{
