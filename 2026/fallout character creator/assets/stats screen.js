@@ -7,11 +7,13 @@
     Second webpage will then ask the user to select 3 stats they are good at and for 2 optional perks.
 
     File will:
-      Govern 2nd page stats:
-        Link SPECIAL to stats
+      Govern 2nd page stats:           --DONE
+        Link SPECIAL to stats          --DONE
         Link custom perks to stats
         Allow 3 stats to be increased
-
+        Prevent more than 3 stat boxes from being checked
+        Prevent more than 2 perks from being checked
+      Swap in correct text for each stat and perk
     Skills:
     ======
                === COMBAT ===                               ID
