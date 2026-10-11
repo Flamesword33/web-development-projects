@@ -54,7 +54,10 @@ Survival:       Endurance + Intelligence + 15               survive
 //GLOBALS
 let Stat_points = 3;
 let Perk_points = 2;
+
 function main(){
+  //[10,10,10,10,10,10,10]; test max
+  //[1,1,1,1,1,1,1];        test min
   let stats = [5,5,5,5,5,5,5];
   stats = get_stats_from_url(stats);
   let character = new stat_screen(stats[0],stats[1],stats[2],stats[3],stats[4],stats[5],stats[6]);
