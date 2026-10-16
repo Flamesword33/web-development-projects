@@ -15,11 +15,7 @@
       Govern current page stats: 
         Link SPECIAL to HP                                     --> DONE
         Link SPECIAL to AP                                     --> DONE
-        Link SPECIAL to other derived stats
-      Govern 2nd page stats:
-        Link SPECIAL to stats
-        Link custom perks to stats
-        Allow 3 stats to be increased
+        Link SPECIAL to other derived stats                    --> DONE
 
 
     I'm changing plus_sign/minus_sign to change_st("+/-") to cut down on the number of if/then calls
@@ -28,11 +24,18 @@
 
     CH, IN lacks sub stats
 
+    change i'd like to make: get the stat object during the change functions
+
     === BUGS ===
-    
-      
+          
  */
 
+/** change_st(plus_or_minus)
+ * @description: 
+ * Takes either a + or - and calls plus_sign("ST") or minus_sign("ST"). 
+ * Additionally calls set_hp() and set_carry_weight()
+ * @param {String} plus_or_minus: expects either a "+" or "-" 
+ */
 function change_st(plus_or_minus){
   if(plus_or_minus == "+"){
     plus_sign("ST");
@@ -43,8 +46,15 @@ function change_st(plus_or_minus){
   //stats associated with st here
   set_hp();
   set_carry_weight();
-}
+}//change_st
 
+
+/** change_pe(plus_or_minus)
+ * @description: 
+ * Takes either a + or - and calls plus_sign("PE") or minus_sign("PE"). 
+ * Additionally calls set_effective_range()
+ * @param {String} plus_or_minus: expects either a "+" or "-" 
+ */
 function change_pe(plus_or_minus){
   if(plus_or_minus == "+"){
     plus_sign("PE");
@@ -54,8 +64,14 @@ function change_pe(plus_or_minus){
   }
   //stats associated with pe here
   set_effective_range(); //also sets sequence
-}
+}//change_pe
 
+/** change_en(plus_or_minus)
+ * @description: 
+ * Takes either a + or - and calls plus_sign("EN") or minus_sign("EN"). 
+ * Additionally calls set_hp() and set_resitance()
+ * @param {String} plus_or_minus: expects either a "+" or "-" 
+ */
 function change_en(plus_or_minus){
   if(plus_or_minus == "+"){
     plus_sign("EN");
@@ -66,8 +82,14 @@ function change_en(plus_or_minus){
   //stats associated with en here
   set_hp();
   set_resistance(); //poison, radiation, healing rate
-}
+}//change_en
 
+/** change_ag(plus_or_minus)
+ * @description: 
+ * Takes either a + or - and calls plus_sign("AG") or minus_sign("AG"). 
+ * Additionally calls set_ap()
+ * @param {String} plus_or_minus: expects either a "+" or "-" 
+ */
 function change_ag(plus_or_minus){
   if(plus_or_minus == "+"){
     plus_sign("AG");
@@ -77,8 +99,14 @@ function change_ag(plus_or_minus){
   }
   //stats associated with st here
   set_ap();
-}
+}//change_ag
 
+/** change_lk(plus_or_minus)
+ * @description: 
+ * Takes either a + or - and calls plus_sign("LK") or minus_sign("LK"). 
+ * Additionally calls set_crit()
+ * @param {String} plus_or_minus: expects either a "+" or "-" 
+ */
 function change_lk(plus_or_minus){
   if(plus_or_minus == "+"){
     plus_sign("LK");
@@ -88,12 +116,14 @@ function change_lk(plus_or_minus){
   }
   //stats associated with lk here
   set_crit();
-}
+}//change_lk
 
-/**minus_sign(int special)
+/**minus_sign(special)
  * Checks if Special value above 1
  * Reduces given special value by 1
  * Increases point total by 1 
+ * Affects html associated with given special and point total
+ * @param {String} special: Accepts "ST","PE","EN","AG","LK","CH","IN" 
  */
 function minus_sign(special){
   change_image(special);
@@ -114,6 +144,8 @@ function minus_sign(special){
  * Checks if point value is greater than 0
  * Increases Special value by 1
  * Reduces point value by 1
+ * Affects html associated with given special and point total
+ * @param {String} special: Accepts "ST","PE","EN","AG","LK","CH","IN" 
  */
 function plus_sign(special){
   change_image(special);
@@ -129,6 +161,9 @@ function plus_sign(special){
   document.getElementById("points-left").innerHTML = points;
 }//plus_sign
 
+/**set_hp()
+ * Sets hp based on ST and EN stats
+ */
 function set_hp(){
   let Strength = parseInt(document.getElementById("ST").innerHTML);
   let Endurance = parseInt(document.getElementById("EN").innerHTML);
@@ -139,8 +174,12 @@ function set_hp(){
   [].slice.call( divs ).forEach(function ( div ) {
     div.innerHTML = HP;
   });
-}
+}//set_hp
 
+
+/**set_ap()
+ * Sets ap off AG stat
+ */
 function set_ap(){
   let Agility = parseInt(document.getElementById("AG").innerHTML);
   let AP = 5 + Math.floor(Agility/2);
@@ -150,8 +189,12 @@ function set_ap(){
   [].slice.call( divs ).forEach(function ( div ) {
     div.innerHTML = AP;
   });
-}
+}//set_ap
 
+
+/**set_effective_range()
+ * sets effective range and sequence off PE stat, also sets sequence
+ */
 function set_effective_range(){
   let perception = parseInt(document.getElementById("PE").innerHTML);
   let effective_range = perception * 5;
@@ -159,8 +202,11 @@ function set_effective_range(){
 
   document.getElementById("effective-range").innerHTML = effective_range;
   document.getElementById("sequence").innerHTML = sequence;
-}
+}//set_effective_range
 
+/**set_carry_weight()
+ * sets carry weight and unarmed damage bonus off ST
+ */
 function set_carry_weight(){
   let strength = parseInt(document.getElementById("ST").innerHTML);
   let carry_weight = strength * 25 + 25;
@@ -171,8 +217,11 @@ function set_carry_weight(){
 
   document.getElementById("carry-weight").innerHTML = carry_weight;
   document.getElementById("unarmed-damage-bonus").innerHTML = unarmed_dmg_bonus;
-}
+}//set_carry_weight
 
+/**set_resistance()
+ * sets poison, radiation resistances and healing rate based on EN stat
+ */
 function set_resistance(){
   let endurance = parseInt(document.getElementById("EN").innerHTML);
   let poison = endurance * 5;
@@ -182,14 +231,17 @@ function set_resistance(){
   document.getElementById("poison-resist").innerHTML = poison;
   document.getElementById("rad-resist").innerHTML = radiation;
   document.getElementById("heal-rate").innerHTML = heal_rate;
-}
+}//set_resistance
 
+/**set_crit()
+ * sets crit based on LK stat
+ */
 function set_crit(){
   let luck = parseInt(document.getElementById("LK").innerHTML);
   let crit = luck;
 
   document.getElementById("crit-chance").innerHTML = crit;
-}
+}//set_crit
 
 /**next_page()
  * sets the url for the next page with the current SPECIAL values
@@ -211,19 +263,28 @@ function next_page(){
   }
   url = url + special[6] + "=" + stats[6];
   window.open(url);
-}
+}//next_page()
 
 //let enemy_count = Number(document.getElementById("enemy-count").value);
 //document.getElementById(id).style.property = new style
 
+/**change_image(stat)
+ * swaps the main page image for another based on stat.png
+ * calls change_text(stat)
+ * @param {String} stat: Accepts "ST","PE","EN","AG","LK","CH","IN" 
+ */
 function change_image(stat){
   let images = document.getElementsByClassName("center-image");
   let url = "../fallout character creator/assets/" + stat + ".png"
   images[0].src = url;
 
   change_text(stat);
-}
+}//change_image
 
+/**change_text(stat)
+ * sets the html image text to a new custom string based on stat
+ * @param {String} stat: Accepts "ST","PE","EN","AG","LK","CH","IN" 
+ */
 function change_text(stat){
   let new_text = "";
   if(stat == "ST"){
@@ -250,4 +311,4 @@ function change_text(stat){
 
   document.querySelector(".right-panel p").innerHTML = new_text;
   //document.getElementsByClassName("right-panel")[0].getElementsByTagName("p")[0].innerHTML = new_text;
-}
+}//change_text

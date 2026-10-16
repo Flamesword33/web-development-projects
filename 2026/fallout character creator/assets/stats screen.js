@@ -9,7 +9,7 @@
     File will:
       Govern 2nd page stats:           --DONE
         Link SPECIAL to stats          --DONE
-        Link custom perks to stats     
+        Link perks to stats            --DONE
         Allow 3 stats to be increased
         Prevent more than 3 stat boxes from being checked
         Prevent more than 2 perks from being checked
