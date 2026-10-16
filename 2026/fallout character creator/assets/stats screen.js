@@ -55,6 +55,13 @@ Survival:       Endurance + Intelligence + 15               survive
 let Stat_points = 3;
 let Perk_points = 2;
 
+/**main()
+ * Creates a new character with stats from the url
+ * sets up the html page combat and roleplaying stats
+ * @requires get_stats_from_url(stats) 
+ * @requires set_combat() 
+ * @requires set_role_play()
+ */
 function main(){
   //[10,10,10,10,10,10,10]; test max
   //[1,1,1,1,1,1,1];        test min
@@ -63,8 +70,17 @@ function main(){
   let character = new stat_screen(stats[0],stats[1],stats[2],stats[3],stats[4],stats[5],stats[6]);
   character.set_combat();
   character.set_role_play();
-}
+}//main
 
+/**get_stats_from_url(stats)
+ * Reads the url after the ? for ints and returns them
+ * Expects 
+ *   url to be formatted as: ?var1=5&var2=4...
+ *   stats to be less than or equal in size to the url variables 
+ * 
+ * @param {list[int]} stats: a int list 
+ * @returns {list[int]} stats: a filled out list of ints
+ */
 function get_stats_from_url(stats){
   let url = window.location.search;
   let key_value = ["",""];
@@ -74,9 +90,9 @@ function get_stats_from_url(stats){
   for(let x = 0; x<stats.length; x++){
     key_value = url[x].split('=');
     stats[x] = parseInt(key_value[1]); 
-  }
+  }//for
   return stats;
-}
+}//get_stats_from_url
 
 class stat_screen{
   constructor(ST, PE, EN, CH, IN, AG, LK){
@@ -87,9 +103,14 @@ class stat_screen{
     this.IN = IN;
     this.AG = AG;
     this.LK = LK;
+    //copy to remember in case of changes
     this.original_CH = CH;
-  }
+  }//constructor
 
+  /**set_combat()
+   * populates information about games combat stats
+   * @requires set_cstat(string,int,int)
+   */
   set_combat(){
     this.set_cstat("pistol", this.AG, this.AG);
     this.set_cstat("rifle", this.PE, this.AG);
@@ -100,13 +121,23 @@ class stat_screen{
     this.set_cstat("unarmed", this.ST, this.EN);
     this.set_cstat("throw", this.ST, this.PE);
     this.set_cstat("trap", this.IN, this.LK);
-  }
+  }//set_combat
 
+  /**set_cstat(id, stat1, stat2)
+   * Adds 2 stats and 15, then saves it to the html via an id
+   * @param {string} id: html id string 
+   * @param {int} stat1 
+   * @param {int} stat2 
+   */
   set_cstat(id, stat1, stat2){
     let final = stat1 + stat2 + 15;
     document.getElementById(id).innerHTML = final;
-  }
+  }//set_cstat
 
+  /**set_role_play()
+   * populates information about games role play stats
+   * @requires set_rstat(string, int)
+   */
   set_role_play(){
     this.set_rstat("first-aid", this.PE+this.IN+30);
     this.set_rstat("doctor", Math.floor(this.PE/2) + this.IN + 5);
@@ -121,10 +152,21 @@ class stat_screen{
     this.set_rstat("survive", this.EN+this.IN+15);
   }
 
+  /**set_rstat(id, stat)
+   * Saves information to a given html id
+   * @param {string} id: a html id 
+   * @param {int} stat 
+   */
   set_rstat(id, stat){
     document.getElementById(id).innerHTML = stat;
-  }
+  }//set_rstat
 
+  /**ghoul(is_ghoul)
+   * Halves ghoul charisma and updates speech & barter
+   * Resets non ghoul characters
+   * @param {boolean} is_ghoul
+   * @requires set_rstat(string,int) 
+   */
   ghoul(is_ghoul){
     if(is_ghoul == true){
       this.CH = Math.floor(this.CH/2);
