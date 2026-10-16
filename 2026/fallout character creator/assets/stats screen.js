@@ -87,6 +87,7 @@ class stat_screen{
     this.IN = IN;
     this.AG = AG;
     this.LK = LK;
+    this.original_CH = CH;
   }
 
   set_combat(){
@@ -124,5 +125,15 @@ class stat_screen{
     document.getElementById(id).innerHTML = stat;
   }
 
+  ghoul(is_ghoul){
+    if(is_ghoul == true){
+      this.CH = Math.floor(this.CH/2);
+    }
+    else if(is_ghoul == false){
+      this.CH = this.original_CH;
+    }
+    this.set_rstat("speech", this.CH+this.CH+15);
+    this.set_rstat("barter", this.CH+this.CH+this.IN+5);
+  }
 
 }//stat_screen
