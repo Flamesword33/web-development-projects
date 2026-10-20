@@ -52,8 +52,8 @@ Survival:       Endurance + Intelligence + 15               survive
 
 /////////
 //GLOBALS
-let Stat_points = 3;
-let Perk_points = 2;
+var Stat_points = 3;  
+var Perk_points = 2;
 
 /**main()
  * Creates a new character with stats from the url
