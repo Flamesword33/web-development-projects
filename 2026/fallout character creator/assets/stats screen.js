@@ -94,6 +94,55 @@ function get_stats_from_url(stats){
   return stats;
 }//get_stats_from_url
 
+/**increase(id)
+ * Expects <div><input type="checkbox"> </div>
+ *         <div id="var">25</div>
+ * Finds the given value and if the box is checked increses it by 20
+ * Internal counter to 3, after that increse() prevents further checkboxes from activating
+ * Unchecking boxes reduces given number by 20 and reduces the internal counter
+ * @param {String} id: the html id of the stat 
+ */
+function increase(id){
+  let current = parseInt(document.getElementById(id).innerHTML);
+  let stat = document.getElementById(id)
+  let check_box = stat.previousElementSibling.firstChild;
+  let is_increase = check_box.checked;
+
+  if(is_increase == true){
+    if(Stat_points > 0){
+      document.getElementById(id).innerHTML = current + 20;
+      Stat_points = Stat_points - 1;
+    }
+    else if(Stat_points == 0){
+      check_box.checked = false;
+    }
+  }//box checked
+  else if(is_increase == false){
+    document.getElementById(id).innerHTML = current - 20;
+    Stat_points = Stat_points + 1;
+  }//box unchecked
+  //change_text(id);
+}//increase
+
+function check_perks(id){
+  let perk = document.getElementById(id)
+  let is_checked = perk.checked;
+
+  if(is_checked == true){
+    if(Perk_points > 0){
+      Perk_points = Perk_points - 1;
+    }
+    else if(Perk_points == 0){
+      perk.checked = false;
+    }
+  }//box checked
+  else if(is_checked == false){
+    Perk_points = Perk_points + 1;
+  }//box unchecked
+  //change_text(id);
+}//check_perks
+
+
 class stat_screen{
   constructor(ST, PE, EN, CH, IN, AG, LK){
     this.ST = ST;
