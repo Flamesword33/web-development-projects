@@ -34,7 +34,11 @@
  * @description: 
  * Takes either a + or - and calls plus_sign("ST") or minus_sign("ST"). 
  * Additionally calls set_hp() and set_carry_weight()
- * @param {String} plus_or_minus: expects either a "+" or "-" 
+ * @param {String} plus_or_minus: expects either a "+" or "-"
+ * @requires plus_sign(String)
+ * @requires minus_sign(String)
+ * @requires set_hp()
+ * @requires set_carry_weight() 
  */
 function change_st(plus_or_minus){
   if(plus_or_minus == "+"){
@@ -53,7 +57,10 @@ function change_st(plus_or_minus){
  * @description: 
  * Takes either a + or - and calls plus_sign("PE") or minus_sign("PE"). 
  * Additionally calls set_effective_range()
- * @param {String} plus_or_minus: expects either a "+" or "-" 
+ * @param {String} plus_or_minus: expects either a "+" or "-"
+ * @requires plus_sign(String)
+ * @requires minus_sign(String)
+ * @requires set_effective_range() 
  */
 function change_pe(plus_or_minus){
   if(plus_or_minus == "+"){
@@ -71,6 +78,10 @@ function change_pe(plus_or_minus){
  * Takes either a + or - and calls plus_sign("EN") or minus_sign("EN"). 
  * Additionally calls set_hp() and set_resitance()
  * @param {String} plus_or_minus: expects either a "+" or "-" 
+ * @requires plus_sign(String)
+ * @requires minus_sign(String)
+ * @requires set_hp()
+ * @requires set_resistance()
  */
 function change_en(plus_or_minus){
   if(plus_or_minus == "+"){
@@ -85,10 +96,12 @@ function change_en(plus_or_minus){
 }//change_en
 
 /** change_ag(plus_or_minus)
- * @description: 
  * Takes either a + or - and calls plus_sign("AG") or minus_sign("AG"). 
  * Additionally calls set_ap()
  * @param {String} plus_or_minus: expects either a "+" or "-" 
+ * @requires plus_sign(String)
+ * @requires minus_sign(String)
+ * @requires set_ap()
  */
 function change_ag(plus_or_minus){
   if(plus_or_minus == "+"){
@@ -102,10 +115,12 @@ function change_ag(plus_or_minus){
 }//change_ag
 
 /** change_lk(plus_or_minus)
- * @description: 
  * Takes either a + or - and calls plus_sign("LK") or minus_sign("LK"). 
  * Additionally calls set_crit()
  * @param {String} plus_or_minus: expects either a "+" or "-" 
+ * @requires plus_sign(String)
+ * @requires minus_sign(String)
+ * @requires set_crit()
  */
 function change_lk(plus_or_minus){
   if(plus_or_minus == "+"){
@@ -124,6 +139,7 @@ function change_lk(plus_or_minus){
  * Increases point total by 1 
  * Affects html associated with given special and point total
  * @param {String} special: Accepts "ST","PE","EN","AG","LK","CH","IN" 
+ * @requires change_image(String)
  */
 function minus_sign(special){
   change_image(special);
@@ -146,6 +162,7 @@ function minus_sign(special){
  * Reduces point value by 1
  * Affects html associated with given special and point total
  * @param {String} special: Accepts "ST","PE","EN","AG","LK","CH","IN" 
+ * @requires change_image(String)
  */
 function plus_sign(special){
   change_image(special);
@@ -272,6 +289,7 @@ function next_page(){
  * swaps the main page image for another based on stat.png
  * calls change_text(stat)
  * @param {String} stat: Accepts "ST","PE","EN","AG","LK","CH","IN" 
+ * @requires change_text(String)
  */
 function change_image(stat){
   let images = document.getElementsByClassName("center-image");
