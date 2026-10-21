@@ -10,9 +10,9 @@
       Govern 2nd page stats:           --DONE
         Link SPECIAL to stats          --DONE
         Link perks to stats            --DONE
-        Allow 3 stats to be increased
-        Prevent more than 3 stat boxes from being checked
-        Prevent more than 2 perks from being checked
+        Allow 3 stats to be increased  --DONE
+        Prevent more than 3 stat boxes from being checked --DONE
+        Prevent more than 2 perks from being checked      --DONE
       Swap in correct text for each stat and perk
     Skills:
     ======
