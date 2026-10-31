@@ -2,18 +2,19 @@
     by Nathan Pelletier
     started September 27 2026
 
-    Based off fallout 1. Website asks user for SPECIAL stats. 
+    Based off fallout 1. Website asks user for SPECIAL Stats. 
     Creates a character sheet for a user based off their SPECIAL. 
-    Second webpage will then ask the user to select 3 stats they are good at and for 2 optional perks.
+    Second webpage will then ask the user to select 3 Stats they are good at and for 2 optional perks.
 
     File will:
-      Govern 2nd page stats:           --DONE
-        Link SPECIAL to stats          --DONE
-        Link perks to stats            --DONE
-        Allow 3 stats to be increased  --DONE
+      Govern 2nd page Stats:           --DONE
+        Link SPECIAL to Stats          --DONE
+        Link perks to Stats            --DONE
+        Allow 3 Stats to be increased  --DONE
         Prevent more than 3 stat boxes from being checked --DONE
         Prevent more than 2 perks from being checked      --DONE
       Swap in correct text for each stat and perk
+
     Skills:
     ======
                === COMBAT ===                               ID
@@ -44,54 +45,50 @@ Survival:       Endurance + Intelligence + 15               survive
        
  */
 
-//needs to create event on window start, said event:
-//  reads url and sets stats on page
-
-// let x = document.getvalue...;
 // x.checked == true/false;
 
 /////////
 //GLOBALS
 var Stat_points = 3;  
 var Perk_points = 2;
+var Stats = [5,5,5,5,5,5,5];
 
 /**main()
- * Creates a new character with stats from the url
- * sets up the html page combat and roleplaying stats
- * @requires get_stats_from_url(stats) 
+ * Creates a new character with Stats from the url
+ * sets up the html page combat and roleplaying Stats
+ * @requires get_stats_from_url(Stats) 
  * @requires set_combat() 
  * @requires set_role_play()
  */
 function main(){
   //[10,10,10,10,10,10,10]; test max
   //[1,1,1,1,1,1,1];        test min
-  let stats = [5,5,5,5,5,5,5];
-  stats = get_stats_from_url(stats);
-  let character = new stat_screen(stats[0],stats[1],stats[2],stats[3],stats[4],stats[5],stats[6]);
+  Stats = get_stats_from_url(Stats);
+  let character = new stat_screen(Stats[0],Stats[1],Stats[2],Stats[3],Stats[4],Stats[5],Stats[6]);
   character.set_combat();
   character.set_role_play();
 }//main
 
-/**get_stats_from_url(stats)
+/**get_stats_from_url(Stats)
  * Reads the url after the ? for ints and returns them
  * Expects 
  *   url to be formatted as: ?var1=5&var2=4...
- *   stats to be less than or equal in size to the url variables 
+ *   Stats to be less than or equal in size to the url variables 
  * 
- * @param {list[int]} stats: a int list 
- * @returns {list[int]} stats: a filled out list of ints
+ * @param {list[int]} Stats: a int list 
+ * @returns {list[int]} Stats: a filled out list of ints
  */
-function get_stats_from_url(stats){
+function get_stats_from_url(Stats){
   let url = window.location.search;
   let key_value = ["",""];
   //this will turn url into ?ST=5&EN=5&...
   url = url.slice(1); //remove ?
   url = url.split('&');
-  for(let x = 0; x<stats.length; x++){
+  for(let x = 0; x<Stats.length; x++){
     key_value = url[x].split('=');
-    stats[x] = parseInt(key_value[1]); 
+    Stats[x] = parseInt(key_value[1]); 
   }//for
-  return stats;
+  return Stats;
 }//get_stats_from_url
 
 /**increase(id)
@@ -143,6 +140,21 @@ function check_perks(id){
 }//check_perks
 
 
+/**ghoul(is_ghoul)
+ * Halves ghoul charisma, updating speech & barter
+ * Resets non ghoul characters 
+ */
+function ghoul(){
+  //stat[ST,PE,EN,CH,IN,AG,LK]
+  let is_ghoul = document.getElementById("ghoul").checked;
+  let temp_ch = Stats[3];
+  if(is_ghoul == true){
+    temp_ch = Math.floor(Stats[3]/2);
+  }
+  document.getElementById("speech").innerHTML = temp_ch+temp_ch+15;
+  document.getElementById("barter").innerHTML = temp_ch+temp_ch+Stats[4]+5;
+}//ghoul
+
 class stat_screen{
   constructor(ST, PE, EN, CH, IN, AG, LK){
     this.ST = ST;
@@ -157,7 +169,7 @@ class stat_screen{
   }//constructor
 
   /**set_combat()
-   * populates information about games combat stats
+   * populates information about games combat Stats
    * @requires set_cstat(string,int,int)
    */
   set_combat(){
@@ -173,7 +185,7 @@ class stat_screen{
   }//set_combat
 
   /**set_cstat(id, stat1, stat2)
-   * Adds 2 stats and 15, then saves it to the html via an id
+   * Adds 2 Stats and 15, then saves it to the html via an id
    * @param {string} id: html id string 
    * @param {int} stat1 
    * @param {int} stat2 
@@ -184,7 +196,7 @@ class stat_screen{
   }//set_cstat
 
   /**set_role_play()
-   * populates information about games role play stats
+   * populates information about games role play Stats
    * @requires set_rstat(string, int)
    */
   set_role_play(){
@@ -210,21 +222,5 @@ class stat_screen{
     document.getElementById(id).innerHTML = stat;
   }//set_rstat
 
-  /**ghoul(is_ghoul)
-   * Halves ghoul charisma and updates speech & barter
-   * Resets non ghoul characters
-   * @param {boolean} is_ghoul
-   * @requires set_rstat(string,int) 
-   */
-  ghoul(is_ghoul){
-    if(is_ghoul == true){
-      this.CH = Math.floor(this.CH/2);
-    }
-    else if(is_ghoul == false){
-      this.CH = this.original_CH;
-    }
-    this.set_rstat("speech", this.CH+this.CH+15);
-    this.set_rstat("barter", this.CH+this.CH+this.IN+5);
-  }
 
 }//stat_screen
